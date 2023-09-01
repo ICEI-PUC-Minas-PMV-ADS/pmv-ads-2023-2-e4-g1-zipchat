@@ -11,21 +11,15 @@ Muitos chatbots ainda enfrentam dificuldades em compreender as nuances da lingua
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo geral do projeto  é desenvolver uma aplicação distribuída de chatbot que ofereça uma solução abrangente e eficaz para o problema identificado, que incluem:
+- Integração com OPENAI: Implementar a integração com a API para aproveitar suas capacidades avançadas de processamento de linguagem
+- Compreensão contextual: desenvolver um chatbot para entender e lembrar o contexto das conversas, melhorando a coesão nas respostas.
+- Respostas inteligentes e criativas: Utilizar um modelo de linguagem avançado para gerar respostas mais inteligentes, relevantes e criativas
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O aumento da demanda por interações mais naturais e relevantes impulsiona a necessidade por chatbots avançados, com esses softwares é possível otimizar atendimento mitigando a necessidade de empresas contar com atendimento humano para requisições de que repetem com frequência entre clientes. A integração com uma API de processamento avançado de linguagem proporciona uma oportunidade de elevar a qualidade das respostas  e criar experiências de conversação mais humanas. Além disso, oferece a oportunidade de aprender sobre integração com tecnologias em um contexto prático.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
