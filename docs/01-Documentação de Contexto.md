@@ -1,18 +1,13 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+De acordo com Júlio Paulillo, em seu artigo no blog Agendor, os chatbots são softwares que se comunicam e interagem com usuários humanos por meio de mensagens automatizadas. Essas ferramentas têm se tornado essenciais para empresas, permitindo que elas respondam às necessidades dos consumidores a qualquer momento, depender da presença de uma equipe de atendentes[^1].
+
+A evolução das comunicações no mundo contemporâneo trouxe à tona necessidades de soluções eficazes e personalizadas para interações em tempo real. Nesse contexto, os chatbots, agentes capazes de dialogar com usuário de maneira inteligente, surgem como ferramentas vitais para atender à demanda por comunicações instantânea, seja para interações entre empresas e clientes, colaboração interna e outros.
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Muitos chatbots ainda enfrentam dificuldades em compreender as nuances da linguagem humana, proporcionar respostas relevantes e manter conversa coesa. A falta de personalização e a limitação no entendimento podem levar a interações frustrantes e não satisfatórias.
 
 ## Objetivos
 
@@ -39,8 +34,7 @@ hierárquicas, etc.
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+## Referências
+JÚLIO PAULILLO, "O que é chatbot? Como essa ferramenta funciona e como usá-la", Agendor Blog, disponível em: https://www.agendor.com.br/blog/o-que-e-chatbot. [Acesso em: 31 de agos. 2023].
+
+Referência adicional: Zendesk, "Um guia para os melhores chatbots AI para empresas", disponível em: https://www.zendesk.com.br/service/messaging/chatbot/ [Acesso em: Acesso em: 31 de agos. 2023].
