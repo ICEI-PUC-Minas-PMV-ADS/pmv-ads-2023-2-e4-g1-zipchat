@@ -23,10 +23,10 @@ O aumento da demanda por interações mais naturais e relevantes impulsiona a ne
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+O objetivo geral do projeto  é desenvolver uma aplicação distribuída de chatbot que ofereça uma solução abrangente e eficaz para o problema identificado, que incluem:
+- Integração com OPENAI: Implementar a integração com a API para aproveitar suas capacidades avançadas de processamento de linguagem.
+- Compreensão contextual: desenvolver um chatbot para entender e lembrar o contexto das conversas, melhorando a coesão nas respostas.
+- Respostas inteligentes e criativas: Utilizar um modelo de linguagem avançado para gerar respostas mais inteligentes, relevantes e criativas
 
 ## Referências
 JÚLIO PAULILLO, "O que é chatbot? Como essa ferramenta funciona e como usá-la", Agendor Blog, disponível em: https://www.agendor.com.br/blog/o-que-e-chatbot. [Acesso em: 31 de agos. 2023].
