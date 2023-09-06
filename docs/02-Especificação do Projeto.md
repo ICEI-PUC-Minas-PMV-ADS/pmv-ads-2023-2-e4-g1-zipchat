@@ -1,11 +1,14 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
+ A seguir, será apresentada de forma abrangente as técnicas e ferramentas empregadas para estruturar o projeto, segmento, este, que desempenha um papel crítico no sucesso da solução.
+ 
+- Personas e Histórias de Usuários: Iniciando pelo entendimento das necessidades e expectativas dos usuários por meio da criação de personas e histórias de usuário, com intuito de construir soluções mais reais às demandas do público-alvo.
+- Modelagem de Processo de Negócio: É realizado uma modelagem detalhada dos processos de negócio envolvidos para a identificação de áreas de melhoria.
+- Indicadores de Desempenho: Estabelecido indicadores de desempenho para medir o progresso e a eficácia do projeto.
+- Requisitos: É documentado de forma completa e detalhada os requisitos funcionais e não funcionais do projeto, base para o desenvolvimento e a implementação da solução.
+- Matriz de Rastreabilidade: Para garantir que cada requisito esteja vinculado a um elemento específico do projeto, como funcionalidades, testes e documentação.
+- Gerenciamento do Projeto: Por último, é feito o gerenciamento de projeto para supervisionar e controlar o progresso, os recursos e os cronogramas do projeto.
+  
 ## Personas
 
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
