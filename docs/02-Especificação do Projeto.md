@@ -90,6 +90,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-006| Agendar consultas médicas para o paciente | MÉDIA | 
 |RF-007| Registrar o histórico de conversas do paciente | BAIXA | 
 |RF-008| Disponibilizar opção para o paciente sair do chatbot	 | Baixa | 
+|RF-009| Gerar relatorio da Anamnese para o usuario| Alta | 
 
 ### Requisitos não Funcionais
 
