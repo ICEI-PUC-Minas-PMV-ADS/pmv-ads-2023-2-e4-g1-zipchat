@@ -82,8 +82,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Permitir que o usuário faça login ou se cadastre	 | ALTA | 
+|RF-002| Apresentar uma interface semelhante ao WhatsApp	 | ALTA | 
+|RF-003| Coletar informações médicas básicas do paciente | ALTA | 
+|RF-004| Analisar as respostas do paciente e fazer recomendações	| ALTA | 
+|RF-005| Direcionar o paciente para a especialidade médica ou emergência. | MÉDIA | 
+|RF-006| Agendar consultas médicas para o paciente | MÉDIA | 
+|RF-007| Registrar o histórico de conversas do paciente | BAIXA | 
+|RF-008| Disponibilizar opção para o paciente sair do chatbot	 | Baixa | 
 
 ### Requisitos não Funcionais
 
@@ -91,6 +97,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-003| Deve manter a privacidade e segurança das informações médicas dos pacientes |  ALTA | 
+|RNF-004| Deve ser possível integrar o chatbot com sistemas externos, como ou sistemas de agendamento de consultas.| Baixa| 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
