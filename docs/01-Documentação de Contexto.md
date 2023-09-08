@@ -25,7 +25,7 @@ A integração com a API de processamento avançado de linguagem oferece uma opo
 
 ## Público-Alvo
 
-Este projeto destina-se a estudantes, bem como qualquer pessoa interessada em explorar a tecnologia de chatbot e processamento de linguagem avançada. Além disso, o projeto pode ser útil para profissionais que desejam automatizar interações de atendimento ao cliente, melhorar a comunicação em suas plataformas ou, até empreendedores que desejam criar soluções inovadoras de coleta de informações médicas por meio de chatbots para atender às necessidades específicas da ANAMNESE.
+Este projeto procura atender a dois principais públicos: pacientes que buscam uma anamnese médica mais precisa, bem como clínicas médicas, hospitais e profissionais de saúde que desejam aprimorar a eficiência na coleta de informações médicas e oferecer um atendimento mais inovador. O chatbot integrado com a OPENIA se destina a proporcionar uma experiência aprimorada tanto para os pacientes quanto para os profissionais de saúde, otimizando o processo de anamnese.
 
 ## Referências
 JÚLIO PAULILLO, "O que é chatbot? Como essa ferramenta funciona e como usá-la", Agendor Blog, disponível em: https://www.agendor.com.br/blog/o-que-e-chatbot. [Acesso em: 31 de agos. 2023].
