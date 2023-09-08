@@ -1,24 +1,26 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11619205&assignment_repo_type=AssignmentRepo)
 # TÍTULO DO PROJETO
 
-`CURSO`
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-`SEMESTRE`
+`Segundo semestre - Eixo 4`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto em desenvolvimento consiste na criação de um chatbot personalizado para realizar anamneses médicas de forma eficiente e precisa. Esse chatbot será integrado com o Chat GPT para aprimorar a interação com os pacientes, coletando informações detalhadas sobre seu histórico médico, sintomas atuais e estilo de vida. Ele utilizará a capacidade de processamento de linguagem do Chat GPT para compreender e responder às respostas dos pacientes, tornando a coleta de dados mais amigável e completa. O objetivo é auxiliar os profissionais de saúde a tomar decisões informadas com base nas informações coletadas e aprimorar a experiência do paciente durante a anamnese
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Fellipe Henrique Pastor Pereira
+* Guilherme Correa Gomes
+* Joao Pedro Pereira dos Santos
+* Lucas de Oliveira Borges
+* Vinicius Monteiro Fortino
+*  integrante
 
 ## Orientador
 
-* Nome completo do professor 1
+* Wagner Cipriano da Silva
 
 ## Instruções de utilização
 
