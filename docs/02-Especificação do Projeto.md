@@ -47,23 +47,31 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente, na área da saúde, especialmente na coleta de informações médicas através de anamneses, há diversas limitações e desafios que afetam a eficácia e a qualidade das interações. Alguns desses problemas: 
+
+- Complexidade das informações: Chatbot tem dificuldade de lidar e compreender com essa complexidade.
+- Falta de contexto: Sem um contexto adequado leva à respostas genéricas.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Esta projeto visa abordar os problemas mencionados na documentação de Contexto, fornecendo uma solução abrangente e eficaz por meio do desenvolvimento de um chatbot integrado com ima OPENAI. Além disso, a proposta do projeto visa se alinha com as estratégias e objetivos do setor de saúde, que buscam melhorar a eficiência e a qualidade dos processos de coleta de informações médicas. 
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – LogON
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Implementar a autenticação multifatorial é uma das maneiras mais eficazes de aumentar a segurança de um processo de logon. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Capturar](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/ace61a35-9565-4a52-a0c2-d2f214f1bf80)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – LogIn
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+![Capturar2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/c6508f76-58df-4cf6-87db-62f90ab20264)
 
-![Processo 2](img/02-bpmn-proc2.png)
+### Processo 3 – Chat - Anamnese
+
+Em vez de apenas formular perguntas com base nas respostas da OPENAI, o chatbot pode ser aprimorado para personalizar as perguntas com base no histórico médico anterior do paciente.
+
+![chat](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/23ca59d6-f01a-4fe6-b7fa-4756a3c6a306)
+
 
 ## Indicadores de Desempenho
 
