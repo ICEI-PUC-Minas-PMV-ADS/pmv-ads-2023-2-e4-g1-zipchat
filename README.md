@@ -15,8 +15,8 @@ O projeto em desenvolvimento consiste na criação de um chatbot personalizado p
 * Guilherme Correa Gomes
 * Joao Pedro Pereira dos Santos
 * Lucas de Oliveira Borges
+* Luiz Fellipe Pereira Pires
 * Vinicius Monteiro Fortino
-*  integrante
 
 ## Orientador
 
