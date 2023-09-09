@@ -45,7 +45,7 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://user-images.githubusercontent.com/13721147/194158525-bbc9cf21-13af-47a7-ba23-97f21870d676.png">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Ler  <br><br> Atividades ao ar livre<br><br> Culinária <br> <br>        | Carolina é assistente social e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Esforçada <br><br> Resiliente <br><br> Organizada  <br>    |
+| <br> Ler  <br><br> Atividades ao ar livre<br><br> Culinária <br> <br>        | Carolina é assistente social e sofre com asma<br> desde a infância. <br>Ela pratica esportes, mas deve tomar precauções extras e ter um plano de ação em caso de crises de asma.   <br>        | Esforçada <br><br> Resiliente <br><br> Organizada  <br>    |
 
 
 
