@@ -13,7 +13,7 @@
 
 |    `Nome`: Joana Santos Cardoso  | `Profissão`: Professora de Matemática     |     `Idade`: 64 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Organização no agendamento de pacientes <br> <br>  Facilidade para consultar o médico  <br> <br> Atendimento específico e exclusivo.   |  `Frustrações`: <br>  Atraso do médico nas consultas  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
+| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Organização no agendamento <br> <br>  Facilidade para consultar o médico  <br> <br> Atendimento específico e exclusivo.   |  `Frustrações`: <br>  Atraso do médico nas consultas  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Adora assistir filmes <br><br> Gosta de passear ao Ar livre<br><br> Momentos em família <br> <br>     | Joana é professora de matemática,  que foi diagnosticada com hipertensão arterial,  <br> uma condição que requer medicação e mudanças no estilo de vida, como uma dieta com baixo teor de sódio e exercícios regulares.  <br>            | Organizada <br><br> Extrovertida <br><br> Esforçada<br>   |
 
@@ -63,8 +63,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Joana Santos     | Eficiencia e agilidade na marcação| Agilizar a marcacão de consultas  |
+|Joana Santos     | Atendimento específico | Sair com rapidez |
+|Rafael Fernandes | Visualizar as marcações | Organizar melhor a agenda |
+|Marcelo de Lima  | Filas menos demoradas | Ser atendido no horário específico |
+|Laura Cabral     | Visualizar a marcação de consultas e exames | Evitar esquecimento de datas |
+|Carolina Almeida | Consultas a distância | Otimizar seu tempo |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
