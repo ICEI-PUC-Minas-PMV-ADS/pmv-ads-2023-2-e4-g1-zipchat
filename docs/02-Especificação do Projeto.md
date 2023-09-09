@@ -151,9 +151,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02|O chatbot deve estar em conformidade com todas as regulamentações médicas aplicáveis.|
-|03|O projeto só pode ser considerado concluído após a aprovação do usuário final, que pode ser obtida por meio de pesquisas de satisfação e feedback.|
+|01|O chatbot deve estar em conformidade com todas as regulamentações médicas aplicáveis.|
+|03|O aplicativo deve responder às ações do usuário em até 20 segundos|
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
