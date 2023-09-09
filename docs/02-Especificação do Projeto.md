@@ -13,6 +13,39 @@
 
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
+## Personas
+
+|    `Nome`: Joana Santos Cardoso  | `Profissão`: Médica Cardiologista        |     `Idade`: 44 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/55036173/188963711-7db4ab2c-ea9d-4674-83e6-b1c8f8f4fb90.png">| `Motivações`: <br>  Organização no agendamento de pacientes <br> <br>  Facilidade para consultar agendamentos do dia  <br> <br> Facilidade na marcação de pacientes   |  `Frustrações`: <br>  Desorganização de agenda  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+| <br> Adora assistir filmes <br><br> Gosta de passear ao Ar livre<br><br> Conhecer lugares novos <br> <br>     | Joana é  médica cardiologista,   que preza pela boa <br> organizaçãoela é uma especialista que visa economizar tempo em suas marcações de pacientes  <br>            | Organizada <br><br> Extrovertida <br><br> Esfoçada<br>   |
+
+
+|    `Nome`: Rafael Fernandes Rocha  | `Profissão`: Desenvolvedor         |     `Idade`: 28 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/55036173/188989388-76071b6b-c8b8-41e2-9f92-fa8ddb89d5c3.png">| `Motivações`: <br>  Otimizar tempo <br> <br> Ter um site para conferir marcações  <br> <br> Facilidade na marcação de consultas |  `Frustrações`: <br>   Perder tempo telefonando para clinicas <br> <br> Dificuldade na confirmação do agendamento <br><br> Esquecimento da data de marcação            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+| <br> Jogar Games  <br><br> Ouvir música livre<br><br> Conhecer tecnologias novas <br> <br>        | Rafael é um desenvolvedor focado<br> durante sue horario de trabalho, Mario se preocupa com a saúde <br>mas acaba indo pouco ao médico por falta de organização    <br>        | Desorganizado <br><br> Introvertido <br><br> Metodico  <br>    |
+
+
+|    `Nome`: Marcelo de Lima Henrique | `Profissão`: Motorista         |     `Idade`: 48 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+| <br> Ler  <br><br> Jogos de mesa<br><br> Conversar com as pessoas <br> <br>        | Marcelo é motorista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Esforçado <br><br> Sério <br><br> Sábio  <br>    |
+
+|    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 30 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+| <br> Ler  <br><br> Jogos de mesa<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Esforçado <br><br> Sério <br><br> Sábio  <br>    |
+
+|    `Nome`: Carolina Almeida de Souza | `Profissão`: Assistente Social      |     `Idade`: 27 Anos    |
+|--------------------|------------------------------------|----------------------------------------|
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+|  `Hobbies`: |   `História`:  | `Personalidade`:  |
+| <br> Ler  <br><br> Jogos de mesa<br><br> Conversar com as pessoas <br> <br>        | Carolina é assistente social e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Esforçado <br><br> Sério <br><br> Sábio  <br>    |
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
 > **Links Úteis**:
