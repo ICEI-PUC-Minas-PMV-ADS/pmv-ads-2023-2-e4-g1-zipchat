@@ -17,7 +17,7 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 
 |    `Nome`: Joana Santos Cardoso  | `Profissão`: Professora de Matemática     |     `Idade`: 64 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Organização no agendamento de pacientes <br> <br>  Facilidade para consultar agendamentos do dia  <br> <br> Facilidade na marcação de pacientes   |  `Frustrações`: <br>  Desorganização de agenda  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
+| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Organização no agendamento de pacientes <br> <br>  Facilidade para consultar o médico  <br> <br> Atendimento específico e exclusivo.   |  `Frustrações`: <br>  Desorganização de agenda  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Adora assistir filmes <br><br> Gosta de passear ao Ar livre<br><br> Momentos em família <br> <br>     | Joana é professora de matemática,  que foi diagnosticada com hipertensão arterial,  <br> uma condição que requer medicação e mudanças no estilo de vida, como uma dieta com baixo teor de sódio e exercícios regulares.  <br>            | Organizada <br><br> Extrovertida <br><br> Esforçada<br>   |
 
@@ -33,13 +33,13 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Ler <br><br> Pesca <br><br> Momentos em família <br> <br>        | Marcelo é motorista e sofre com princípios de trombose<br> Devido a ficar muito tempo sentado no caminhão, MArcelo desenvolveu trombose nas suas pernas <br>        | Esforçado <br><br> Comunicativo <br><br> Determinado  <br>    |
+| <br> Ler <br><br> Pesca <br><br> Momentos em família <br> <br>        | Marcelo é motorista e sofre com princípios de trombose<br> Devido a ficar muito tempo sentado no caminhão, MArcelo desenvolveu trombose nas suas pernas. <br>        | Esforçado <br><br> Comunicativo <br><br> Determinado  <br>    |
 
 |    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 27 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/raw/main/docs/img/people_images/ddddd.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista que sofre de depressão desde a adolescência. <br>  Ela está em tratamento psicológico e toma medicamentos para ajudar a gerenciar seus sintomas  <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
+| <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista que sofre de depressão desde a adolescência. <br>  Ela está em tratamento psicológico e toma medicamentos para ajudar a gerenciar seus sintomas.  <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
 
 |    `Nome`: Carolina Almeida de Souza | `Profissão`: Assistente Social      |     `Idade`: 29 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
