@@ -37,7 +37,7 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 
 |    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 30 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="img/people_images/ddddd.jpg" width="1600">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+| <img width="250" alt="image" src="img/people_images/ddddd.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
 
