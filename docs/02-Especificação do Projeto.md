@@ -35,15 +35,15 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Ler  <br><br> Pesca<br><br> Momentos em família <br> <br>        | Marcelo é motorista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícil ir a hospitais   <br>        | Esforçado <br><br> Comunicativo <br><br> Determinado  <br>    |
 
-|    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 30 Anos    |
+|    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 27 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="img/people_images/ddddd.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/raw/main/docs/img/people_images/ddddd.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
 
-|    `Nome`: Carolina Almeida de Souza | `Profissão`: Assistente Social      |     `Idade`: 27 Anos    |
+|    `Nome`: Carolina Almeida de Souza | `Profissão`: Assistente Social      |     `Idade`: 35 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+| <img width="250" alt="image" src="https://user-images.githubusercontent.com/76191741/229353765-48c64e18-2dd2-4186-8b3b-4238aaf2fe5c.png">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Ler  <br><br> Atividades ao ar livre<br><br> Culinária <br> <br>        | Carolina é assistente social e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Esforçada <br><br> Resiliente <br><br> Organizada  <br>    |
 
