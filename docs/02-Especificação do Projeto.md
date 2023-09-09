@@ -26,7 +26,7 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/aea66113-9f26-45c4-bc7e-e5af89014a0a">| `Motivações`: <br>  Otimizar tempo <br> <br> Ter um site para conferir marcações  <br> <br> Facilidade na marcação de consultas |  `Frustrações`: <br>   Perder tempo telefonando para clinicas <br> <br> Dificuldade na confirmação do agendamento <br><br> Esquecimento da data de marcação            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Jogar Games  <br><br> Ouvir música livre<br><br> Conhecer tecnologias novas <br> <br>        | Rafael é um desenvolvedor focado<br> durante sue horario de trabalho, Mario se preocupa com a saúde <br>mas acaba indo pouco ao médico por falta de organização    <br>        | Intuitivo <br><br> Introvertido <br><br> Metodico  <br>    |
+| <br> Jogar Games  <br><br> Ouvir música livre<br><br> Conhecer tecnologias novas <br> <br>        | Rafael é um desenvolvedor focado<br> durante sue horario de trabalho, ele se preocupa com a saúde <br>mas acaba indo pouco ao médico por falta de organização    <br>        | Intuitivo <br><br> Introvertido <br><br> Metódico  <br>    |
 
 
 |    `Nome`: Marcelo de Lima Henrique | `Profissão`: Motorista         |     `Idade`: 48 Anos    |
@@ -37,7 +37,7 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 
 |    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 30 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
+| <img width="250" alt="image" src="img/people_images/ddddd.jpg" width="1600">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
 
