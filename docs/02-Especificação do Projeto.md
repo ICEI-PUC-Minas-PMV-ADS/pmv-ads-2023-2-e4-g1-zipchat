@@ -15,37 +15,37 @@ Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se de
 
 ## Personas
 
-|    `Nome`: Joana Santos Cardoso  | `Profissão`: Médica Cardiologista        |     `Idade`: 64 Anos    |
+|    `Nome`: Joana Santos Cardoso  | `Profissão`: Professora de Matemática     |     `Idade`: 64 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Organização no agendamento de pacientes <br> <br>  Facilidade para consultar agendamentos do dia  <br> <br> Facilidade na marcação de pacientes   |  `Frustrações`: <br>  Desorganização de agenda  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Adora assistir filmes <br><br> Gosta de passear ao Ar livre<br><br> Momentos em família <br> <br>     | Joana é  médica cardiologista,   que preza pela boa <br> organizaçãoela é uma especialista que visa economizar tempo em suas marcações de pacientes  <br>            | Organizada <br><br> Extrovertida <br><br> Esforçada<br>   |
+| <br> Adora assistir filmes <br><br> Gosta de passear ao Ar livre<br><br> Momentos em família <br> <br>     | Joana é professora de matemática,  que foi diagnosticada com hipertensão arterial,  <br> uma condição que requer medicação e mudanças no estilo de vida, como uma dieta com baixo teor de sódio e exercícios regulares.  <br>            | Organizada <br><br> Extrovertida <br><br> Esforçada<br>   |
 
 
 |    `Nome`: Rafael Fernandes Rocha  | `Profissão`: Desenvolvedor Mobile   |     `Idade`: 28 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/aea66113-9f26-45c4-bc7e-e5af89014a0a">| `Motivações`: <br>  Otimizar tempo <br> <br> Ter um site para conferir marcações  <br> <br> Facilidade na marcação de consultas |  `Frustrações`: <br>   Perder tempo telefonando para clinicas <br> <br> Dificuldade na confirmação do agendamento <br><br> Esquecimento da data de marcação            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Jogar Games  <br><br> Ouvir música livre<br><br> Conhecer tecnologias novas <br> <br>        | Rafael é um desenvolvedor focado<br> durante sue horario de trabalho, ele se preocupa com a saúde <br>mas acaba indo pouco ao médico por falta de organização    <br>        | Intuitivo <br><br> Introvertido <br><br> Metódico  <br>    |
+| <br> Jogar Games  <br><br> Família e Amigos <br><br> Conhecer tecnologias novas <br> <br>        | Rafael é um desenvolvedor focado<br> que foi diagnosticado recentemente com diabetes tipo 1. Ele está aprendendo a gerenciar sua dieta e níveis de açúcar no sangue enquanto equilibra seu trabalho em tempo integral e a vida em família.    <br>        | Intuitivo <br><br> Introvertido <br><br> Metódico  <br>    |
 
 
 |    `Nome`: Marcelo de Lima Henrique | `Profissão`: Motorista         |     `Idade`: 54 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://user-images.githubusercontent.com/100283917/189008834-552789bd-d695-44eb-80f3-22b56fe5610e.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Ler  <br><br> Pesca<br><br> Momentos em família <br> <br>        | Marcelo é motorista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícil ir a hospitais   <br>        | Esforçado <br><br> Comunicativo <br><br> Determinado  <br>    |
+| <br> Ler <br><br> Pesca <br><br> Momentos em família <br> <br>        | Marcelo é motorista e sofre com princípios de trombose<br> Devido a ficar muito tempo sentado no caminhão, MArcelo desenvolveu trombose nas suas pernas <br>        | Esforçado <br><br> Comunicativo <br><br> Determinado  <br>    |
 
 |    `Nome`: Laura Ferreira Cabral | `Profissão`: Jornalista       |     `Idade`: 27 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/raw/main/docs/img/people_images/ddddd.jpg">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista e sofre com osteoporose<br> Devido a doença têm mobilidade reduzida e precisa de <br>cuidados no dia a dia, tornando difícel ir a hospitais   <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
+| <br> Fotografia  <br><br> Leitura<br><br> Conversar com as pessoas <br> <br>        | Laura é jornalista que sofre de depressão desde a adolescência. <br>  Ela está em tratamento psicológico e toma medicamentos para ajudar a gerenciar seus sintomas  <br>        | Extroverdita <br><br> Disciplinada <br><br> Educada <br>    |
 
 |    `Nome`: Carolina Almeida de Souza | `Profissão`: Assistente Social      |     `Idade`: 29 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
 | <img width="250" alt="image" src="https://user-images.githubusercontent.com/13721147/194158525-bbc9cf21-13af-47a7-ba23-97f21870d676.png">| `Motivações`: <br>  Se cuidar mais <br> <br> Atendimento ágil  <br> <br> Facilidade de comunicação com hospital |  `Frustrações`: <br>   Ter de ir a hospitais muitas vezes <br> <br> Dificuldade na locomoção <br><br> Longa espera para o atendimento            
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
-| <br> Ler  <br><br> Atividades ao ar livre<br><br> Culinária <br> <br>        | Carolina é assistente social e sofre com asma<br> desde a infância. <br>Ela pratica esportes, mas deve tomar precauções extras e ter um plano de ação em caso de crises de asma.   <br>        | Esforçada <br><br> Resiliente <br><br> Organizada  <br>    |
+| <br> Ler  <br><br> Atividades ao ar livre<br><br> Culinária <br> <br>        | Carolina é assistente social e sofre com asma desde a infância. <br> Ela pratica esportes, mas deve tomar precauções extras e ter um plano de ação em caso de crises de asma.   <br>        | Esforçada <br><br> Resiliente <br><br> Organizada  <br>    |
 
 
 
