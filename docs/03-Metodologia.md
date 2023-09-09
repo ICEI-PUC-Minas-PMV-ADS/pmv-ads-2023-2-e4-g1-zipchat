@@ -7,8 +7,14 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+|     Ambiente  |    Plataforma      |     Link    |
+|--------------------|------------------------------------|----------------------------------------|
+| Repositório de código fonte | GitHub |  https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat  
+|  Gerenciamento do Projeto |   GitHub  |https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/485 |  
+|  Projeto de Interface e  Wireframes  | A definir  |  A definir|
+|  Documentos do projeto	  |  Github  | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/tree/main/docs|
+
+
 
 ## Controle de Versão
 
@@ -48,10 +54,10 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 Apresente a divisão de papéis entre os membros do grupo.
 
 Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
+- Scrum Master: Felipe Pastor;
+- Product Owner: Lucas Borges;
+- Equipe de Desenvolvimento Front End: Lucas Borges, Luiz Fellipe, Guilherme Correa;
+- Equipe de Desenvolvimento Back End: Fellipe Pastor, João Pedro Santos,Vinicius Monteiro.
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
