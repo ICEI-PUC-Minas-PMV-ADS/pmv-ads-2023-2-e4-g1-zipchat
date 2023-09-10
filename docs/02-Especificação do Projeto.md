@@ -89,12 +89,10 @@ Em vez de apenas formular perguntas com base nas respostas da OPENAI, o chatbot 
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+Indicadores de desempenho da aplicação medem além de inicadores de infraestrutura quanto de acertividade.
 
-Usar o seguinte modelo: 
+<img width="1292" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/3579780/02889ad5-4f1d-4a73-b201-1a60adfa77d9">
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
 
