@@ -13,14 +13,14 @@
 
 |    `Nome`: Joana Santos Cardoso  | `Profissão`: Professora de Matemática     |     `Idade`: 64 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Organização no agendamento <br> <br>  Facilidade para consultar o médico  <br> <br> Atendimento específico e exclusivo.   |  `Frustrações`: <br>  Atraso do médico nas consultas  <br> <br> Falta de facilidade na confirmação dos agendamentos <br><br>                    
+| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/49cfcc5e-e06d-407f-a916-0c261cf68869">| `Motivações`: <br>  Querer um direcionamento sobre sintomas. <br> <br>  Querer um direcionamento para médicos <br> <br> Atendimento específico e exclusivo.   |  `Frustrações`: <br>  Atraso do médico nas consultas  <br> <br> Demora ao ter uma primeira resposta sobre seu problema. <br><br>                    
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Adora assistir filmes <br><br> Gosta de passear ao Ar livre<br><br> Momentos em família <br> <br>     | Joana é professora de matemática,  que foi diagnosticada com hipertensão arterial,  <br> uma condição que requer medicação e mudanças no estilo de vida, como uma dieta com baixo teor de sódio e exercícios regulares.  <br>            | Organizada <br><br> Extrovertida <br><br> Esforçada<br>   |
 
 
 |    `Nome`: Rafael Fernandes Rocha  | `Profissão`: Desenvolvedor Mobile   |     `Idade`: 28 Anos    |
 |--------------------|------------------------------------|----------------------------------------|
-| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/aea66113-9f26-45c4-bc7e-e5af89014a0a">| `Motivações`: <br>  Otimizar tempo <br> <br> Ter um site para conferir marcações  <br> <br> Facilidade na marcação de consultas |  `Frustrações`: <br>   Perder tempo telefonando para clinicas <br> <br> Dificuldade na confirmação do agendamento <br><br> Esquecimento da data de marcação            
+| <img width="250" alt="image" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj-bibliosync/assets/103579574/aea66113-9f26-45c4-bc7e-e5af89014a0a">| `Motivações`: <br> Otimizar tempo <br> <br> Ter um site com um direcionamento médico. |  `Frustrações`: <br>   Perder tempo telefonando para clínicas. <br> <br> Dificuldade no direcionamento de um caso.      
 |  `Hobbies`: |   `História`:  | `Personalidade`:  |
 | <br> Jogar Games  <br><br> Família e Amigos <br><br> Conhecer tecnologias novas <br> <br>        | Rafael é um desenvolvedor focado<br> que foi diagnosticado recentemente com diabetes tipo 1. Ele está aprendendo a gerenciar sua dieta e níveis de açúcar no sangue enquanto equilibra seu trabalho em tempo integral e a vida em família.    <br>        | Intuitivo <br><br> Introvertido <br><br> Metódico  <br>    |
 
