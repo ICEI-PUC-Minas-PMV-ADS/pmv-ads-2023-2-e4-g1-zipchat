@@ -161,12 +161,12 @@ Cronograma do projeto
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-|    | |Agosto    | Setembro  | Setembro | Outubro | Novembro |
-|------|-----------------------------------------|----|
-|Data de Entrega| 01/08/23 a 03/09/23	 | 04/09/23 a 01/10/23 | 02/10/23 a 29/10/23	| 30/10/23 a 26/11/23 |
-|Equipe de Gestão	| Documento de Contexto		 |  | 	|  |
-|Equipe Back		| 		| Implementação da API	 | 	|  |
-|Equipe Front			| 		| 	 | 	Projeto e implementação da interface Web	| Projeto e implementação da interface Mobile|
+| Agosto  | Setembro | Outubro | Novembro | Dezembro |
+| ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
+| Data de Entrega  | 01/08/23 á 03/09/23 | 04/09/23 á 01/10/23 |02/10/23 á 29/10/23 |30/10/23 á 26/11/23 |
+| Equipe de Gestão | Documento de Contexto |    |    |     |
+| Equipe Back |    |Implementação da API |    |   |
+| Equipe Front |     |  |Projeto e implementação da interface Web  |Projeto e implementação da interface Mobile  |
 
 ## Gestão de Orçamento
 
