@@ -61,12 +61,13 @@ Lembre-se que você deve ser enumerar e descrever precisamente e personalizada t
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
+
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Joana Santos     | Eficiencia e agilidade na marcação| Agilizar a marcacão de consultas  |
+|Joana Santos     | Eficiencia e agilidade ao ter um direcionamento médico| Agilizar a ter uma anamnese  |
 |Joana Santos     | Atendimento específico | Sair com rapidez |
-|Rafael Fernandes | Visualizar as marcações | Organizar melhor a agenda |
-|Marcelo de Lima  | Filas menos demoradas | Ser atendido no horário específico |
+|Rafael Fernandes | Visuailzar qual médico devo procurar | Consultar sobre um problema. |
+|Marcelo de Lima  | Rapidez em uma consulta | Ser atendido no horário específico |
 |Laura Cabral     | Visualizar a marcação de consultas e exames | Evitar esquecimento de datas |
 |Carolina Almeida | Consultas a distância | Otimizar seu tempo |
 
