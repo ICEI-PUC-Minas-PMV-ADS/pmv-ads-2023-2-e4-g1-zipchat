@@ -159,8 +159,7 @@ Para gerenciar as tarefas foi criado um quadro de atividades no github.
 
 Cronograma do projeto
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/a33b5f22-2523-405d-bacf-bf9a7d228d94)
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/80701b6e-9164-4337-a64c-e57cc63a7724)
 
 ## Gerenciamento de Equipe
 
