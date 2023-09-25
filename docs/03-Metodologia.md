@@ -17,6 +17,9 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 
 ## Controle de Versão
+Para a gestão do código fonte será utilizado o modelo de processo baseado no Git Flow, como mostrado na figura a seguir:
+
+![192118295-077f7020-72df-4af2-83d4-b46af1599a44](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/80110034/c76d9c17-1573-45c9-af8f-d25032357127)
 
 A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
@@ -36,7 +39,7 @@ etiquetas:
 - `bug`: uma funcionalidade encontra-se com problemas
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
-- 
+ 
 ## Gerenciamento de Projeto
 
 ### Divisão de Papéis
