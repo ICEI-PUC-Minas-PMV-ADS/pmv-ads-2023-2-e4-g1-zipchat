@@ -4,9 +4,11 @@
     {
         public ChatGptInputDto(string prompt)
         {
-            this.prompt = $"De acordo com esses sintomas:{prompt}.Me diga especialidade de médico procurar, o que posso ter e se devo ir em uma emergencia médica.";
+            this.prompt = $"De acordo com esses sintomas:{prompt}." +
+                $"Me diga especialidade de médico procurar," +
+                $" o que posso ter e se devo ir em uma emergencia médica.";
             temperature = 0.2m;
-            max_tokens = 10;
+            max_tokens = 100;
             model = "text-davinci-003";
         }
 
