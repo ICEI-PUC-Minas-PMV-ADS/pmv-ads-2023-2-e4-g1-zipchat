@@ -17,6 +17,9 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 
 ## Controle de Versão
+Para a gestão do código fonte será utilizado o modelo de processo baseado no Git Flow, como mostrado na figura a seguir:
+
+![192118295-077f7020-72df-4af2-83d4-b46af1599a44](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/80110034/c76d9c17-1573-45c9-af8f-d25032357127)
 
 A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
@@ -36,17 +39,7 @@ etiquetas:
 - `bug`: uma funcionalidade encontra-se com problemas
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
-
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-
+ 
 ## Gerenciamento de Projeto
 
 ### Divisão de Papéis
@@ -78,4 +71,4 @@ As ferramentas empregadas no projeto são:
 
 #### Ferramentas de Design (wireframing):
 
-A definir
+Canva: Ferramenta para criação e edição de wirefremes, esta permite a edição de múltiplas pessoas ao mesmo tempo.
