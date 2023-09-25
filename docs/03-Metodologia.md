@@ -78,4 +78,4 @@ As ferramentas empregadas no projeto são:
 
 #### Ferramentas de Design (wireframing):
 
-A definir
+Canva: Ferramenta para criação e edição de wirefremes, esta permite a edição de múltiplas pessoas ao mesmo tempo.
