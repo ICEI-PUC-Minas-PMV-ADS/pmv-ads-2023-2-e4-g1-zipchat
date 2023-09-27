@@ -12,8 +12,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(ZipChatDbContext))]
-    [Migration("20230924165148_Migration1")]
-    partial class Migration1
+    [Migration("20230926185713_Atualizando usuario")]
+    partial class Atualizandousuario
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -97,6 +97,10 @@ namespace Repository.Migrations
 
                     b.Property<int>("Contato")
                         .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .IsRequired()

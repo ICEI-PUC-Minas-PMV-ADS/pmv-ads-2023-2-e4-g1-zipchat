@@ -1,6 +1,8 @@
-﻿namespace Domain.Entidade
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace back_zipchat.Models
 {
-    public class Usuario
+    public class AutenticacaoModel
     {
         public Guid Id { get; set; }
 
