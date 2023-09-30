@@ -40,23 +40,21 @@ namespace back_zipchat.Controllers
         {
             var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
 
-            //_httpClient.DefaultRequestHeaders.Authorization =
-            //    new AuthenticationHeaderValue("Bearer", _apiKey);
+            _httpClient.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", _apiKey);
 
-            //var model = new ChatGptInputDto(sintomas);
+            var model = new ChatGptInputDto(sintomas);
 
-            //var requestBody = JsonSerializer.Serialize(model);
+            var requestBody = JsonSerializer.Serialize(model);
 
-            //var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+            var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
 
-            //var response =
-            //    await _httpClient.PostAsync("https://api.openai.com/v1/completions", content);
+            var response =
+                await _httpClient.PostAsync("https://api.openai.com/v1/completions", content);
 
-            //var result = await response.Content.ReadFromJsonAsync<ChatGptResponseDto>();
+            var result = await response.Content.ReadFromJsonAsync<ChatGptResponseDto>();
 
-            //var promptResponse = result.choices.FirstOrDefault().text;
-
-            var promptResponse = "teste";
+            var promptResponse = result.choices.FirstOrDefault().text;
 
             var usuario = await ObterUsario(userEmail);
 
