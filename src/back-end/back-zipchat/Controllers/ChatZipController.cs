@@ -40,24 +40,70 @@ namespace back_zipchat.Controllers
         {
             var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
 
-            _httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", _apiKey);
+            //_httpClient.DefaultRequestHeaders.Authorization =
+            //    new AuthenticationHeaderValue("Bearer", _apiKey);
 
-            var model = new ChatGptInputDto(sintomas);
+            //var model = new ChatGptInputDto(sintomas);
 
-            var requestBody = JsonSerializer.Serialize(model);
+            //var requestBody = JsonSerializer.Serialize(model);
 
-            var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+            //var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
 
             //var response =
             //    await _httpClient.PostAsync("https://api.openai.com/v1/completions", content);
 
             //var result = await response.Content.ReadFromJsonAsync<ChatGptResponseDto>();
 
-            //var promptResponse = result.choices.FirstOrDefault();
+            //var promptResponse = result.choices.FirstOrDefault().text;
 
+            var promptResponse = "teste";
+
+            var usuario = await ObterUsario(userEmail);
+
+            await InserirHistoricoConversaUsuario(usuario, sintomas, promptResponse);
+
+            await InserirAnamneseUsuario(usuario, promptResponse);
 
             return Ok();
+        }
+
+        private async Task InserirAnamneseUsuario(Usuario usuario, string promptResponse)
+        {
+            var anamneseUsuario = new Anamnese
+            {
+                Id = Guid.NewGuid(),
+                Conteudo = promptResponse,
+                Criacao = "teste",
+                UsuarioId = usuario.Id
+            };
+            _zipDebContext.Anamneses.Add(anamneseUsuario);
+            await _zipDebContext.SaveChangesAsync();
+        }
+
+        private async Task InserirHistoricoConversaUsuario(
+            Usuario usuario,
+            string sintomas,
+            string respostaGpt)
+        {
+            var historicoPaciente = new HistoricoPaciente
+            {
+                Id = Guid.NewGuid(),
+                IdPaciente = usuario.Id,
+                DataConversa = DateTime.Now,
+                Descricao = $"O paciente {usuario.Nome} apresentou os seguintes sintomas:" +
+                $" {sintomas} e" +
+                $" a resposta foi {respostaGpt}"
+            };
+
+            _zipDebContext.HistoricoPacientes.Add(historicoPaciente);
+
+            await _zipDebContext.SaveChangesAsync();
+        }
+
+        private async Task<Usuario> ObterUsario(string? userEmail)
+        {
+            return await _zipDebContext.Usuarios
+                   .FirstOrDefaultAsync(u => u.Email == userEmail);
         }
 
         [AllowAnonymous]

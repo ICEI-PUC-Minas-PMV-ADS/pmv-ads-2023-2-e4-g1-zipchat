@@ -8,7 +8,7 @@
                 $"Me diga especialidade de médico procurar," +
                 $" o que posso ter e se devo ir em uma emergencia médica.";
             temperature = 0.2m;
-            max_tokens = 100;
+            max_tokens = 50;
             model = "text-davinci-003";
         }
 

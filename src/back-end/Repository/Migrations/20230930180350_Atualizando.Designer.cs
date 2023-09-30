@@ -12,8 +12,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(ZipChatDbContext))]
-    [Migration("20230926185713_Atualizando usuario")]
-    partial class Atualizandousuario
+    [Migration("20230930180350_Atualizando")]
+    partial class Atualizando
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,8 +38,8 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -59,6 +59,27 @@ namespace Repository.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Especialidades", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entidade.HistoricoPaciente", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DataConversa")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("IdPaciente")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HistoricoPacientes");
                 });
 
             modelBuilder.Entity("Domain.Entidade.Medico", b =>

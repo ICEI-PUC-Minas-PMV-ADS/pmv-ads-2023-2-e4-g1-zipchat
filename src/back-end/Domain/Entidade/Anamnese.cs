@@ -8,6 +8,6 @@
 
         public string Criacao { get; set;}
 
-        public int UsuarioId { get; set;}   
+        public Guid UsuarioId { get; set;}   
     }
 }
