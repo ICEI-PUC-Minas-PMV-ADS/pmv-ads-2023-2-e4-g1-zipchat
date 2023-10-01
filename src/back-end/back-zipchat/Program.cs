@@ -1,3 +1,4 @@
+using back_zipchat.Configuration;
 using back_zipchat.Controllers;
 using back_zipchat.Interfaces;
 using back_zipchat.ModelsConfiguration;
@@ -23,18 +24,9 @@ builder.Services.AddSwaggerGen();
 //Interfaces
 builder.Services.AddScoped<IAServiceInterface, IAService>();
 
-
-// Builder CORS
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("AllowAllOrigins",
-//        builder =>
-//        {
-//            builder.AllowAnyOrigin()
-//                   .AllowAnyMethod()
-//                   .AllowAnyHeader();
-//        });
-//});
+//MongoDB
+builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.AddSingleton<MongoDBService>();
 
 
 // Builder Autenticação
@@ -59,17 +51,6 @@ var adminClientOptions = builder
 
 builder.Services.AddKeycloakAdminHttpClient(adminClientOptions);
 
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-//}).AddJwtBearer(options =>
-//{
-//    options.RequireHttpsMetadata = false;
-//});
-
-
 var app = builder.Build();
 
 // APP swagger
@@ -85,8 +66,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// APP CORS
-//app.UseCors("AllowAllOrigins");
 
 app.UseAuthentication();
 app.UseAuthorization();

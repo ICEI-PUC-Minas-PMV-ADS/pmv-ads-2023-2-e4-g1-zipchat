@@ -1,19 +1,34 @@
 version: '3.3'
 services:
-  db:
-    image: mysql:5.7
+  mongo:
+    image: mongo
     restart: always
     environment:
-      MYSQL_DATABASE: 'zip-chat'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'password'
-      MYSQL_ROOT_PASSWORD: 'password'
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
     ports:
-      - '3307:3306'
-    expose:
-      - '3307'
+      - "27017:27017"
     volumes:
-      - my-db:/var/lib/mysql
+      - mongo-db:/data/db
+    networks:
+      - mongo-compose-network
+      
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: root
+      ME_CONFIG_BASICAUTH_PASSWORD: password
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+    depends_on:
+      - mongo
+    networks:
+      - mongo-compose-network
+
   db-keycloack:
     image: mysql:5.7
     restart: always
@@ -46,5 +61,8 @@ services:
     depends_on:
       - db-keycloack
 volumes:
-  my-db:
   keycloack-db:
+  mongo-db:
+networks: 
+    mongo-compose-network:
+      driver: bridge

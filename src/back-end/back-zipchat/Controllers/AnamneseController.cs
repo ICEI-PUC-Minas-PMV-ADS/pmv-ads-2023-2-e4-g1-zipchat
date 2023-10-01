@@ -15,6 +15,7 @@ namespace back_zipchat.Controllers
     {
 
         private readonly IAServiceInterface _IAService;
+        private readonly MongoDBService _mongoDBService;
 
         public AnamneseController(IAServiceInterface iAService)
 		{
@@ -37,6 +38,12 @@ namespace back_zipchat.Controllers
             }
 
             return Ok(resultadoprompt);
+        }
+
+
+        [HttpGet]
+        public async Task<List<AnamneseModel>> Get() {
+            return await _IAService.GetAnamneses();
         }
     }
 }
