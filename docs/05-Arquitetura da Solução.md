@@ -34,6 +34,26 @@ Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, 
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+## Estilo arquitetural do projeto
+
+### Documento de Arquitetura:
+Na condução de nosso projeto, adotamos a arquitetura conhecida como Domain Driven Design - DDD. Optamos por esse estilo por sua capacidade única de integrar princípios eficazes de design e desenvolvimento. Ao proporcionar abordagens tanto estratégicas quanto táticas de modelagem, o DDD se revela uma escolha valiosa para a entrega de software de excelência. Inerente aos seus princípios, o DDD promove a colaboração, a escuta atenta e a compreensão, refletindo um esforço contínuo para centralizar e compartilhar o conhecimento.
+
+A arquitetura da API é inspirada no DDD, onde o domínio da aplicação é o ponto focal. O modelo de domínio é dividido em agregados, entidades, objetos de valor e serviços de domínio. As interações com o domínio são gerenciadas por controladores que traduzem as solicitações HTTP para comandos e consultas do domínio.
+
+A arquitetura adota os seguintes padrões:
+
+- DDD: Foco no desenvolvimento em torno do domínio da aplicação.
+- CQRS (Command Query Responsibility Segregation): Separação de responsabilidades entre comandos e consultas para otimização de leitura e gravação.
+
+Camadas e Componentes:
+
+- Camada de Apresentação (Controllers): Responsável por receber e responder a solicitações HTTP.
+- Camada de Aplicação: Coordena a execução de casos de uso, traduzindo entre a camada de apresentação e a camada de domínio.
+- Camada de Domínio: Contém entidades, agregados, objetos de valor e serviços de domínio.
+- Camada de Infraestrutura: Implementa serviços técnicos como repositórios, serviços externos, etc.
+
+
 ## Hospedagem
 
 Explique como a hospedagem e o lançamento da plataforma foi feita.
