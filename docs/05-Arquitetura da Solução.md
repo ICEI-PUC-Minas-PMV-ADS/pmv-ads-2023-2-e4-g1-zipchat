@@ -17,12 +17,17 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 ![diagraER drawio (2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/29d5e38e-4c58-4e2b-94f8-b1a5f07cba2f)
 
-
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
  
 ![zipchat](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/986dd0c7-ed5f-4687-8979-15fb51a567f6)
+
+## Documentação da Implementação do Banco de Dados NoSQL
+
+A integração do MongoDB neste projeto se justifica pela flexibilidade que oferece em termos de esquema, essencial quando lidamos com anamneses cuja estrutura pode variar entre consultas médicas. A capacidade de armazenar dados sem um esquema fixo, a escalabilidade horizontal para lidar com grandes volumes de anamneses e a facilidade de uso com formatos de documentos BSON são fatores determinantes. O MongoDB é uma escolha adequada quando se busca agilidade no desenvolvimento, adaptação fácil a mudanças nos requisitos e integração eficiente com tecnologias que utilizam objetos JavaScript, como em ambientes Node.js.
+
+![mongo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/b57a9daa-1b29-4ce4-b290-62dcbf32ca29)
 
 ## Modelo Físico
 
