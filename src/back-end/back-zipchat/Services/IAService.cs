@@ -37,7 +37,7 @@ namespace back_zipchat.Services
             //return CreatedAtAction(nameof(Get), new { id = anamnese.Id }, anamnese);
         }
 
-        public async Task<string> ChamaPrompt(MensagemModel mensagem)
+        public async Task<AnamneseModel> ChamaPrompt(MensagemModel mensagem)
 		{
             try
             {
@@ -53,6 +53,15 @@ namespace back_zipchat.Services
 
                 string promptResponse = result.choices.FirstOrDefault().text;
 
+                AnamneseModel anamnese = new AnamneseModel
+                {
+                    usuario = mensagem.Emissor,
+                    sintomas = mensagem.Texto,
+                    resultadoIA = promptResponse
+                };
+
+                await CreateAnamnese(anamnese);
+
 
                 if (response.StatusCode == HttpStatusCode.Unauthorized)
                     throw new Exception();
@@ -62,17 +71,9 @@ namespace back_zipchat.Services
 
 
                 if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    await CreateAnamnese(new AnamneseModel
-                    {
-                        usuario = mensagem.Emissor,
-                        sintomas = mensagem.Texto,
-                        resultadoIA = promptResponse
-                    });
-                    return promptResponse;
-                }
+                    return anamnese;
 
-                return promptResponse;
+                return anamnese;
             }
             catch (HttpRequestException e)
             {

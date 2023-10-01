@@ -5,7 +5,7 @@ namespace back_zipchat.Interfaces
 {
 	public interface IAServiceInterface
     {
-        public Task<string> ChamaPrompt(MensagemModel mensagem);
+        public Task<AnamneseModel> ChamaPrompt(MensagemModel mensagem);
         public Task<List<AnamneseModel>> GetAnamneses();
     }
 }

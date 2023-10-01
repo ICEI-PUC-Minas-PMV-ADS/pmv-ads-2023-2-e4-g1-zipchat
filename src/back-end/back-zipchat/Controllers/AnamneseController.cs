@@ -26,7 +26,7 @@ namespace back_zipchat.Controllers
         [HttpPost]
         public async Task<IActionResult> RecebeAnamnese(MensagemModel mensagem)
         {
-            string resultadoprompt = "";
+            AnamneseModel resultadoprompt;
 
             try
             {
