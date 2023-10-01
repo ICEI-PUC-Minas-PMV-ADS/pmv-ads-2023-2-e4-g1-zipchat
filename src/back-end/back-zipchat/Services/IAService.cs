@@ -34,7 +34,6 @@ namespace back_zipchat.Services
             await _mongoDBService.CreateAsync(anamnese);
 
             return anamnese;
-            //return CreatedAtAction(nameof(Get), new { id = anamnese.Id }, anamnese);
         }
 
         public async Task<AnamneseModel> ChamaPrompt(MensagemModel mensagem)
