@@ -47,15 +47,23 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+A escolha dessas sub-características foi orientada pela necessidade de assegurar uma experiência de usuário robusta e eficiente na aplicação distribuída do chatbot. Essas métricas refletem a busca por um produto que atenda às expectativas dos usuários e mantenha altos padrões de qualidade em todas as facetas da aplicação.
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+|     Subcaracterísticas  |    justificativa    |
+|--------------------|---------------------------------------|
+| Funcionalidade | A correta compreensão das intenções dos usuários é crucial para fornecer respostas precisas. Uma alta taxa de compreensão reflete a eficácia do chatbot em entender as necessidades dos usuários, garantindo uma interação útil e satisfatória.  |
+| Confiabilidade | A confiabilidade do chatbot é essencial para manter uma experiência de usuário sem interrupções. Uma alta taxa de resolução de problemas sem falhas contribui para a confiança do usuário no sistema, evitando frustrações e garantindo uma interação suave.  |
+| Usabilidade | A usabilidade é um fator-chave na aceitação do chatbot pelos usuários. A taxa de engajamento reflete a capacidade do chatbot em manter os usuários interessados e envolvidos durante toda a conversa, contribuindo para uma experiência positiva. |
+| Eficiência de Desempenho | O tempo de resposta do chatbot é crítico para a satisfação do usuário. Uma resposta rápida indica eficiência, mantendo os usuários engajados. A escala permite avaliar se o desempenho atende às expectativas e se há espaço para melhorias.  |
+| Adaptabilidade | Com a aplicação distribuída utilizando diferentes tecnologias front-end, a adaptabilidade é crucial. A métrica de compatibilidade com dispositivos front-end reflete a capacidade do chatbot de oferecer uma experiência consistente em ambas as plataformas (Expo e React), garantindo uma interação eficaz em diferentes contextos.  |
+| Desempenho |  O desempenho geral do sistema é determinante para a eficiência da aplicação distribuída. A métrica de tempo de resposta do sistema avalia não apenas o chatbot, mas também a integração com APIs externas, como a do Chat GPT, assegurando uma experiência ágil e responsiva para os usuários em todas as operações. |
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+|     Subcaracterísticas  |    Métrica    | Escala    |
+|--------------------|-----------------|-------------------------|
+| Funcionalidade | capacidade do chatbot em entender corretamente as intenções dos usuários. | 1. Compreensão insatisfatória. 2. Compreensão parcial. 3. Compreensão aceitável. 4. Excelente compreensão.  |
+| Confiabilidade | capacidade do chatbot em resolver problemas sem interrupções inesperadas. | 1. Resolução problemática. 2. Resolução com algumas falhas. 3. Resolução eficaz. 4. Resolução sem interrupções.  |
+| Usabilidade | eficácia do chatbot em manter o engajamento do usuário ao longo da conversa. | 1. Baixo engajamento. 2. Engajamento moderado. 3. Alto engajamento. 4. Engajamento excepcional.  |
+| Eficiência de Desempenho | eficiência do chatbot em responder rapidamente às consultas dos usuários. | 1. Tempo de resposta inaceitavelmente. 2. Tempo de resposta aceitável. 3. Resposta rápida. 4.Resposta instantânea.  |
+| Adaptabilidade | capacidade do chatbot de se adaptar a diferentes dispositivos front-end. | 1.  Baixa adaptabilidade. 2. Adaptabilidade moderada. 3. Alta adaptabilidade. 4.Excelente adaptabilidade.  |
+| Desempenho | tempo total necessário para que o sistema responda a uma solicitação, considerando tanto a resposta do chatbot quanto a integração com APIs externas, como a API do Chat GPT. | 1.   Desempenho inaceitavelmente. 2. Desempenho aceitável. 3.Bom desempenho. 4.Excelente desempenho.  |
