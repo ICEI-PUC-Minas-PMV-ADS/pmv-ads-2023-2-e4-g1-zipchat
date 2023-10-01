@@ -11,17 +11,22 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![diagrama](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/e4569ef4-f299-4b48-935b-70e9e6b7eb44)
 
+# Documentação da Implementação do Banco de Dados Relacional
+
+A escolha de um banco de dados relacional é fundamentada na necessidade de lidar com dados altamente estruturados e inter-relacionados, como as informações de usuários, consultas médicas e anamneses. Os RDBMS oferecem uma modelagem de dados robusta, garantindo integridade referencial, consistência em transações e facilitando consultas complexas. Essa abordagem é especialmente relevante para aplicações que demandam uma estrutura rígida e relacionamentos bem definidos entre entidades, proporcionando confiabilidade e precisão nos dados.
+
 ## Modelo ER
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
 
-![diagraER drawio (2)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/29d5e38e-4c58-4e2b-94f8-b1a5f07cba2f)
+![diagraER drawio (3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/1908828a-0262-4b7e-851b-c4eb0cd79748)
 
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
  
-![zipchat](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/986dd0c7-ed5f-4687-8979-15fb51a567f6)
+![newDatabase](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/28df3652-8c78-4793-bd10-9b143c4be790)
+
 
 ## Documentação da Implementação do Banco de Dados NoSQL
 
