@@ -1,80 +1,78 @@
 using back_zipchat.Controllers;
+using back_zipchat.Interfaces;
 using back_zipchat.ModelsConfiguration;
+using back_zipchat.Services;
+using Keycloak.AuthServices.Authentication;
+using Keycloak.AuthServices.Authorization;
+using Keycloak.AuthServices.Sdk.Admin;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Repository;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Outros servi�os configurados aqui
-builder.Configuration.AddJsonFile("appsettings.json");
-builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-builder.Services.AddHttpClient<ChatZipController>();
+DotNetEnv.Env.Load();
+
+
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ZipChat", Version = "v1" });
+builder.Services.AddSwaggerGen();
 
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Description = "JWT Authorization header using the Bearer scheme. Exemplo: \"Bearer {token}\"",
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer"
-    });
+//Interfaces
+builder.Services.AddScoped<IAServiceInterface, IAService>();
 
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-        {
-            {
-                new OpenApiSecurityScheme
-                {
-                Reference = new OpenApiReference
-                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                    },
-                      Scheme = "oauth2",
-                      Name = "Bearer",
-                      In = ParameterLocation.Header,
 
-                },
-                    new string[] {}
-                }
-        });
-});
+// Builder CORS
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowAllOrigins",
+//        builder =>
+//        {
+//            builder.AllowAnyOrigin()
+//                   .AllowAnyMethod()
+//                   .AllowAnyHeader();
+//        });
+//});
 
-builder.Services.AddDbContext<ZipChatDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-    .AddJwtBearer(options =>
-    {
-        options.SaveToken = true;
-        options.RequireHttpsMetadata = false;
-        options.TokenValidationParameters = new TokenValidationParameters()
-        {
-            ValidateIssuer = false,
-            ValidateIssuerSigningKey = true,
-            ValidateAudience = false,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("o ceu esta azul e assim ando pelos caminhos sombrosos da terra")),
-            ClockSkew = TimeSpan.Zero
-        };
-    });
+// Builder Autenticação
+var authenticationOptions = builder
+                            .Configuration
+                            .GetSection(KeycloakAuthenticationOptions.Section)
+                            .Get<KeycloakAuthenticationOptions>();
+
+builder.Services.AddKeycloakAuthentication(authenticationOptions);
+
+var authorizationOptions = builder
+                            .Configuration
+                            .GetSection(KeycloakProtectionClientOptions.Section)
+                            .Get<KeycloakProtectionClientOptions>();
+
+builder.Services.AddKeycloakAuthorization(authorizationOptions);
+
+var adminClientOptions = builder
+                            .Configuration
+                            .GetSection(KeycloakAdminClientOptions.Section)
+                            .Get<KeycloakAdminClientOptions>();
+
+builder.Services.AddKeycloakAdminHttpClient(adminClientOptions);
+
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+//}).AddJwtBearer(options =>
+//{
+//    options.RequireHttpsMetadata = false;
+//});
+
 
 var app = builder.Build();
 
+// APP swagger
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -86,6 +84,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// APP CORS
+//app.UseCors("AllowAllOrigins");
 
 app.UseAuthentication();
 app.UseAuthorization();
