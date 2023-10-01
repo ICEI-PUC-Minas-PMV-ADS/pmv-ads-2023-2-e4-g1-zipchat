@@ -13,9 +13,13 @@ namespace back_zipchat.Models
 
         public string usuario { get; set; } = null!;
 
-        [BsonElement("items")]
-        [JsonPropertyName("items")]
-        public List<string> resultIA { get; set; } = null!;
+        public string sintomas { get; set; } = null!;
+
+        public string resultadoIA { get; set; } = null!;
+
+        //[BsonElement("items")]
+        //[JsonPropertyName("items")]
+        //public List<string> resultIA { get; set; } = null!;
     }
 }
 

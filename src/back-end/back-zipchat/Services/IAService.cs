@@ -7,6 +7,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace back_zipchat.Services
 {
@@ -28,6 +29,14 @@ namespace back_zipchat.Services
             return await _mongoDBService.GetAsync();
         }
 
+        private async Task<AnamneseModel> CreateAnamnese(AnamneseModel anamnese)
+        {
+            await _mongoDBService.CreateAsync(anamnese);
+
+            return anamnese;
+            //return CreatedAtAction(nameof(Get), new { id = anamnese.Id }, anamnese);
+        }
+
         public async Task<string> ChamaPrompt(MensagemModel mensagem)
 		{
             try
@@ -44,6 +53,7 @@ namespace back_zipchat.Services
 
                 string promptResponse = result.choices.FirstOrDefault().text;
 
+
                 if (response.StatusCode == HttpStatusCode.Unauthorized)
                     throw new Exception();
 
@@ -52,7 +62,15 @@ namespace back_zipchat.Services
 
 
                 if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    await CreateAnamnese(new AnamneseModel
+                    {
+                        usuario = mensagem.Emissor,
+                        sintomas = mensagem.Texto,
+                        resultadoIA = promptResponse
+                    });
                     return promptResponse;
+                }
 
                 return promptResponse;
             }
