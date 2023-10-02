@@ -29,6 +29,18 @@ namespace back_zipchat.Services
             return await _mongoDBService.GetAsync();
         }
 
+        public async Task<AnamneseModel> GetAnamnesesById(string id)
+        {
+            return await _mongoDBService.GetAsyncById(id);
+        }
+
+
+        public async Task<List<AnamneseModel>> GetAnamnesesByUser(string usuario)
+        {
+            return await _mongoDBService.GetAsync(usuario);
+        }
+
+
         private async Task<AnamneseModel> CreateAnamnese(AnamneseModel anamnese)
         {
             await _mongoDBService.CreateAsync(anamnese);

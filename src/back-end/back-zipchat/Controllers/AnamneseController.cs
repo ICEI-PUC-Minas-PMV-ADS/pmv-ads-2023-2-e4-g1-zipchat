@@ -41,9 +41,21 @@ namespace back_zipchat.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("/anamnese")]
         public async Task<List<AnamneseModel>> Get() {
             return await _IAService.GetAnamneses();
+        }
+
+        [HttpGet("/anamnese/{id}")]
+        public async Task<AnamneseModel> GetById(string id)
+        {
+            return await _IAService.GetAnamnesesById(id);
+        }
+
+        [HttpGet("/anamnese/usuario/{usuario}")]
+        public async Task<List<AnamneseModel>> GetByUser(string usuario)
+        {
+            return await _IAService.GetAnamnesesByUser(usuario);
         }
     }
 }
