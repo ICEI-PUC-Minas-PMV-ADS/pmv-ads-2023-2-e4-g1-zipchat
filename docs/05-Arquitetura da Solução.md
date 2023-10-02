@@ -40,9 +40,15 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+O coração desse projeto é a tecnologia .NET, uma estrutura poderosa desenvolvida pela Microsoft que fornece um ambiente robusto para o desenvolvimento de aplicativos. O uso do C#, uma linguagem de programação moderna e versátil, permite à equipe criar código eficiente e seguro.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+O Entity Framework é uma escolha natural para esse projeto, já que oferece um mapeamento eficiente entre o modelo de dados e o banco de dados relacional SQL Server. Essa combinação permite que os desenvolvedores construam aplicativos escaláveis com facilidade, mantendo a integridade dos dados e a eficiência das consultas.
+
+No entanto, este projeto vai além do SQL Server e incorpora a flexibilidade do NoSQL com o MongoDB. A capacidade de armazenar e recuperar dados não estruturados e sem esquema pré-definido torna o MongoDB uma opção ideal para casos de uso onde a adaptabilidade é fundamental.
+
+A equipe de desenvolvimento também optou por utilizar tecnologias de front-end modernas para oferecer uma experiência de usuário excepcional. O React Native, uma estrutura de desenvolvimento de aplicativos móveis, permite que a equipe crie aplicativos nativos para iOS e Android a partir de uma única base de código. Isso acelera o desenvolvimento e economiza recursos significativamente.
+
+Além disso, para o desenvolvimento de interfaces web dinâmicas e responsivas, o React é a tecnologia escolhida. A combinação de React Native e React garante uma consistência na experiência do usuário em dispositivos móveis e desktop.
 
 ## Estilo arquitetural do projeto
 
