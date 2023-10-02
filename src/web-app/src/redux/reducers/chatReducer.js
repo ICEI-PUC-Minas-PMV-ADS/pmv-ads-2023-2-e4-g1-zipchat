@@ -3,7 +3,7 @@ const chat = [
   {
     order: 0,
     type: 'response',
-    message: 'Seja bem-vindo, vamos começar a anmnese'
+    message: 'Seja bem-vindo, vamos começar a anmnese! Por favor me descreva seus sintomas!'
   }
 ] 
 
