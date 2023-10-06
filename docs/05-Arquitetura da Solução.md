@@ -37,7 +37,7 @@ A integração do MongoDB neste projeto se justifica pela flexibilidade que ofer
 ## Modelo Físico
 
 Arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados.
-[Link para sript](src/db/zipchat.sql)
+[Link para sript](../src/db/zipchat.sql)
 
 
 ## Tecnologias Utilizadas
