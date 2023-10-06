@@ -19,7 +19,7 @@ A escolha de um banco de dados relacional é fundamentada na necessidade de lida
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
 
-![diagraER drawio (3)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/1908828a-0262-4b7e-851b-c4eb0cd79748)
+![zipchat](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/44552ae0-ced1-44d2-9b3e-4a12fdc653c2)
 
 ## Esquema Relacional
 
@@ -36,7 +36,9 @@ A integração do MongoDB neste projeto se justifica pela flexibilidade que ofer
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+Arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados.
+[Link para sript](src/db/zipchat.sql)
+
 
 ## Tecnologias Utilizadas
 
