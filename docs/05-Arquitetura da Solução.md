@@ -39,6 +39,12 @@ A integração do MongoDB neste projeto se justifica pela flexibilidade que ofer
 Arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados.
 [Link para sript](../src/db/zipchat.sql)
 
+## Contrato da api
+
+Documentação da api (swagger).
+[Link para doc](../src/doc-pdf-api/Swagger.pdf)
+
+
 
 ## Tecnologias Utilizadas
 
