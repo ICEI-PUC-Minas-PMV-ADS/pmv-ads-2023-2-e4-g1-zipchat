@@ -1,12 +1,17 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+CT-001 - Registrar histórico do paciente
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/0d210c71-8549-4708-88ff-a63f9fdaf95b)
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+CT-02 – Coletar informações do paciente
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fe1c80f2-ccc4-46b8-a04a-75646b2335de)
+
+
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+O objetivo desta avaliação é analisar se a aplicação ZipChat atende os requisitos previamente propostos.
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+CT-01 - Durante a execução dos testes não ocorreu nenhum problema com a funcionalidade, demonstrando que a inserção no BD esta ocorrendo conforme o previsto.
+
+CT-02 - Durante a execução dos testes não ocorreu nenhum problema com a funcionalidade, demonstrando que a coleta de informações do paciente no BD esta ocorrendo conforme o previsto.
