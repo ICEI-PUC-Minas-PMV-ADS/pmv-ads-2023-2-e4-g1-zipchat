@@ -1,9 +1,11 @@
 # Registro de Testes de Software
 
 CT-001 - Registrar histórico do paciente
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/0d210c71-8549-4708-88ff-a63f9fdaf95b)
 
 CT-02 – Coletar informações do paciente
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fe1c80f2-ccc4-46b8-a04a-75646b2335de)
 
 
