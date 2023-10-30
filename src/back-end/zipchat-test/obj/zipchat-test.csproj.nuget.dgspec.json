@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/zipchat-test.csproj": {}
+    "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\zipchat-test.csproj": {}
   },
   "projects": {
-    "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/zipchat-test.csproj": {
+    "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/zipchat-test.csproj",
-        "projectName": "zipchat-test",
-        "projectPath": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/zipchat-test.csproj",
-        "packagesPath": "/Users/outrogato/.nuget/packages/",
-        "outputPath": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/obj/",
+        "projectUniqueName": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj",
+        "projectName": "back-zipchat",
+        "projectPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj",
+        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/outrogato/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,9 +40,129 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "IdentityModel.AspNetCore": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Keycloak.AuthServices.Authentication": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Keycloak.AuthServices.Authorization": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.22, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Refit.HttpClientFactory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\zipchat-test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\zipchat-test.csproj",
+        "projectName": "zipchat-test",
+        "projectPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\zipchat-test.csproj",
+        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj": {
+                "projectPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -50,7 +172,7 @@
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.5.1, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -75,7 +197,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

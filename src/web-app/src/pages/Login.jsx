@@ -5,10 +5,14 @@ import IconEye from "../assets/icons/IconEye";
 import IconEyeInvisible from "../assets/icons/IconEyeInvisible";
 import zipchatLogo from "../assets/zipchat02.png";
 import design from "../assets/Design.png";
+import './telas.css';
+import { redirect, useNavigate } from "react-router-dom";
+import { auth, post } from "../../agent"
 
 function Login() {
   const [hasLenght, setHasLength] = useState("");
   const [showPass, setShowPass] = useState(false);
+  const navigate = useNavigate();
 
   const sendFormDateExample = (e) => {
     e.preventDefault();
@@ -18,18 +22,20 @@ function Login() {
       username: data.get("email"),
       password: data.get("password"),
     };
+    auth(formValues)
+    navigate('/chat')
 
-    console.log(formValues);
   };
 
   return (
-    <section className="flex border-2 items-center w-full  justify-center h-screen md:h-[80vh]  bg-white max-w-screen-xl ">
+    <section className="flex items-center h-screen justify-center">
+    <div className="flex border-2 items-center w-full  justify-center h-screen md:h-[80vh]  bg-white max-w-screen-xl ">
       <div className="flex w-full md:w-3/6 flex-col items-center ">
         <div className="flex items-center justify-center">
           <img src={zipchatLogo} alt="logo" width={170} className="lg:w-2/5"/>
         </div>
 
-        <h1 className="md:text-3xl lg:text-2xl text-4xl lg:mt-2 mb-14 lg:mb-4 font-bold text-colors-whatsapp-green">
+        <h1 className="md:text-3xl lg:text-2xl text-4xl lg:mt-2 mb-14 lg:mb-4 font-bold text-what-grenn">
           Bem-vindo de volta
         </h1>
 
@@ -38,7 +44,6 @@ function Login() {
             <IconCircleUser className="mr-3" width={20} height={20} />
             <input
               name="email"
-              type="email"
               placeholder="E-mail"
               className="text-lg"
             />
@@ -74,30 +79,31 @@ function Login() {
 
           <div
             onClick={() => {}}
-            className="ml-auto text-colors-blue-link mt-8 cursor-pointer"
+            className="ml-auto text-blue-link  mt-8 cursor-pointer"
           >
             <span>Esqueceu password</span>
           </div>
 
           <button
-            className="mt-12 transition-all duration-300 hover:bg-colors-whatsapp-green-button/80 p-1 md:w-5/5 bg-colors-whatsapp-green-button rounded-lg text-white font-bold text-xl"
+            className="mt-12 transition-all duration-300 hover:bg-colors-whatsapp-green-button/80 p-1 md:w-5/5 bg-what-grenn rounded-lg text-white font-bold text-xl"
             type="submit"
           >
             Login
           </button>
         </form>
 
-        <div onClick={() => {}} className="text-colors-blue-link mt-8 cursor-pointer">
+        <div onClick={() => {}} className="text-blue-link mt-8 cursor-pointer">
           <span>Não tem conta? Cadastre</span>
         </div>
       </div>
 
       <div className=" w-4/6 relative h-full hidden md:flex items-center">
-        <div className="absolute h-3/6 w-4/6  bg-colors-whatsapp-green right-0 top-0"></div>
+        <div className="absolute h-3/6 w-4/6 bg-what-grenn right-0 top-0"></div>
         <div className="z-10">
           <img alt="cell phone image" src={design} className="" />
         </div>
       </div>
+    </div>
     </section>
   );
 }

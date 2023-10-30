@@ -4,6 +4,7 @@ import IconEyeInvisible from "../assets/icons/IconEyeInvisible";
 import IconExclamationCircle from "../assets/icons/IconExclamationCircle";
 import IconArrowBackOutline from "../assets/icons/IconArrowBackOutline";
 import passRecorverImg from '../assets/DesignPass.png';
+import './telas.css';
 
 function PasswordRecover() {
   const [password, setPassword] = useState("");
@@ -45,7 +46,8 @@ function PasswordRecover() {
   };
 
   return (
-    <section className="flex border-2 items-center w-full  justify-center h-screen md:h-[80vh]  bg-colors-whatsapp-green max-w-screen-xl ">
+    <section className="flex items-center h-screen justify-center">
+    <div className="flex border-2 items-center w-full  justify-center h-screen md:h-[80vh]  bg-what-grenn max-w-screen-xl ">
       <div className="flex w-full md:w-3/6 flex-col items-center ">
 
      
@@ -97,7 +99,7 @@ function PasswordRecover() {
           </div>
 
           <button
-            className="mt-12 transition-all duration-300 hover:bg-colors-whatsapp-green-button/80 p-3 md:w-full bg-colors-whatsapp-green-button rounded-lg text-white font-bold text-xl"
+            className="mt-12 transition-all duration-300 hover:bg-colors-whatsapp-green-button/80 p-3 md:w-full bg-whatsapp-green-button rounded-lg text-white font-bold text-xl"
             type="submit"
           >
             Enviar
@@ -120,6 +122,7 @@ function PasswordRecover() {
           />
         </div>
       </div>
+    </div>
     </section>
   );
 }
