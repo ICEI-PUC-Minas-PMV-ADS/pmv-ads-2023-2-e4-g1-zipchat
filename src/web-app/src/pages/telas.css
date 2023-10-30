@@ -1,0 +1,20 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  all: initial;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  max-width: 100vw;
+  background: url("../assets/bg-03.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
