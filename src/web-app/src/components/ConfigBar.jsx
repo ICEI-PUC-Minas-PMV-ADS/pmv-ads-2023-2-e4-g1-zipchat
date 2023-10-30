@@ -21,10 +21,10 @@ function ConfigBar({logout}) {
         ) : (
           <IconMoon widht={26} height={26} />
         )}
+      </div>
         <div onClick={logout} className="">
           <IconLogoutBoxLine widht={16} height={16} />
         </div>
-      </div>
     </div>
   );
 }
