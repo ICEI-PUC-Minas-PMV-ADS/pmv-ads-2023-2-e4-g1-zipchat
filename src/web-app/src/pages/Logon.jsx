@@ -4,12 +4,16 @@ import IconEyeInvisible from "../assets/icons/IconEyeInvisible";
 import IconExclamationCircle from "../assets/icons/IconExclamationCircle";
 import design from "../assets/Design03.png";
 import './telas.css';
+import { redirect, useNavigate } from "react-router-dom";
+import { cad } from "../../agent"
 
 function Logon() {
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [showPass, setShowPass] = useState(false);
   const [showExlamation, setShowExlamation] = useState(false);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const sendFormDataExample = (e) => {
     e.preventDefault();
@@ -31,6 +35,18 @@ function Logon() {
       password: data.get("confirmPassword"),
     };
 
+    cad(formValues)
+    .then((authSuccess) => {
+        if (authSuccess) {
+           navigate('/chat')
+        } else {
+            console.log('Falha na autenticação');
+        }
+    })
+    .catch((error) => {
+        console.error('Erro na autenticação:', error);
+        setError("Erro ao cadastrar novo usuário."); 
+    });
     console.log(formValues);
   };
 
@@ -119,8 +135,12 @@ function Logon() {
               Cadastro
             </button>
           </form>
-
-          <div className="text-blue-link mt-8 lg:mt-3">
+          {error && (
+            <div className="text-red-500 mt-4 text-lg">
+              {error}
+            </div>
+          )}  
+          <div onClick={() => {navigate('/')}}  className="text-blue-link mt-8 lg:mt-3">
             <span>Já tem uma conta? Log in</span>
           </div>
         </div>

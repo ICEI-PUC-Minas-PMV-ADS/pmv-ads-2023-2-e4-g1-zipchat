@@ -12,18 +12,30 @@ import { auth, post } from "../../agent"
 function Login() {
   const [hasLenght, setHasLength] = useState("");
   const [showPass, setShowPass] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const sendFormDateExample = (e) => {
+  const sendFormDateExample = async (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
-
+  
     const formValues = {
       username: data.get("email"),
       password: data.get("password"),
     };
+  
     auth(formValues)
-    navigate('/chat')
+    .then((authSuccess) => {
+        if (authSuccess) {
+           navigate('/chat')
+        } else {
+            console.log('Falha na autenticação');
+        }
+    })
+    .catch((error) => {
+        console.error('Erro na autenticação:', error);
+        setError("Credenciais inválidas. Verifique seu e-mail e senha."); 
+    });
 
   };
 
@@ -78,7 +90,7 @@ function Login() {
           </div>
 
           <div
-            onClick={() => {}}
+            onClick={() => {navigate('/recorver')}}
             className="ml-auto text-blue-link  mt-8 cursor-pointer"
           >
             <span>Esqueceu password</span>
@@ -91,8 +103,12 @@ function Login() {
             Login
           </button>
         </form>
-
-        <div onClick={() => {}} className="text-blue-link mt-8 cursor-pointer">
+        {error && (
+            <div className="text-red-500 mt-4 text-lg">
+              {error}
+            </div>
+          )}
+        <div onClick={() => {navigate('/logon')}} className="text-blue-link mt-8 cursor-pointer">
           <span>Não tem conta? Cadastre</span>
         </div>
       </div>

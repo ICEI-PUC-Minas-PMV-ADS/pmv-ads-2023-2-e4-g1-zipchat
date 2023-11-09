@@ -97,6 +97,7 @@ function Chat() {
 
   /* manda mensagem*/
   const handleSendMessage = async (message) => {
+    console.log("chatActiveId",chatActiveId)
     if (!chatActiveId) {
       // Creating new chat
       let newChatid = uuidv4();
