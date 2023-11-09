@@ -28,7 +28,7 @@ function Sidebar({children, onClear, onNewChat, onLogOut}) {
           <div className={`border-t  pt-2 ${theme === 'dark' ? 'border-gray-700' : 'border-gray-100'}`}>
             <SidebarButton 
             icon={<IconTrash width={16} height={16}/>}
-            label="Apagar todoas as conversas"
+            label="Apagar todas as conversas"
             onClick={onClear}
             />
           </div>

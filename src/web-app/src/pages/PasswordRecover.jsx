@@ -5,12 +5,14 @@ import IconExclamationCircle from "../assets/icons/IconExclamationCircle";
 import IconArrowBackOutline from "../assets/icons/IconArrowBackOutline";
 import passRecorverImg from '../assets/DesignPass.png';
 import './telas.css';
+import { useNavigate } from "react-router-dom";
 
 function PasswordRecover() {
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [showPass, setShowPass] = useState(false);
   const [showExlamation, setShowExlamation] = useState(false);
+  const navigate = useNavigate();
 
   const sendFormDataExample = (e) => {
     e.preventDefault();
@@ -106,7 +108,7 @@ function PasswordRecover() {
           </button>
         </form>
 
-        <div onClick={""} className="font-bold flex justify-center cursor-pointer p-2  mt-8 text-white">
+        <div onClick={() => navigate('/')} className="font-bold flex justify-center cursor-pointer p-2  mt-8 text-white">
           <IconArrowBackOutline width={24} height={24}className="mr-5"/>
           <span >Voltar Login</span>
         </div>

@@ -20,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/chat",
     element: <Chat />,
+    canActivate: () => {
+      const token = localStorage.getItem('token');
+      return !!token; 
+    },
   },
   {
     path: "/logon",

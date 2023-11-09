@@ -16,7 +16,10 @@ export const auth = (credentials) => {
         
         axios.post('http://127.0.0.1:8080/realms/zipchat/protocol/openid-connect/token', params)
             .then((response) => {
-                instance.defaults.headers.common['Authorization'] = "Bearer " + response.data.access_token;
+                const access_token = response.data.access_token;
+                instance.defaults.headers.common['Authorization'] = "Bearer " + access_token;
+                
+                localStorage.setItem('access_token', access_token);
                 resolve(true); // Autenticação bem-sucedida, retorna true
             })
             .catch((error) => {

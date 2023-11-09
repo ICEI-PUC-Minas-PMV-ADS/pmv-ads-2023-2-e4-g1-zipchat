@@ -7,7 +7,7 @@ import { useThemeProvider } from "../zustang/ThemeProvider";
 import { v4 as uuidv4 } from "uuid";
 import SideBarChatButton from "../components/SideBarChatButton";
 import { post} from "../../agent"
-
+import { redirect, useNavigate } from "react-router-dom";
 const exemploChat = {
   id: "1",
   title: "Exemplo de Chat",
@@ -28,6 +28,7 @@ const exemploChat = {
 
 
 function Chat() {
+  const navigate = useNavigate();
   const { theme } = useThemeProvider();
 
   const [chatActive, setChatActive] = useState({});
@@ -97,7 +98,6 @@ function Chat() {
 
   /* manda mensagem*/
   const handleSendMessage = async (message) => {
-    console.log("chatActiveId",chatActiveId)
     if (!chatActiveId) {
       // Creating new chat
       let newChatid = uuidv4();
@@ -131,7 +131,11 @@ function Chat() {
     setAILoading(true);
   };
 
-  const handleLogOut = () => {};
+  const handleLogOut = () => {
+    localStorage.removeItem('access_token');
+    navigate('/')
+
+  };
   /************************************************** */
 
   /***********************funções no SideBarChatButton *********8 */
@@ -143,8 +147,13 @@ function Chat() {
     if(item) setChatActiveId(item.id)
   };
 
-  const handleDeleteChat = () => {
-
+  const handleDeleteChat = (id) => {
+    if(AILoading) return 
+    let chatListClone = [...chatList];
+    const chatIndex = chatListClone.findIndex(item => item.id === id);
+    chatListClone.splice(chatIndex, 1);
+    setChatList(chatListClone);
+    setChatActiveId("");
   };
 
   return (
