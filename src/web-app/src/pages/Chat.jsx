@@ -6,8 +6,9 @@ import Footer from "../components/Footer";
 import { useThemeProvider } from "../zustang/ThemeProvider";
 import { v4 as uuidv4 } from "uuid";
 import SideBarChatButton from "../components/SideBarChatButton";
-import { post} from "../../agent"
+import { post, get} from "../../agent"
 import { redirect, useNavigate } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 const exemploChat = {
   id: "1",
   title: "Exemplo de Chat",
@@ -38,6 +39,26 @@ function Chat() {
   /**********simulando chat************************** */
   const [chatList, setChatList] = useState([]);
   const [chatActiveId, setChatActiveId] = useState("");
+
+  const access_token = localStorage.getItem('access_token');
+
+  const decodedToken = jwtDecode(access_token);
+
+  // Acesse o nome do usuário a partir do token decodificado
+  const userName = decodedToken.name.split(" ")[0];
+  console.log("userName");
+  console.log(userName);
+  const getLastChats = () => {
+    get(`anamnese/usuario/${userName}`).then(response => {
+      let lastChats = response.data.map(element => ({
+        id: element.id,
+        author: "me",
+        title: element.sintomas,
+        body: element.sintomas
+      }));
+      setChatList(lastChats)
+    })
+  }
 
   useEffect(() => {
       setChatActive(chatList.find(item => item.id === chatActiveId));
@@ -86,7 +107,7 @@ function Chat() {
 
   const sendAnamnese = async (message) => {
     post('anamnese', {
-      "emissor": "vinicius",
+      "emissor": {userName},
       "texto": message,
       "data": "2023-10-01T17:08:24.968Z"
     })
@@ -156,6 +177,8 @@ function Chat() {
     setChatActiveId("");
   };
 
+
+  getLastChats()
   return (
     <main
       className={`flex min-h-screen ${
