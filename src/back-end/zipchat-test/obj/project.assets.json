@@ -13318,34 +13318,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vinic\\.nuget\\packages\\": {}
+    "/Users/outrogato/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\zipchat-test.csproj",
+      "projectUniqueName": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/zipchat-test.csproj",
       "projectName": "zipchat-test",
-      "projectPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\zipchat-test.csproj",
-      "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\zipchat-test\\obj\\",
+      "projectPath": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/zipchat-test.csproj",
+      "packagesPath": "/Users/outrogato/.nuget/packages/",
+      "outputPath": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/outrogato/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj": {
-              "projectPath": "C:\\Users\\vinic\\Documents\\Projetos\\pmv-ads-2023-2-e4-g1-zipchat\\src\\back-end\\back-zipchat\\back-zipchat.csproj"
+            "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/back-zipchat/back-zipchat.csproj": {
+              "projectPath": "/Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/back-zipchat/back-zipchat.csproj"
             }
           }
         }
@@ -13401,7 +13399,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
       }
     }
   }

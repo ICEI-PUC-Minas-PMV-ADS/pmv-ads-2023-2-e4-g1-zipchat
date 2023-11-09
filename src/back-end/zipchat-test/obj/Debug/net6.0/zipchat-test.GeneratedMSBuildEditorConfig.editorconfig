@@ -9,4 +9,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = zipchat_test
-build_property.ProjectDir = C:\Users\vinic\Documents\Projetos\pmv-ads-2023-2-e4-g1-zipchat\src\back-end\zipchat-test\
+build_property.ProjectDir = /Users/outrogato/Documents/pmv-ads-2023-2-e4-g1-zipchat/src/back-end/zipchat-test/

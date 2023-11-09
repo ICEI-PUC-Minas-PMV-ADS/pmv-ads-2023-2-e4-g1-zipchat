@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const instance = axios.create({
-    baseURL: 'https://localhost:7275/'
+    // baseURL: 'https://localhost:7275/'
 });
 
 export const auth = (credentials) => {
@@ -16,6 +16,8 @@ export const auth = (credentials) => {
         
         axios.post('http://127.0.0.1:8080/realms/zipchat/protocol/openid-connect/token', params)
             .then((response) => {
+                console.log('response')
+                console.log(response)
                 const access_token = response.data.access_token;
                 instance.defaults.headers.common['Authorization'] = "Bearer " + access_token;
                 
@@ -28,7 +30,50 @@ export const auth = (credentials) => {
             });
     });
 }
-export const cad = (credentials) => {
+
+export const addUser = (user) => {
+    return instance.post('http://127.0.0.1:8080/admin/realms/zipchat/users', {
+        "username": user.username,
+        "email": user.email,
+        "firstName": user.username,
+        "lastName": user.username,
+        "emailVerified": true,
+        "enabled": true,
+        "requiredActions": [],
+        "groups": []
+    })
+}
+
+
+export const getUserList = () => {
+    return instance.get("http://127.0.0.1:8080/admin/realms/zipchat/users")
+}
+
+export const addPass = (userId, pass) => {
+    return instance.put(`http://127.0.0.1:8080/admin/realms/zipchat/users/${userId}/reset-password`, {
+        "temporary": false,
+        "type": "password",
+        "value": pass
+    })
+}
+
+
+export const userRegister = async (user) => {
+    return new Promise((resolve, reject) => {
+        console.log(user)
+        auth({username: "admin", password: "admin"})
+
+        addUser(user)
+        .then(response => {
+            getUserList()
+            .then(response => { 
+                let createdUser = response.data.filter(x => x.username == user.username)[0].id
+                console.log(createdUser)
+                addPass(createdUser, user.password).then(() => {resolve({authSuccess: true})})
+            })
+        })
+    });
+
     // return new Promise((resolve, reject) => {
     //     var params = new URLSearchParams();
     //     params.append('username', credentials.username);
@@ -50,5 +95,9 @@ export const cad = (credentials) => {
 }
 
 export const post = (uri, data) => {
-    return instance.post(uri, data);
+    return instance.post('https://localhost:7275/'+uri, data);
+}
+
+export const get = (uri, data) => {
+    return instance.get('https://localhost:7275/'+uri);
 }

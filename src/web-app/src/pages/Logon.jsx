@@ -5,7 +5,7 @@ import IconExclamationCircle from "../assets/icons/IconExclamationCircle";
 import design from "../assets/Design03.png";
 import './telas.css';
 import { redirect, useNavigate } from "react-router-dom";
-import { cad } from "../../agent"
+import { userRegister } from "../../agent"
 
 function Logon() {
   const [password, setPassword] = useState("");
@@ -30,15 +30,17 @@ function Logon() {
 
     const formValues = {
       name: data.get("name"),
-      usuário: data.get("usuario"),
-      username: data.get("email"),
+      username: data.get("usuario"),
+      email: data.get("email"),
       password: data.get("confirmPassword"),
     };
 
-    cad(formValues)
+    userRegister(formValues)
     .then((authSuccess) => {
+        console.log("authSuccess")
+        console.log(authSuccess)
         if (authSuccess) {
-           navigate('/chat')
+           navigate('/')
         } else {
             console.log('Falha na autenticação');
         }
