@@ -35,6 +35,10 @@ Quanto ao tema Dark:
 
 Em resumo, uma paleta equilibrada. Os tons de azul acinzentado e roxo criam uma atmosfera de calma e mistério, enquanto o bege claro oferece contraste e destaque, garantindo uma experiência visualmente agradável para os usuários que interagem com o chat bot na página de tema escuro.
 
+
+
+## Web
+
 #### Tela Login
 
 ![1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/ef8f5725-f227-408a-a274-865f05702301)
@@ -55,3 +59,25 @@ Em resumo, uma paleta equilibrada. Os tons de azul acinzentado e roxo criam uma 
 #### Tela Chat - Dark
 
 ![FireShot Capture 001 - Vite + React - localhost](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/7cf6055d-9035-4bec-9b2b-3f3fec34c9b8)
+
+## Mobile
+
+#### Tela Preload
+
+![1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/8353f8a9-0f21-44ed-a1b4-447be6bb69e2)
+
+#### Tela Login
+
+![2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/1588a855-9733-4be3-8edc-5042ccb684b2)
+
+#### Tela Logon
+
+![3](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/52bf3178-f38f-45dc-ae66-fea5c46ee74f)
+
+#### Tela Recuperar Senha
+
+![4](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/fa9ddafc-e8e1-4e85-ac84-1d74e10621f3)
+
+#### Tela Chat
+
+![5](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/100283917/c30dbc51-8b5a-4302-af4b-041816788107)
