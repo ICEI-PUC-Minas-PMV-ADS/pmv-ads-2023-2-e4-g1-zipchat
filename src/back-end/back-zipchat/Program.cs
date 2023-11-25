@@ -67,7 +67,6 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader());
 });
 
-
 // Builder Autenticação
 var authenticationOptions = builder
                             .Configuration
@@ -103,8 +102,6 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseHttpsRedirection();
-
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -114,3 +111,5 @@ app.MapControllers();
 app.UseCors();
 
 app.Run();
+
+Console.WriteLine("App running...");

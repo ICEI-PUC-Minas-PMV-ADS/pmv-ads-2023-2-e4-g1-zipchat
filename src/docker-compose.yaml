@@ -1,5 +1,28 @@
 version: '3.3'
 services:
+  back-end-service:
+    build: ./back-end/
+    ports:
+      - 5000:80
+      - 5001:5039
+      - 7275:7275
+    networks:
+      - mongo-compose-network
+    environment:
+      AI_HOST: https://api.openai.com/v1/completions
+      AI_KEY: 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
+      KEYCLOACK_REALM: zipchat
+      KEYCLOACK_AUTH_SERVER: http://127.0.0.1:8080/
+      KEYCLOACK_AUTHORITY: https://127.0.0.1:8080/auth/realms/zipchat
+      KEYCLOACK_SSL_REQUIRED: none
+      KEYCLOACK_RESOURCE: zipchat-api
+      KEYCLOACK_VERIFY_TOKEN_AUDIENCE: true
+      KEYCLOACK_CREDENTIALS_SECRET: apFCRbmwETIKR78F4stVqHQNy3SUhK5O
+      KEYCLOACK_CONFIDENTIAL_PORT: 0
+      KEYCLOACK_RESPONSE_TYPE: code
+    depends_on:
+      - mongo
+
   mongo:
     image: mongo
     restart: always
