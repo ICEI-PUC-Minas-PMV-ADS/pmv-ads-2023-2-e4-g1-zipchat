@@ -4,13 +4,17 @@ CT-001 - Registrar histórico do paciente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/0d210c71-8549-4708-88ff-a63f9fdaf95b)
 
-CT-02 – Coletar informações do paciente
+CT-002 - Inserindo um usuário como Nulo
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/cab7eb0c-0b82-444e-968c-ddb94ec233d7)
+
+CT-003 – Coletar informações do paciente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fe1c80f2-ccc4-46b8-a04a-75646b2335de)
 
-CT-03 - Inserindo um usuário como Nulo
+CT-004 - Simulando a recuperação de um id inexistente
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/cab7eb0c-0b82-444e-968c-ddb94ec233d7)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/4f5a4cb6-a22a-4842-b5da-d212a55aa26a)
 
 
 
