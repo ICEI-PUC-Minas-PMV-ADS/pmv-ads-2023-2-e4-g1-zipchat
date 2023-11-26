@@ -4,7 +4,7 @@ CT-001 - Registrar histórico do paciente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/0d210c71-8549-4708-88ff-a63f9fdaf95b)
 
-CT-002 - Inserindo um usuário faltando um campo
+CT-002 - Ausencia de campo obrigatório
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/92c8e384-525e-4902-8aef-dc4e0ea1870d)
 
