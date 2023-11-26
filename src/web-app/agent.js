@@ -32,18 +32,18 @@ export const auth = (credentials) => {
     });
 }
 
-export const addUser = (user) => {
-    return instance.post(`${KEYCLOACK_BASE_URL}/admin/realms/zipchat/users`, {
-        "username": user.username,
-        "email": user.email,
-        "firstName": user.username,
-        "lastName": user.username,
-        "emailVerified": true,
-        "enabled": true,
-        "requiredActions": [],
-        "groups": []
-    })
-}
+// export const addUser = (user) => {
+//     return instance.post(`${KEYCLOACK_BASE_URL}/admin/realms/zipchat/users`, {
+//         "username": user.username,
+//         "email": user.email,
+//         "firstName": user.username,
+//         "lastName": user.username,
+//         "emailVerified": true,
+//         "enabled": true,
+//         "requiredActions": [],
+//         "groups": []
+//     })
+// }
 
 
 export const getUserList = () => {
