@@ -6,8 +6,26 @@
 | Objetivo do Teste 	| Verificar inserção dos dados informados pelo paciente no banco de dados. |
 |Critério de Êxito | Persistência dos dados no BD  |
 
-| **Caso de Teste** 	| **CT-02 – Coletar informações do paciente** 	|
+| **Caso de Teste** 	| **CT-002 – Ausência de campo obrigatório** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-007 - Registrar o histórico de conversas do paciente |
+| Objetivo do Teste 	| Verificar se será lançado uma exceção ao tentar inserir uma anamnese faltando os simtomas |
+|Critério de Êxito | Lançamento de exceção  |
+
+| **Caso de Teste** 	| **CT-003 – Coletar informações do paciente** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-003 - Coletar informações médicas básicas do paciente |
 | Objetivo do Teste 	| Verificar recuperação dos dados no banco através de um ID |
 |Critério de Êxito | Recuperação das informações no BD  |
+
+| **Caso de Teste** 	| **CT-004 - Passar um id inexistente para coletar as informações** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-003 - Coletar informações médicas básicas do paciente |
+| Objetivo do Teste 	| Verificar se será lançado uma exceçã |
+|Critério de Êxito | Recuperação das informações no BD  |
+
+| **Caso de Teste** 	| **CT-004 - Inserir anamnese com a ausência do campo simtomas** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-007 - Coletar informações médicas básicas do paciente |
+| Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "MissingFieldException" |
+|Critério de Êxito | Lançamento da exceção "MissingFieldException" com a mensagem: "Ausência de um campo obrigatório"  |
