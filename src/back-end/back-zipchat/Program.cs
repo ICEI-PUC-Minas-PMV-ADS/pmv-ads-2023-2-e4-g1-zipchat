@@ -2,6 +2,7 @@ using back_zipchat.Configuration;
 using back_zipchat.Controllers;
 using back_zipchat.Interfaces;
 using back_zipchat.ModelsConfiguration;
+using back_zipchat.Repository;
 using back_zipchat.Services;
 using Keycloak.AuthServices.Authentication;
 using Keycloak.AuthServices.Authorization;
@@ -54,10 +55,12 @@ builder.Services.AddSwaggerGen(c =>
 
 //Interfaces
 builder.Services.AddScoped<IAServiceInterface, IAService>();
+builder.Services.AddScoped<ICalendarInterface, CalendarService>();
 
 //MongoDB
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
-builder.Services.AddSingleton<MongoDBService>();
+builder.Services.AddSingleton<AnamneseRepository>();
+builder.Services.AddSingleton<CalendarRepository>();
 
 builder.Services.AddCors(options =>
 {

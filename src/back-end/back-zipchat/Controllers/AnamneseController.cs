@@ -9,13 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace back_zipchat.Controllers
 {
     [ApiController]
-    [Authorize]
     [Route("anamnese")]
     public class AnamneseController : ControllerBase
     {
 
         private readonly IAServiceInterface _IAService;
-        private readonly MongoDBService _mongoDBService;
 
         public AnamneseController(IAServiceInterface iAService)
 		{

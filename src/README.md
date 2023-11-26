@@ -32,11 +32,13 @@ Após a subida do docker, é possivel rodar cada aplicação individualmentee se
 
 Após subir as peças via docker-compose:
 - keycloack admin: http://localhost:8080/admin/master/console/
-- mongo-express: http://localhost:8081/  
+- mongo-express: hadminttp://localhost:8081/  
 - back-end: 
-    USANDO VS: https://localhost:7275
-    VIA DOCKER: http://localhost:5000
-- web-front: https://localhost:3000
+    VIA Visual Studio: https://localhost:7275
+    VIA DOCKER: http://localhost:5000  (sem SSL)
+- web-front: 
+    VIA TERMINAL: https://localhost:3000
+    VIA DOCKER: https://localhost:3001
 
 # Configurando
 
@@ -62,21 +64,62 @@ Clicar em Master que vai abrir um menu com um botão azul `Create Realm`, vai ab
 
 No canto esquerdo, clique em `Clients`, na lateral direita vai aparecer `Import client`, e importe o aquivo o caminho abaixo.
 
+- `Client ID` tem de ser `zipchat-api`
+
+
 `src/local/zipchat-api.json`
 
 ### Criação de usuário
-Em seguida clique em usuário, crie um usuário com o parametro `Email Verified` true e salva, depois Vai na aba `Credentials` e crie um novo password, desmarque a opção `Temporary Password`.
+- Em seguida clique em `Users` na barra lateral esquerda;
+- depois em `Add user`; 
+- preencha conforme achar melhor;
+- o parametro `Email Verified` true
+- click em `Create`
+- depois Vai na aba `Credentials` e crie um novo password, desmarque a opção `Temporary Password`.
+- clique em `Save`
 
 ### Criação de usuário ADMIN
-#TODO
+- Em seguida clique em `Users` na barra lateral esquerda;
+- depois em `Add user`; 
+- preencha conforme:
+    - username: admin
+    - email: admin@gmail.com
+    - First name: admin
+    - Last name: admin
+- o parametro `Email Verified` true
+- click em `Create`
+- depois Vai na aba `Credentials` e crie um novo password, desmarque a opção `Temporary Password`.
+- clique em `Save`
+
+Agora vamos criar o grupo de admin
+- Em seguida clique em `Groups` na barra lateral esquerda;
+- `Create group`
+- Name: `admin`
+- Clique na aba `Role mapping`
+- Clique em `Assign role`
+- Clique em todas as roles
+- Clique em `Assign`
+
+Agora vamos atribuir essa role ao usuário `admin`
+- Em seguida clique em `Users` na barra lateral esquerda;
+- Selecione o usuário `admin`
+- Clique na aba `Groups`
+- Clique em `Join Group`
+- Selecione `admin`
+- Clique em `Join`
 
 Doc Referencia:
 https://marraia.medium.com/utiliza%C3%A7%C3%A3o-do-keycloak-em-aplica%C3%A7%C3%B5es-net-6-0-4a787520c85b
 
 --- 
 
-## Back-end
-Importar a solução back-zipchat.sln no visual studio
+## Back-end utilizando o Docker [Utilizando back]
+- Inserir `API_KEY` do chactGPT na varíavel `AI_KEY` no arquivo `docker-compose.yaml` em `back-end-service > environment`
+- Colocar como `false` na variável `TEST` no arquivo `docker-compose.yaml` em `back-end-service > environment`
+
+## Back-end utilizando o Visual Studio [Desenvolvimento back]
+- Importar a solução back-zipchat.sln no visual studio
+- Copiar o arquivo `.env.template` renomeando para `.env`
 
 ## Front-end
 
