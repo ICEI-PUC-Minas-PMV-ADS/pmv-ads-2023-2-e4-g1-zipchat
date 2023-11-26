@@ -8,6 +8,9 @@ CT-02 – Coletar informações do paciente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fe1c80f2-ccc4-46b8-a04a-75646b2335de)
 
+CT-03 - Inserindo um usuário como Nulo
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/29114f77-c63e-4dcb-9379-2ec24a677912)
 
 
 ## Avaliação
