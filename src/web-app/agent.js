@@ -1,9 +1,10 @@
 import axios from 'axios';
 
+const KEYCLOACK_BASE_URL = "http://localhost:8080"
+// const BACKEND_BASE_URL = "http://localhost:5000" // Docker
+const BACKEND_BASE_URL = "http://localhost:5039" // Visual Studio
 
-const instance = axios.create({
-    // baseURL: 'https://localhost:7275/'
-});
+const instance = axios.create();
 
 export const auth = (credentials) => {
     return new Promise((resolve, reject) => {
@@ -14,7 +15,7 @@ export const auth = (credentials) => {
         params.append('client_id', 'zipchat-api');
         params.append('client_secret', 'apFCRbmwETIKR78F4stVqHQNy3SUhK5O');
         
-        axios.post('http://127.0.0.1:8080/realms/zipchat/protocol/openid-connect/token', params)
+        axios.post(`${KEYCLOACK_BASE_URL}/realms/zipchat/protocol/openid-connect/token`, params)
             .then((response) => {
                 console.log('response')
                 console.log(response)
@@ -32,7 +33,7 @@ export const auth = (credentials) => {
 }
 
 export const addUser = (user) => {
-    return instance.post('http://127.0.0.1:8080/admin/realms/zipchat/users', {
+    return instance.post(`${KEYCLOACK_BASE_URL}/admin/realms/zipchat/users`, {
         "username": user.username,
         "email": user.email,
         "firstName": user.username,
@@ -46,11 +47,11 @@ export const addUser = (user) => {
 
 
 export const getUserList = () => {
-    return instance.get("http://127.0.0.1:8080/admin/realms/zipchat/users")
+    return instance.get(`${KEYCLOACK_BASE_URL}/admin/realms/zipchat/users`)
 }
 
 export const addPass = (userId, pass) => {
-    return instance.put(`http://127.0.0.1:8080/admin/realms/zipchat/users/${userId}/reset-password`, {
+    return instance.put(`${KEYCLOACK_BASE_URL}/admin/realms/zipchat/users/${userId}/reset-password`, {
         "temporary": false,
         "type": "password",
         "value": pass
@@ -95,9 +96,9 @@ export const userRegister = async (user) => {
 }
 
 export const post = (uri, data) => {
-    return instance.post('https://localhost:7275/'+uri, data);
+    return instance.post(`${BACKEND_BASE_URL}/${uri}`, data);
 }
 
 export const get = (uri, data) => {
-    return instance.get('https://localhost:7275/'+uri);
+    return instance.get(`${BACKEND_BASE_URL}/${uri}`);
 }

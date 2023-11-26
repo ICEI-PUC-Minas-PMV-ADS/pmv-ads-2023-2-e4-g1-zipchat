@@ -15,6 +15,7 @@ namespace back_zipchat.Services
     {
         static readonly private string AI_HOST = Environment.GetEnvironmentVariable("AI_HOST");
         static readonly private string AI_KEY = Environment.GetEnvironmentVariable("AI_KEY");
+        static readonly private string TEST = Environment.GetEnvironmentVariable("TEST");
         private readonly HttpClient _httpClient;
         private readonly MongoDBService _mongoDBService;
 
@@ -52,17 +53,28 @@ namespace back_zipchat.Services
 		{
             try
             {
-                string requestBody = JsonSerializer.Serialize(new PromptModel(mensagem.Texto));
+                string promptResponse = "[APP em teste] Procure um médico um clínico gereal";
 
-                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AI_KEY);
+                if (TEST != "true")
+                {
+                    string requestBody = JsonSerializer.Serialize(new PromptModel(mensagem.Texto));
 
-                HttpContent content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+                    _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AI_KEY);
 
-                HttpResponseMessage response = await _httpClient.PostAsync(AI_HOST, content);
+                    HttpContent content = new StringContent(requestBody, Encoding.UTF8, "application/json");
 
-                ChatGptResponseDto result = await response.Content.ReadFromJsonAsync<ChatGptResponseDto>();
+                    HttpResponseMessage response = await _httpClient.PostAsync(AI_HOST, content);
 
-                string promptResponse = result.choices.FirstOrDefault().text;
+                    ChatGptResponseDto result = await response.Content.ReadFromJsonAsync<ChatGptResponseDto>();
+
+                    promptResponse = result.choices.FirstOrDefault().text;
+
+                    if (response.StatusCode == HttpStatusCode.Unauthorized)
+                        throw new Exception();
+
+                    if (response.StatusCode == HttpStatusCode.BadRequest)
+                        throw new Exception();
+                }
 
                 AnamneseModel anamnese = new AnamneseModel
                 {
@@ -72,17 +84,6 @@ namespace back_zipchat.Services
                 };
 
                 await CreateAnamnese(anamnese);
-
-
-                if (response.StatusCode == HttpStatusCode.Unauthorized)
-                    throw new Exception();
-
-                if (response.StatusCode == HttpStatusCode.BadRequest)
-                    throw new Exception();
-
-
-                if (response.StatusCode == HttpStatusCode.OK)
-                    return anamnese;
 
                 return anamnese;
             }

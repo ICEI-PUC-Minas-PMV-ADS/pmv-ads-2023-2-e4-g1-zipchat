@@ -5,7 +5,7 @@ import { useThemeProvider } from "../zustang/ThemeProvider";
 import ChatMessageLoading from "./ChatMessageLoading";
 
 
-function Chatarea({chat, loading}) {
+function Chatarea({chat, loading, appointment}) {
   const {theme} = useThemeProvider();
   
   return (
@@ -13,7 +13,8 @@ function Chatarea({chat, loading}) {
       {!chat ? (
         <ChatPlaceholcer />
       ) : (
-        chat.messages && chat.messages.length > 0 ? (
+        chat.messages && chat.messages.length > 0 ? 
+        (
           chat.messages.map((item, index) => (
             <div key={index} className="">
               <ChatMessage
@@ -22,12 +23,13 @@ function Chatarea({chat, loading}) {
               />
             </div>
           ))
-        ) : (
+        ): 
+        (
           <ChatPlaceholcer />
         )
       )}
       {loading && <ChatMessageLoading />}
-
+          <div>teste</div>
     </div>
   );
 }

@@ -27,7 +27,6 @@ const exemploChat = {
 };
 
 
-
 function Chat() {
   const navigate = useNavigate();
   const { theme } = useThemeProvider();
@@ -46,15 +45,22 @@ function Chat() {
 
   // Acesse o nome do usuário a partir do token decodificado
   const userName = decodedToken.name.split(" ")[0];
-  console.log("userName");
-  console.log(userName);
+  
   const getLastChats = () => {
     get(`anamnese/usuario/${userName}`).then(response => {
-      let lastChats = response.data.map(element => ({
-        id: element.id,
-        author: "me",
-        title: element.sintomas,
-        body: element.sintomas
+      let lastChats = response.data.map(message => ({
+        id: message.id,
+        title: message.sintomas,
+        messages:[
+        {
+          author: 'me',
+          body: message.sintomas
+        },
+        {
+          author: 'ia',
+          body: message.resultadoIA          
+        }
+      ]
       }));
       setChatList(lastChats)
     })
@@ -63,6 +69,13 @@ function Chat() {
   useEffect(() => {
       setChatActive(chatList.find(item => item.id === chatActiveId));
   }, [chatActiveId, chatList]);
+
+  useEffect(() => {
+    if(chatList.length == 0) {
+      console.log("Getting previews messages...")
+      getLastChats();
+    }
+  }, [chatList])
 
   useEffect(() => {
     if(AiResponse) {
@@ -107,9 +120,9 @@ function Chat() {
 
   const sendAnamnese = async (message) => {
     post('anamnese', {
-      "emissor": {userName},
+      "emissor": `${userName}`,
       "texto": message,
-      "data": "2023-10-01T17:08:24.968Z"
+      "data": new Date().toISOString
     })
     .then((response) => {
       console.log(response);
@@ -155,7 +168,6 @@ function Chat() {
   const handleLogOut = () => {
     localStorage.removeItem('access_token');
     navigate('/')
-
   };
   /************************************************** */
 
@@ -165,7 +177,13 @@ function Chat() {
   const handleSelectChat = (id) => {
     if(AILoading) return;
     let item = chatList.find(item => item.id === id)
-    if(item) setChatActiveId(item.id)
+    if(item){
+      setChatActiveId(item.id)
+      setChatActive(chatList.find(item => item.id === chatActiveId));
+      console.log(chatList)
+    }
+    //TODO: set text
+  
   };
 
   const handleDeleteChat = (id) => {
@@ -177,8 +195,6 @@ function Chat() {
     setChatActiveId("");
   };
 
-
-  getLastChats()
   return (
     <main
       className={`flex min-h-screen ${
@@ -207,7 +223,7 @@ function Chat() {
           newChatClick={handleNewChat}
         />
 
-        <Chatarea chat={chatActive} loading={AILoading}/>
+        <Chatarea chat={chatActive} loading={AILoading} appointment={true}/>
 
         <Footer onSendMessage={handleSendMessage} disabled={AILoading} />
       </section>
