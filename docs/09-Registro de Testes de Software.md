@@ -24,4 +24,8 @@ O objetivo desta avaliação é analisar se a aplicação ZipChat atende os requ
 
 CT-01 - Durante a execução dos testes não ocorreu nenhum problema com a funcionalidade, demonstrando que a inserção no BD esta ocorrendo conforme o previsto.
 
-CT-02 - Durante a execução dos testes não ocorreu nenhum problema com a funcionalidade, demonstrando que a coleta de informações do paciente no BD esta ocorrendo conforme o previsto.
+CT-02 - Durante a execução do teste ocorreu conforme o planejado, sendo lançado uma exceção.
+
+CT-03 - Durante a execução dos testes não ocorreu nenhum problema com a funcionalidade, demonstrando que a inserção no BD esta ocorrendo conforme o previsto.
+
+CT-04 - Durante a execução do teste ocorreu conforme o planejado, ao tentar recuperar o Id inexistente foi lançado a exceção "Id inexistente".
