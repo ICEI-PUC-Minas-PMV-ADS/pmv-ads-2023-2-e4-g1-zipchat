@@ -17,6 +17,11 @@ CT-004 - Simulando a recuperação de um id inexistente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/4f5a4cb6-a22a-4842-b5da-d212a55aa26a)
 
+CT-005 - Ausencia de simtomas
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/9958f1f3-035c-401d-a648-22a78f2e8d76)
+
+
 
 
 ## Avaliação
@@ -30,3 +35,5 @@ CT-02 - Durante a execução do teste ocorreu conforme o planejado, sendo lança
 CT-03 - Durante a execução dos testes não ocorreu nenhum problema com a funcionalidade, demonstrando que a inserção no BD esta ocorrendo conforme o previsto.
 
 CT-04 - Durante a execução do teste ocorreu conforme o planejado, ao tentar recuperar o Id inexistente foi lançado a exceção "Id inexistente".
+
+CT-05 - Durante a execução do teste ocorreu conforme o planejado, sendo lançado uma exceção personalizada ao tentar inserir anamnese com a ausência do campo "sintomas".
