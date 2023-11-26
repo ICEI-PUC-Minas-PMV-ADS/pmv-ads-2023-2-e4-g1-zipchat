@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Net.Http.Headers;
 using Microsoft.AspNetCore.Mvc;
+using back_zipchat.Repository;
 
 namespace back_zipchat.Services
 {
@@ -17,34 +18,34 @@ namespace back_zipchat.Services
         static readonly private string AI_KEY = Environment.GetEnvironmentVariable("AI_KEY");
         static readonly private string TEST = Environment.GetEnvironmentVariable("TEST");
         private readonly HttpClient _httpClient;
-        private readonly MongoDBService _mongoDBService;
+        private readonly AnamneseRepository _anamneseRepository;
 
-        public IAService(HttpClient httpClient, MongoDBService mongoDBService)
+        public IAService(HttpClient httpClient, AnamneseRepository anamneseRepository)
         {
             _httpClient = httpClient;
-            _mongoDBService = mongoDBService;
+            _anamneseRepository = anamneseRepository;
         }
 
         public async Task<List<AnamneseModel>> GetAnamneses()
         {
-            return await _mongoDBService.GetAsync();
+            return await _anamneseRepository.GetAsync();
         }
 
         public async Task<AnamneseModel> GetAnamnesesById(string id)
         {
-            return await _mongoDBService.GetAsyncById(id);
+            return await _anamneseRepository.GetAsyncById(id);
         }
 
 
         public async Task<List<AnamneseModel>> GetAnamnesesByUser(string usuario)
         {
-            return await _mongoDBService.GetAsync(usuario);
+            return await _anamneseRepository.GetAsync(usuario);
         }
 
 
         private async Task<AnamneseModel> CreateAnamnese(AnamneseModel anamnese)
         {
-            await _mongoDBService.CreateAsync(anamnese);
+            await _anamneseRepository.CreateAsync(anamnese);
 
             return anamnese;
         }

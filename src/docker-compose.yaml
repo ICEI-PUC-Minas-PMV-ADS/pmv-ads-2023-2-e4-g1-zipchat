@@ -12,8 +12,8 @@ services:
       AI_HOST: https://api.openai.com/v1/completions
       AI_KEY: INSERT_API_KEY
       KEYCLOACK_REALM: zipchat
-      KEYCLOACK_AUTH_SERVER: http://127.0.0.1:8080/
-      KEYCLOACK_AUTHORITY: https://127.0.0.1:8080/auth/realms/zipchat
+      KEYCLOACK_AUTH_SERVER: http://${DOCKER_GATEWAY_HOST:-host.docker.internal}/
+      KEYCLOACK_AUTHORITY: https://${DOCKER_GATEWAY_HOST:-host.docker.internal}/auth/realms/zipchat
       KEYCLOACK_SSL_REQUIRED: none
       KEYCLOACK_RESOURCE: zipchat-api
       KEYCLOACK_VERIFY_TOKEN_AUDIENCE: true
@@ -23,6 +23,9 @@ services:
       TEST: true
     depends_on:
       - mongo
+    volumes: 
+      - ./local/appsettings.docker.json:/back-zipchat/appsettings.json
+      - ./local/appsettings.docker.json:/app/appsettings.json
 
   mongo:
     image: mongo
@@ -67,6 +70,9 @@ services:
       - '3306'
     volumes:
       - keycloack-db:/var/lib/mysql
+    networks:
+      - mongo-compose-network
+      
   keycloak:
     container_name: keycloak
     image: quay.io/keycloak/keycloak:19.0.1
@@ -84,6 +90,8 @@ services:
     command: start-dev
     depends_on:
       - db-keycloack
+    networks:
+      - mongo-compose-network
 volumes:
   keycloack-db:
   mongo-db:

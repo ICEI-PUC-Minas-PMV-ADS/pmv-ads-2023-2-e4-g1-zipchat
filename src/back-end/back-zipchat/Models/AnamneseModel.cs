@@ -13,6 +13,8 @@ namespace back_zipchat.Models
 
         public string usuario { get; set; } = null!;
 
+        public DateTime data { get; set; } = new DateTime()!;
+
         public string sintomas { get; set; } = null!;
 
         public string resultadoIA { get; set; } = null!;
