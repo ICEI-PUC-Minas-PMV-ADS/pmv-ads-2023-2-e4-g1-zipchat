@@ -1,0 +1,26 @@
+// icon:chevron-back | Ionicons https://ionicons.com/ | Ionic Framework
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+
+function IconChevronBack(props) {
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      fill="currentColor"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <Path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={48}
+        d="M328 112L184 256l144 144"
+      />
+    </Svg>
+  );
+}
+
+export default IconChevronBack;
