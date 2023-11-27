@@ -40,4 +40,4 @@
 
 4 - Testar funcionalidade "Esqueceu sua senha"
 
-# Realizar teste de segurança utilizando a ferramenta ZAP
+# Registro do teste de vulnerabilidade com a tecnologia ZAP
