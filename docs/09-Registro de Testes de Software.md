@@ -74,4 +74,9 @@ CT-04 - Testar funcionalidade "Esqueceu sua senha"
 ![Imagem do WhatsApp de 2023-11-26 à(s) 21 51 39_c35e1b50](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/1778fc08-8e05-4a1a-a18d-b1cafaadb588)
 
 
+# Registro de Teste de segurança utilizando a ferramenta ZAP
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/6d70d5b3-2220-4c9f-87c7-892d59276285)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/e9e50862-abfc-4a8d-a92f-3135ac38656f)
+
+
 
