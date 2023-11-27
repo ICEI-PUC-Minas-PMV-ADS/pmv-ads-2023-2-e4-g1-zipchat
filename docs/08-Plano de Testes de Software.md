@@ -29,3 +29,13 @@
 |	Requisito Associado 	| RF-007 - Coletar informações médicas básicas do paciente |
 | Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "MissingFieldException" |
 |Critério de Êxito | Lançamento da exceção "MissingFieldException" com a mensagem: "Ausência de um campo obrigatório"  |
+
+# Plano de Testes ponta a ponta
+
+1 - Testar toda a funcionalidade de cadastro
+
+2 - Testar toda a funcionalidade de login
+
+3 - Testar questionamento ao chat GPT
+
+4 - Testar funcionalidade "Esqueceu sua senha"
