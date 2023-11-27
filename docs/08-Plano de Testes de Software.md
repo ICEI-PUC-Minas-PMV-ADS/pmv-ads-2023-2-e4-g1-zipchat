@@ -30,7 +30,7 @@
 | Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "MissingFieldException" |
 |Critério de Êxito | Lançamento da exceção "MissingFieldException" com a mensagem: "Ausência de um campo obrigatório"  |
 
-# Plano de Testes ponta a ponta web e mobile
+# Plano de Testes ponta a ponta (Sistema web e mobile)
 
 1 - Testar toda a funcionalidade de cadastro
 
