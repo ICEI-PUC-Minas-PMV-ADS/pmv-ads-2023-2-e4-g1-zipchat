@@ -39,3 +39,5 @@
 3 - Testar questionamento ao chat GPT
 
 4 - Testar funcionalidade "Esqueceu sua senha"
+
+# Realizar teste de segurança utilizando a ferramenta ZAP
