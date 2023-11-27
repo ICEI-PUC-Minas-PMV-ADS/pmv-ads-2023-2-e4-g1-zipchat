@@ -11,6 +11,7 @@ import { useThemeProvider } from "../../theme/themeProvider";
 export function UserArea({}) {
   const { theme, toggleTheme } = useThemeProvider();
   const [themeIcon, setThemeIcon] = useState("light");
+
   const navigation = useNavigation();
   const handleLogout = () => {
       localStorage.removeItem('access_token');
@@ -27,7 +28,7 @@ export function UserArea({}) {
     <View style={styles.container}>
       <View style={styles.nameArea}>
         <Text style={styles.userName} numberOfLines={1} ellipsizeMode="tail">
-        Olá  {userName}!
+          Olá {userName} !
         </Text>
       </View>
 

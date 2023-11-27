@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-<<<<<<< Updated upstream
-=======
 import { useThemeProvider } from "../../theme/themeProvider";
->>>>>>> Stashed changes
 
 import IconChatLeft from "../../../assets/icons/IconChatLeft";
 import IconTrash from "../../../assets/icons/IconTrash";
@@ -27,22 +24,14 @@ export function SidebarChatButton({ chatItem, active, onClick, onDelete }) {
       onClick(chatItem.id)
     }
   };
-<<<<<<< Updated upstream
- 
-=======
 
   const {theme} = useThemeProvider();
->>>>>>> Stashed changes
   return (
     <TouchableOpacity onPress={handleClickButton}>
       <View
         style={[
           styles.container,
-<<<<<<< Updated upstream
-          { backgroundColor: active ? "#00A884" : "transparent" },
-=======
           { backgroundColor: active ? theme.activeButton : "transparent" },
->>>>>>> Stashed changes
         ]}
       >
         <View style={{ marginRight: 12 }}>

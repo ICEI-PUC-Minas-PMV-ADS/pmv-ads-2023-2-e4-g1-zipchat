@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-import React, { useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-=======
 import React, { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import {
@@ -13,23 +8,16 @@ import {
   TouchableOpacity,
   Keyboard,
 } from "react-native";
->>>>>>> Stashed changes
 import IconChevroBack from "../../assets/icons/IconChevroBack";
 import { useNavigation } from "@react-navigation/native";
 import lock from "../../assets/lock.png";
 import { SignupInput } from "../components/SignupInput";
 
 export default function ForgottenPassword() {
-<<<<<<< Updated upstream
-  const [recoveryPass, setRecoveryPass] = useState({
-    email: "",
-    password: ""
-=======
   const [keyboardIsOpen, setKeyboardIsOpen] = useState(false);
   const [recoveryPass, setRecoveryPass] = useState({
     email: "",
     password: "",
->>>>>>> Stashed changes
   });
 
   const navigation = useNavigation();
@@ -52,11 +40,6 @@ export default function ForgottenPassword() {
     // navigation.reset({ routes: [{ name: "SignIn" }] });
   };
 
-<<<<<<< Updated upstream
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-=======
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
       "keyboardDidShow",
@@ -80,7 +63,6 @@ export default function ForgottenPassword() {
   return (
     <View style={styles.container}>
       <View style={[styles.header, { display: keyboardIsOpen ? "none" : "" }]}>
->>>>>>> Stashed changes
         <IconChevroBack
           width={40}
           height={40}

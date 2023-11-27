@@ -1,10 +1,7 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text, TouchableOpacity, ScrollView } from "react-native";
-<<<<<<< Updated upstream
-=======
 import { useThemeProvider } from "../../theme/themeProvider";
->>>>>>> Stashed changes
 
 import IconClose from "../../../assets/icons/IconClose";
 import IconAdd from "../../../assets/icons/IconAdd";
@@ -14,20 +11,12 @@ import { SidebarButton } from "./SidebarButton";
 import { UserArea } from "./UserArea";
 
 export function ModalConten({ onClose, children, onClear, onNewChat }) {
-<<<<<<< Updated upstream
-
-=======
   const {theme} = useThemeProvider();
->>>>>>> Stashed changes
   return (
     <View style={styles.container}>
       <View style={styles.section2}>
 
-<<<<<<< Updated upstream
-        <View style={styles.section3}>
-=======
         <View style={[styles.section3, {backgroundColor: theme.backgroundSidebar}]}>
->>>>>>> Stashed changes
 
 
           <TouchableOpacity onPress={onNewChat}>

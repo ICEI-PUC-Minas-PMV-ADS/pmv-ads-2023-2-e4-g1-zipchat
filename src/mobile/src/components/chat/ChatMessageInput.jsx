@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-<<<<<<< Updated upstream
-=======
 import { useThemeProvider } from "../../theme/themeProvider";
->>>>>>> Stashed changes
 
 import IconSend from "../../../assets/icons/IconSend";
 
 export function ChatMessageInput({ onSend, disabled }) {
   const [text, setText] = useState("");
 
-<<<<<<< Updated upstream
-=======
   const { theme } = useThemeProvider();
 
->>>>>>> Stashed changes
   const handleSendMessage = () => {
     if (!disabled && text.trim() !== "") {
       onSend(text);
@@ -28,20 +22,13 @@ export function ChatMessageInput({ onSend, disabled }) {
         styles.container,
         {
           opacity: disabled ? 0.5 : 1,
-<<<<<<< Updated upstream
-=======
           backgroundColor: theme.backgroundInput,
           borderColor: theme.borderColorInput,
->>>>>>> Stashed changes
         },
       ]}
     >
       <TextInput
-<<<<<<< Updated upstream
-        style={styles.input}
-=======
         style={[styles.input, { color: theme.color }]}
->>>>>>> Stashed changes
         onSubmitEditing={handleSendMessage}
         returnKeyType="send"
         value={text}
@@ -68,11 +55,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 8,
     borderRadius: 12,
-<<<<<<< Updated upstream
-    backgroundColor: "white",
-    borderColor: "rgba(31, 41, 55, .2)",
-=======
->>>>>>> Stashed changes
   },
   icon: {
     justifyContent: "center",
@@ -84,9 +66,5 @@ const styles = StyleSheet.create({
     borderColor: "transparent",
     backgroundColor: "transparent",
     padding: 2,
-<<<<<<< Updated upstream
-    color: "black",
-=======
->>>>>>> Stashed changes
   },
 });

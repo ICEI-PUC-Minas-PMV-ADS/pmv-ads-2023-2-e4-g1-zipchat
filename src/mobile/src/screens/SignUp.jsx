@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-import React, { useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-=======
 import React, { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import {
@@ -12,19 +7,11 @@ import {
   View,
   TouchableOpacity,
 } from "react-native";
->>>>>>> Stashed changes
 import IconChevroBack from "../../assets/icons/IconChevroBack";
 import { SignupInput } from "../components/SignupInput";
 import { useNavigation } from "@react-navigation/native";
 import IconEyeFill from "../../assets/icons/IconEyeFill";
 import IconEyeSlashFill from "../../assets/icons/IconEyeSlashFill";
-<<<<<<< Updated upstream
-
-export default function SignUp() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [pass, setPass] = useState("");
-  const [wrongPass, setWrongPass] = useState(false);
-=======
 import { userRegister } from "../agent";
 
 export default function SignUp() {
@@ -33,7 +20,6 @@ export default function SignUp() {
   const [pass, setPass] = useState("");
   const [wrongPass, setWrongPass] = useState(false);
   const [logonError, setLogonError] = useState(false);
->>>>>>> Stashed changes
   const [sigon, setSigon] = useState({
     name: "",
     username: "",
@@ -48,10 +34,7 @@ export default function SignUp() {
   };
 
   const doLogon = () => {
-<<<<<<< Updated upstream
-=======
     setLogonError(false)
->>>>>>> Stashed changes
     const signInValues = Object.values(sigon);
     const emptyField = signInValues.some((value) => value === "");
     if (emptyField) {
@@ -60,21 +43,14 @@ export default function SignUp() {
 
     if (sigon.password !== pass) {
       setWrongPass(true);
-<<<<<<< Updated upstream
-      setSigon({...sigon, password: ""});
-      setPass("")
-=======
       setSigon({ ...sigon, password: "" });
       setPass("");
->>>>>>> Stashed changes
       return console.log("error");
     }
 
     setWrongPass(false);
     // PARTE API
 
-<<<<<<< Updated upstream
-=======
     userRegister(sigon)
     .then(authSuccess => {
       console.log(authSuccess)
@@ -88,7 +64,6 @@ export default function SignUp() {
       setLogonError(true)
     })
 
->>>>>>> Stashed changes
     navigation.reset({ routes: [{ name: "Chat" }] });
   };
 
@@ -104,11 +79,6 @@ export default function SignUp() {
     );
   };
 
-<<<<<<< Updated upstream
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-=======
   useEffect(() => {
     const keyboardDidShowListener = Keyboard.addListener(
       "keyboardDidShow",
@@ -132,7 +102,6 @@ export default function SignUp() {
   return (
     <View style={styles.container}>
       <View style={[styles.header, { display: keyboardIsOpen ? "none" : "" }]}>
->>>>>>> Stashed changes
         <IconChevroBack
           width={40}
           height={40}
@@ -143,11 +112,7 @@ export default function SignUp() {
         <Text style={[styles.headerText, styles.text02]}>Conta</Text>
       </View>
 
-<<<<<<< Updated upstream
-      <View style={styles.inputSection}>
-=======
       <View style={[styles.inputSection, { flex: keyboardIsOpen ? 1 : 0 }]}>
->>>>>>> Stashed changes
         <SignupInput
           placeholder="Nome"
           value={sigon.name}
@@ -155,26 +120,15 @@ export default function SignUp() {
         />
 
         <SignupInput
-<<<<<<< Updated upstream
-          placeholder="Usename"I
-          value={sigon.username}
-          onChangeText={(t) => handleInput("username", t)}
-
-=======
           placeholder="Usename"
           I
           value={sigon.username}
           onChangeText={(t) => handleInput("username", t)}
->>>>>>> Stashed changes
         />
 
         <SignupInput
           placeholder="E-mail"
           value={sigon.email}
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
           onChangeText={(t) => handleInput("email", t)}
         />
 
@@ -196,15 +150,12 @@ export default function SignUp() {
           onChangeText={(t) => handleInput("password", t)}
         />
 
-<<<<<<< Updated upstream
-=======
         {logonError && (
           <Text style={styles.errorMessage}>
             Erro ao cadastrar. Tente novamente.
           </Text>
         )}
 
->>>>>>> Stashed changes
         <TouchableOpacity style={styles.button} onPress={doLogon}>
           <Text style={styles.buttonText}>Criar conta</Text>
         </TouchableOpacity>
@@ -238,15 +189,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 50,
     fontWeight: "700",
-<<<<<<< Updated upstream
-    textShadowColor: 'gray', 
-    textShadowOffset: { width:-2, height: 2 }, 
-    textShadowRadius: 5, 
-=======
     textShadowColor: "gray",
     textShadowOffset: { width: -2, height: 2 },
     textShadowRadius: 5,
->>>>>>> Stashed changes
   },
   text01: {
     marginLeft: -20,
@@ -256,14 +201,11 @@ const styles = StyleSheet.create({
     marginTop: -10,
     fontSize: 60,
   },
-<<<<<<< Updated upstream
-=======
   errorMessage: {
     color: "red",
     textAlign: "center",
     marginTop: 10,
   },
->>>>>>> Stashed changes
   inputSection: {
     marginTop: 30,
     marginHorizontal: 30,

@@ -16,37 +16,11 @@ import { Header } from "../components/chat/Header";
 import { ChatArea } from "../components/chat/ChatArea";
 import { Footer } from "../components/chat/Footer";
 import { SidebarChatButton } from "../components/chat/SidebarChatButton";
-<<<<<<< Updated upstream
-=======
 import { useThemeProvider } from "../theme/themeProvider";
 import { post } from "../agent";
->>>>>>> Stashed changes
 
 export default function Chat() {
-  const exemploChat = {
-    id: "1",
-    title: "Exemplo de Chat",
-    messages: [
-      {
-        id: "1",
-        author: "me",
-        body: "Olá, como você está?",
-      },
-      {
-        id: "2",
-        author: "ai",
-        body: "Tudo ótimo, em que posso te ajudar",
-      }
-    ],
-  };
-
-  const [modalVisibility, setModalVisibility] = useState(false);
-  const [chatActive, setChatActive] = useState({});
-  const [AILoading, setAILoading] = useState(false);
-  const [chatList, setChatList] = useState([]);
-  const [chatActiveId, setChatActiveId] = useState("");
-<<<<<<< Updated upstream
-=======
+  
   const [AiResponse, setAIResponse] = useState('');
   
   useEffect(() => {
@@ -81,7 +55,29 @@ export default function Chat() {
       setAIResponse(response.data.resultadoIA)
     })
   }
->>>>>>> Stashed changes
+
+  const exemploChat = {
+    id: "1",
+    title: "Exemplo de Chat",
+    messages: [
+      {
+        id: "1",
+        author: "me",
+        body: "Olá, como você está?",
+      },
+      {
+        id: "2",
+        author: "ai",
+        body: "Tudo ótimo, em que posso te ajudar",
+      }
+    ],
+  };
+
+  const [modalVisibility, setModalVisibility] = useState(false);
+  const [chatActive, setChatActive] = useState({});
+  const [AILoading, setAILoading] = useState(false);
+  const [chatList, setChatList] = useState([]);
+  const [chatActiveId, setChatActiveId] = useState("");
 
   useEffect(() => {
     const checkChatList = chatList.find(item => item.id === chatActiveId);
@@ -144,11 +140,7 @@ export default function Chat() {
   };
 
   // recebe mensagem do input e cria a conversa
-<<<<<<< Updated upstream
-  const handleSendMessage = (message) => {
-=======
   const handleSendMessage = async (message) => {
->>>>>>> Stashed changes
     if(!chatActiveId){
       // Creating new chat
       let newChatId = uuidv4();
@@ -160,11 +152,9 @@ export default function Chat() {
         ]
       }, ...chatList]);
       setChatActiveId(newChatId);
-<<<<<<< Updated upstream
-=======
+
       await sendAnamnese(message)
 
->>>>>>> Stashed changes
     } else {
       //updating existing chat
       let chatListClone = [...chatList];
@@ -180,16 +170,10 @@ export default function Chat() {
     setAILoading(true);
   };
 
-<<<<<<< Updated upstream
-
-  return (
-    <View style={styles.container}>
-=======
   const {theme} = useThemeProvider();
 
   return (
     <View style={[styles.container, {backgroundColor: theme.Background}]}>
->>>>>>> Stashed changes
       
       <Modal
         animationType="slide"
@@ -241,11 +225,7 @@ export default function Chat() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-<<<<<<< Updated upstream
-    backgroundColor: 'white'
-=======
 
->>>>>>> Stashed changes
   },
   section: {
     flex: 1,

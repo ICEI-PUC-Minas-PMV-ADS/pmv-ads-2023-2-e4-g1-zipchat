@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-import React, { useState } from "react";
-=======
 import React, { useState, useEffect } from "react";
->>>>>>> Stashed changes
 import { StatusBar } from "expo-status-bar";
 import {
   Image,
@@ -12,10 +8,7 @@ import {
   View,
   TouchableOpacity,
   Button,
-<<<<<<< Updated upstream
-=======
   Keyboard,
->>>>>>> Stashed changes
 } from "react-native";
 import background from "../../assets/background.png";
 import logo from "../../assets/zipchat02.png";
@@ -23,17 +16,12 @@ import IconBxsUserCircle from "../../assets/icons/IconBxUserCircle";
 import IconLock from "../../assets/icons/IconLock";
 import { SigninInput } from "../components/SigninInput";
 import { useNavigation } from "@react-navigation/native";
-<<<<<<< Updated upstream
-
-export default function SignIn() {
-=======
 import {auth, post} from '../agent';
 
 export default function SignIn() {
   const [keyboardIsOpen, setKeyboardIsOpen] = useState(false);
   const [isFiledEmpty, setIsFiledEmpty] = useState(false);
   const [loginError, setLoginError] = useState(false);
->>>>>>> Stashed changes
   const [signin, setSignin] = useState({
     email: "",
     password: "",
@@ -45,24 +33,6 @@ export default function SignIn() {
     setSignin({ ...signin, [fieldName]: value });
   };
 
-<<<<<<< Updated upstream
-  const doLogin = () => {
-    const signInValues = Object.values(signin);
-    const emptyField = signInValues.some((value) => value === "");
-    if (emptyField) {
-      return console.log("vazio");
-    }
-
-    // PARTE API
-
-    navigation.reset({ routes: [{ name: "Chat" }] });
-  };
-
-  return (
-    <ImageBackground source={background} style={styles.container}>
-      <View style={styles.wrapper}>
-        <View style={styles.logo}>
-=======
   const doLogin = async () => {
     setLoginError(false);
     const signInValues = Object.values(signin);
@@ -74,7 +44,6 @@ export default function SignIn() {
     setIsFiledEmpty(false);
     
     // PARTE API
-    console.log(signin)
     auth(signin)
     .then(authSuccess => {
       if(authSuccess){
@@ -114,7 +83,6 @@ export default function SignIn() {
     <ImageBackground source={background} style={styles.container}>
       <View style={styles.wrapper}>
         <View style={[styles.logo, { display: keyboardIsOpen ? "none" : "" }]}>
->>>>>>> Stashed changes
           <Image
             source={logo}
             style={styles.img}
@@ -123,14 +91,10 @@ export default function SignIn() {
           />
         </View>
         <View style={styles.conatiner_login}>
-<<<<<<< Updated upstream
-          <View style={styles.login}>
-=======
           <View
             behavior= "padding"
             style={styles.login}
           >
->>>>>>> Stashed changes
             <SigninInput
               placeholder="E-mail"
               value={signin.email}
@@ -148,8 +112,6 @@ export default function SignIn() {
               icon={<IconLock width={26} height={26} style={styles.icon} />}
             />
 
-<<<<<<< Updated upstream
-=======
             {loginError && (
               <Text style={styles.errorText}>
                 Usuário e/ou senha incorretos.
@@ -162,7 +124,6 @@ export default function SignIn() {
               </Text>
             )}
 
->>>>>>> Stashed changes
             <View style={styles.forgotPasswordContainer}>
               <Text
                 onPress={() =>
@@ -218,15 +179,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-<<<<<<< Updated upstream
-=======
   errorText: {
     color: "red",
     textAlign: "center",
     marginTop: 10,
   },
 
->>>>>>> Stashed changes
   img: {
     marginTop: 30,
     width: "60%",

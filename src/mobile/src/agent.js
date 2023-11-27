@@ -14,8 +14,6 @@ export const auth = (credentials) => {
         params.append('client_id', 'zipchat-api');
         params.append('client_secret', 'apFCRbmwETIKR78F4stVqHQNy3SUhK5O');
         
-        console.log("params",params)
-        console.log("credentials.username",credentials.username)
         axios.post('http://127.0.0.1:8080/realms/zipchat/protocol/openid-connect/token', params)
             .then((response) => {
                 console.log('response')
@@ -34,11 +32,12 @@ export const auth = (credentials) => {
 }
 
 export const addUser = (user) => {
-    console.log("chegou aqui")
-    instance.defaults.headers.common['Authorization'] = "Bearer  " + localStorage.getItem('access_token');;
-    console.log(instance.defaults.headers)
-    console.log("-----------------------")
 
+    console.log("chegou aqui")
+
+    instance.defaults.headers.common['Authorization'] = "Bearer  " + localStorage.getItem('access_token');;
+
+    console.log(instance.defaults.headers)
     return instance.post('http://127.0.0.1:8080/admin/realms/zipchat/users', {
         "username": user.email,
         "email": user.email,
@@ -67,12 +66,12 @@ export const addPass = (userId, pass) => {
 
 export const userRegister = async (user) => {
     return new Promise((resolve, reject) => {
+        console.log("ta aqui")
         console.log(user)
         auth({email: "admin", password: "admin"})
-        
+
         addUser(user)
         .then(response => {
-            console.log(response,"response user register")
             getUserList()
             .then(response => { 
                 let createdUser = response.data.filter(x => x.username == user.username)[0].id

@@ -3,15 +3,10 @@ import { StyleSheet, View, Text } from "react-native";
 
 import IconUser from "../../../assets/icons/IconUser";
 import IconRobot from "../../../assets/icons/IconRobot";
-<<<<<<< Updated upstream
-
-export function ChatMessageItem({ item }) {
-=======
 import { useThemeProvider } from "../../theme/themeProvider";
 
 export function ChatMessageItem({ item }) {
   const {theme} = useThemeProvider();
->>>>>>> Stashed changes
   return (
     <View
       style={[
@@ -41,11 +36,7 @@ export function ChatMessageItem({ item }) {
         </View>
 
         <View style={styles.messageWrapper}>
-<<<<<<< Updated upstream
-          <Text style={styles.message}>{item.body}</Text>
-=======
           <Text style={[styles.message, {color: theme.color}]}>{item.body}</Text>
->>>>>>> Stashed changes
         </View>
       </View>
     </View>
@@ -76,10 +67,6 @@ const styles = StyleSheet.create({
   },
   message: {
     maxWidth: "100%",
-<<<<<<< Updated upstream
-    color: "black",
-=======
 
->>>>>>> Stashed changes
   },
 });
