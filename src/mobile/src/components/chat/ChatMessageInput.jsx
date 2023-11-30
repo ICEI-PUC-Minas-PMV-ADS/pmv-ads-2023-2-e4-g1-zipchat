@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 8,
     borderRadius: 12,
+    border: 1
   },
   icon: {
     justifyContent: "center",

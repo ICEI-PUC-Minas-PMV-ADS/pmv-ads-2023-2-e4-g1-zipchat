@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   messageArea: {
     maxWidth: "100%",
-    alignSelf: "center",
+  //  alignSelf: "center", 
 
     flexDirection: "row",
   },

@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Button,
   Keyboard,
+  Platform,
 } from "react-native";
 import background from "../../assets/background.png";
 import logo from "../../assets/zipchat02.png";
@@ -16,7 +17,7 @@ import IconBxsUserCircle from "../../assets/icons/IconBxUserCircle";
 import IconLock from "../../assets/icons/IconLock";
 import { SigninInput } from "../components/SigninInput";
 import { useNavigation } from "@react-navigation/native";
-import {auth, post} from '../agent';
+import { auth, post } from "../agent";
 
 export default function SignIn() {
   const [keyboardIsOpen, setKeyboardIsOpen] = useState(false);
@@ -42,19 +43,19 @@ export default function SignIn() {
       return console.log("vazio");
     }
     setIsFiledEmpty(false);
-    
+
     // PARTE API
     auth(signin)
-    .then(authSuccess => {
-      if(authSuccess){
-        navigation.reset({ routes: [{ name: "Chat" }] });    
-      } else {
-        console.log('Falha na autenticação')
-      }
-    })
-    .catch(error => {
-      setLoginError(true)
-    })
+      .then((authSuccess) => {
+        if (authSuccess) {
+          navigation.reset({ routes: [{ name: "Chat" }] });
+        } else {
+          console.log("Falha na autenticação");
+        }
+      })
+      .catch((error) => {
+        setLoginError(true);
+      });
 
     // navigation.reset({ routes: [{ name: "Chat" }] });
   };
@@ -83,20 +84,14 @@ export default function SignIn() {
     <ImageBackground source={background} style={styles.container}>
       <View style={styles.wrapper}>
         <View style={[styles.logo, { display: keyboardIsOpen ? "none" : "" }]}>
-          <img src={logo}
-          />
-                    {/* <Image
-            source={logo}
-            style={styles.img}
-            alt="logo"
-            resizeMode="contain"
-          /> */}
+          {Platform.OS === "web" ? (
+            <img src={logo} style={styles.webLogo} />
+          ) : (
+            <Image source={logo} style={styles.mobileLogo} />
+          )}
         </View>
         <View style={styles.conatiner_login}>
-          <View
-            behavior= "padding"
-            style={styles.login}
-          >
+          <View behavior="padding" style={styles.login}>
             <SigninInput
               placeholder="E-mail"
               value={signin.email}
@@ -121,9 +116,7 @@ export default function SignIn() {
             )}
 
             {isFiledEmpty && (
-              <Text style={styles.errorText}>
-                Preencha todos os campos
-              </Text>
+              <Text style={styles.errorText}>Preencha todos os campos</Text>
             )}
 
             <View style={styles.forgotPasswordContainer}>
@@ -179,6 +172,18 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     alignItems: "center",
+  },
+
+  webLogo: {
+    width: 160,
+    height: 160,
+    marginTop: 100,
+  },
+
+  mobileLogo: {
+    width: "60%",
+    height: "100%",
+    resizeMode: "contain",
   },
 
   errorText: {

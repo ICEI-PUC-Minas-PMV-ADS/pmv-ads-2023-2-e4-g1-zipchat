@@ -63,12 +63,18 @@ export default function ForgottenPassword() {
   return (
     <View style={styles.container}>
       <View style={[styles.header, { display: keyboardIsOpen ? "none" : "" }]}>
+        <TouchableOpacity
+        onPress={() => navigation.reset({ routes: [{ name: "SignIn" }] })}
+        style={styles.backIcon}
+        >
+
         <IconChevroBack
           width={40}
           height={40}
           style={styles.headerIcon}
-          onPress={() => navigation.reset({ routes: [{ name: "SignIn" }] })}
+          
         />
+        </TouchableOpacity>
         <Text style={[styles.headerText, styles.text01]}>Esqueceu sua</Text>
         <Text style={[styles.headerText, styles.text02]}>Senha</Text>
       </View>
@@ -123,6 +129,10 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     marginLeft: 20,
     padding: 3,
+  },
+  backIcon: {
+    marginLeft: 15,
+    alignSelf: 'flex-start'
   },
   headerText: {
     color: "white",

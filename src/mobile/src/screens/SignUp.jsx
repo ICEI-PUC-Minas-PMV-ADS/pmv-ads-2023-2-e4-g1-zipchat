@@ -34,7 +34,7 @@ export default function SignUp() {
   };
 
   const doLogon = () => {
-    setLogonError(false)
+    setLogonError(false);
     const signInValues = Object.values(sigon);
     const emptyField = signInValues.some((value) => value === "");
     if (emptyField) {
@@ -52,17 +52,17 @@ export default function SignUp() {
     // PARTE API
 
     userRegister(sigon)
-    .then(authSuccess => {
-      console.log(authSuccess)
-      if(authSuccess){
-        navigation.reset({ routes: [{ name: "Chat" }] });
-      } else {
-        console.log("Falha no cadastro")
-      }
-    })
-    .catch(error => {
-      setLogonError(true)
-    })
+      .then((authSuccess) => {
+        console.log(authSuccess);
+        if (authSuccess) {
+          navigation.reset({ routes: [{ name: "Chat" }] });
+        } else {
+          console.log("Falha no cadastro");
+        }
+      })
+      .catch((error) => {
+        setLogonError(true);
+      });
 
     navigation.reset({ routes: [{ name: "Chat" }] });
   };
@@ -102,17 +102,17 @@ export default function SignUp() {
   return (
     <View style={styles.container}>
       <View style={[styles.header, { display: keyboardIsOpen ? "none" : "" }]}>
-        <IconChevroBack
-          width={40}
-          height={40}
-          style={styles.headerIcon}
+        <TouchableOpacity
           onPress={() => navigation.reset({ routes: [{ name: "SignIn" }] })}
-        />
+          style={styles.backIcon}
+        >
+          <IconChevroBack width={40} height={40} style={styles.headerIcon} />
+        </TouchableOpacity>
         <Text style={[styles.headerText, styles.text01]}>Crie sua </Text>
         <Text style={[styles.headerText, styles.text02]}>Conta</Text>
       </View>
 
-      <View style={[styles.inputSection, { flex: keyboardIsOpen ? 1 : 0 }]}>
+      <View style={[styles.inputSection, { flex: keyboardIsOpen ? 1 : 1 }]}>
         <SignupInput
           placeholder="Nome"
           value={sigon.name}
@@ -181,9 +181,10 @@ const styles = StyleSheet.create({
   },
   headerIcon: {
     color: "white",
+  },
+  backIcon: {
+    marginLeft: 15,
     alignSelf: "flex-start",
-    marginLeft: 20,
-    padding: 3,
   },
   headerText: {
     color: "white",
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 30,
     alignItems: "center",
     justifyContent: "space-evenly",
-    height: "60%",
+    flexDirection: "column",
   },
   icon: {
     color: "gray",
