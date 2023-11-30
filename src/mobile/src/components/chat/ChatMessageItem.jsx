@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { StyleSheet, View, Text, Modal } from "react-native";
 
 import IconUser from "../../../assets/icons/IconUser";
@@ -9,8 +9,7 @@ import { AppointmentForm } from "./AppointmentForm";
 
 export function ChatMessageItem({ item }) {
   const [modalVisibility, setModalVisibility] = useState(false);
-  
-  const {theme} = useThemeProvider();
+  const { theme } = useThemeProvider();
   return (
     <View
       style={[
@@ -40,18 +39,18 @@ export function ChatMessageItem({ item }) {
         </View>
 
         <View style={styles.messageWrapper}>
-          <Text style={[styles.message, {color: theme.color}]}>{item.body}</Text>
-          {item.author === "ai" && (
-            <Text onPress={() => setModalVisibility(true)} style={[styles.link, {color: theme.link }]}>Marcar consulta ?</Text>
+          <Text style={[styles.message, { color: theme.color }]}>{item.body}</Text>
+          {item.author === "ai" && item.body !== "Resposta da AI" && (
+            <Text onPress={() => setModalVisibility(true)} style={[styles.link, { color: theme.link }]}>Marcar consulta ?</Text>
           )}
 
           <Modal
-           animationType="fade"
-           visible={modalVisibility}
-           transparent={false}
-           onRequestClose={() => setModalVisibility(false)}
+            animationType="fade"
+            visible={modalVisibility}
+            transparent={false}
+            onRequestClose={() => setModalVisibility(false)}
           >
-            <AppointmentForm onClose={setModalVisibility}/>
+            <AppointmentForm onClose={setModalVisibility} />
           </Modal>
         </View>
       </View>
