@@ -83,12 +83,14 @@ export default function SignIn() {
     <ImageBackground source={background} style={styles.container}>
       <View style={styles.wrapper}>
         <View style={[styles.logo, { display: keyboardIsOpen ? "none" : "" }]}>
-          <Image
+          <img src={logo}
+          />
+                    {/* <Image
             source={logo}
             style={styles.img}
             alt="logo"
             resizeMode="contain"
-          />
+          /> */}
         </View>
         <View style={styles.conatiner_login}>
           <View
