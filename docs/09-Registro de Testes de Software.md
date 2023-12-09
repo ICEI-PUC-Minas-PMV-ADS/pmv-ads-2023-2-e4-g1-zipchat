@@ -1,5 +1,7 @@
 # Registro de Testes de Software
 
+ANAMNESES
+
 CT-001 - Registrar histórico do paciente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/0d210c71-8549-4708-88ff-a63f9fdaf95b)
@@ -20,6 +22,23 @@ CT-005 - Ultrapassando a quantidade de caracteres aceitos no campo sintomas
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/08cd4ddb-8e63-4913-9400-cca368644934)
 
+AGENDAMENTO DE CONSULTA
+
+CT-001 - Consultar ID inexistente
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/f8be9978-a630-40be-94c5-c4d7b35c02e0)
+
+CT-002 - Simulando exceção durante consulta ao BD
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/214cd8a6-e2ea-4819-a2e8-c8449516f9b2)
+
+CT-003 - Simulando retorno de uma lista vazia
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fce9895b-d8d5-44af-9509-109fb7dda824)
+
+CT-004 - Validando se será retornado a quantidade correta de registros do banco de dados
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/620183c9-599d-460e-9193-00ef8bf4fed4)
 
 
 
