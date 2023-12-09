@@ -38,7 +38,7 @@ CT-003 - Simulando retorno de uma lista vazia
 
 CT-004 - Validando se será retornado a quantidade correta de registros do banco de dados
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/620183c9-599d-460e-9193-00ef8bf4fed4)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/41d3dc30-4ffc-419f-8d1b-e8d4cf4d328a)
 
 
 
