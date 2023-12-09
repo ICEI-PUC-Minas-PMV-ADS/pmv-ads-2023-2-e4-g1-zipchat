@@ -89,13 +89,13 @@ public class MongoDBTeste
         await Assert.ThrowsAsync<MissingFieldException>(() => _mongoDBService.CreateAsync(anamnese));
     }
 
-    //Recuperando anamnese | Teste OK
+    //Recuperando anamnese
     [Fact]
     public async Task GetAsyncById_ReturnsDocument()
     {
         // Arrange
-        string testId = "test_id";
-        var expectedDocument = new AnamneseModel { Id = testId };
+        string testId = "1";
+        var expectedDocument = new AnamneseModel { Id = testId, usuario = "guilherme", data = DateTime.Now, sintomas = "Febre", resultadoIA = "Recorrer ao médico" };
 
         var asyncCursorMock = new Mock<IAsyncCursor<AnamneseModel>>();
         asyncCursorMock
