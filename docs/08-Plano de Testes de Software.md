@@ -1,5 +1,5 @@
 # Plano de Testes de Software
-Anamneses
+## Anamneses
 
 | **Caso de Teste** 	| **CT-01 – Registrar histórico do paciente** 	|
 |:---:	|:---:	|
@@ -31,7 +31,7 @@ Anamneses
 | Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "ExceededCharacterLimitException" |
 |Critério de Êxito | Lançamento da exceção "ExceededCharacterLimitException" com a mensagem: "O campo sintomas excedeu o limite de caracteres permitido"  |
 
-Agendamento de consulta
+## Agendamento de consulta
 
 | **Caso de Teste** 	| **CT-01 – Consultar ID inexistente** 	|
 |:---:	|:---:	|
