@@ -1,6 +1,6 @@
 # Registro de Testes de Software
 
-ANAMNESES
+## ANAMNESES
 
 CT-001 - Registrar histórico do paciente
 
@@ -22,7 +22,7 @@ CT-005 - Ultrapassando a quantidade de caracteres aceitos no campo sintomas
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/08cd4ddb-8e63-4913-9400-cca368644934)
 
-AGENDAMENTO DE CONSULTA
+## AGENDAMENTO DE CONSULTA
 
 CT-001 - Consultar ID inexistente
 
