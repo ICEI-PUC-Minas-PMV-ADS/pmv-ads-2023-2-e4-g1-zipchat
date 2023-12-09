@@ -6,9 +6,11 @@ import Footer from "../components/Footer";
 import { useThemeProvider } from "../zustang/ThemeProvider";
 import { v4 as uuidv4 } from "uuid";
 import SideBarChatButton from "../components/SideBarChatButton";
-import { post, get} from "../../agent"
+import { post, get} from "../services/httpAgent"
 import { redirect, useNavigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
+
+import { getDecodedAccessToken, removeAccessToken } from '../services/tokenService'
+
 const exemploChat = {
   id: "1",
   title: "Exemplo de Chat",
@@ -39,12 +41,8 @@ function Chat() {
   const [chatList, setChatList] = useState([]);
   const [chatActiveId, setChatActiveId] = useState("");
 
-  const access_token = localStorage.getItem('access_token');
-
-  const decodedToken = jwtDecode(access_token);
-
-  // Acesse o nome do usuário a partir do token decodificado
-  const userName = decodedToken.name.split(" ")[0];
+  const decodedToken = getDecodedAccessToken();
+  const userName = decodedToken.email;
   
   const getLastChats = () => {
     get(`anamnese/usuario/${userName}`).then(response => {
@@ -166,7 +164,7 @@ function Chat() {
   };
 
   const handleLogOut = () => {
-    localStorage.removeItem('access_token');
+    removeAccessToken()
     navigate('/')
   };
   /************************************************** */

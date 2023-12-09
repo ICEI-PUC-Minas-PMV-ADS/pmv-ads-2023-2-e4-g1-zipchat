@@ -5,7 +5,7 @@ import IconExclamationCircle from "../assets/icons/IconExclamationCircle";
 import design from "../assets/Design03.png";
 import './telas.css';
 import { redirect, useNavigate } from "react-router-dom";
-import { userRegister } from "../../agent"
+import { userRegister } from "../services/httpAgent"
 
 function Logon() {
   const [password, setPassword] = useState("");

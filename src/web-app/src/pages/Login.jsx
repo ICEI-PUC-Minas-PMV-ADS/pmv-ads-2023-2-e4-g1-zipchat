@@ -7,7 +7,7 @@ import zipchatLogo from "../assets/zipchat02.png";
 import design from "../assets/Design.png";
 import './telas.css';
 import { redirect, useNavigate } from "react-router-dom";
-import { auth, post } from "../../agent"
+import { userAutentication } from '../services/authenticationService'
 
 function Login() {
   const [hasLenght, setHasLength] = useState("");
@@ -20,11 +20,11 @@ function Login() {
     const data = new FormData(e.target);
   
     const formValues = {
-      username: data.get("email"),
+      email: data.get("email"),
       password: data.get("password"),
     };
   
-    auth(formValues)
+    userAutentication(formValues)
     .then((authSuccess) => {
         if (authSuccess) {
            navigate('/chat')
