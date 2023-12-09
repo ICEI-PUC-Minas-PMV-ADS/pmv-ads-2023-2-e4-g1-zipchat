@@ -6,8 +6,7 @@ CT-001 - Registrar histórico do paciente
 
 CT-002 - Ausencia de campo obrigatório
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/92c8e384-525e-4902-8aef-dc4e0ea1870d)
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/3da0b4f6-3f0e-4bb5-afc5-a75522f4f12f)
 
 CT-003 – Coletar informações do paciente
 
