@@ -1,4 +1,5 @@
 # Plano de Testes de Software
+Anamneses
 
 | **Caso de Teste** 	| **CT-01 – Registrar histórico do paciente** 	|
 |:---:	|:---:	|
@@ -29,6 +30,32 @@
 |	Requisito Associado 	| RF-004 - Analisar as respostas do paciente e fazer recomendações |
 | Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "ExceededCharacterLimitException" |
 |Critério de Êxito | Lançamento da exceção "ExceededCharacterLimitException" com a mensagem: "O campo sintomas excedeu o limite de caracteres permitido"  |
+
+Agendamento de consulta
+
+| **Caso de Teste** 	| **CT-01 – Consultar ID inexistente** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-006 - Agendar consultas médicas para o paciente |
+| Objetivo do Teste 	| Consultar um ID inexistente no BD para verificar se o retorno será vazio. |
+|Critério de Êxito | Retornar Empty  |
+
+| **Caso de Teste** 	| **CT-02 – Simulando exceção durante consulta ao BD** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-006 - Agendar consultas médicas para o paciente |
+| Objetivo do Teste 	| Verificar se será retornado "Falha na consulta ao BD" caso ocorra alguma falha na conexão com o BD |
+|Critério de Êxito | Retornar "Falha na consulta ao BD"  |
+
+| **Caso de Teste** 	| **CT-03 – Simulando retorno de uma lista vazia** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-006 - Agendar consultas médicas para o paciente |
+| Objetivo do Teste 	| Validando caso em que é retornado Empty na consulta ao BD |
+|Critério de Êxito | Retornar Empty  |
+
+| **Caso de Teste** 	| **CT-04 – Validando se será retornado a quantidade correta de registros do banco** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-006 - Agendar consultas médicas para o paciente |
+| Objetivo do Teste 	| Retornar a quantidade correta de consultas agendadas do BD|
+|Critério de Êxito | Retornar apenas 1 consulta   |
 
 # Plano de Testes ponta a ponta (Sistema web e mobile)
 
