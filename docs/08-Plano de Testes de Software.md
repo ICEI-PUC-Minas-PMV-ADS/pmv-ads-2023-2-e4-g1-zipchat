@@ -24,11 +24,11 @@
 | Objetivo do Teste 	| Verificar se será lançado uma exceçã |
 |Critério de Êxito | Recuperação das informações no BD  |
 
-| **Caso de Teste** 	| **CT-004 - Inserir anamnese com a ausência do campo simtomas** 	|
+| **Caso de Teste** 	| **CT-005 - Ultrapassar limite de caracteres (100) ** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-007 - Coletar informações médicas básicas do paciente |
-| Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "MissingFieldException" |
-|Critério de Êxito | Lançamento da exceção "MissingFieldException" com a mensagem: "Ausência de um campo obrigatório"  |
+|	Requisito Associado 	| RF-004 - Analisar as respostas do paciente e fazer recomendações |
+| Objetivo do Teste 	| Verificar se será lançado a exceção personalizada "ExceededCharacterLimitException" |
+|Critério de Êxito | Lançamento da exceção "ExceededCharacterLimitException" com a mensagem: "O campo sintomas excedeu o limite de caracteres permitido"  |
 
 # Plano de Testes ponta a ponta (Sistema web e mobile)
 
