@@ -10,7 +10,7 @@ CT-002 - Ausencia de campo obrigatório
 
 CT-003 – Coletar informações do paciente
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fe1c80f2-ccc4-46b8-a04a-75646b2335de)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/375ce358-fa3e-4c02-b89c-adbea4450ceb)
 
 CT-004 - Simulando a recuperação de um id inexistente
 
