@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "vite build && serve dist"
+    "start": "serve dist"
   },
   "dependencies": {
     "axios": "^1.6.0",
@@ -19,8 +19,7 @@
     "react-router-dom": "^6.17.0",
     "uuid": "^9.0.1",
     "vercel": "^32.6.1",
-    "zustand": "^4.4.3",
-    "vite": "^4.4.5"
+    "zustand": "^4.4.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -32,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
   }
 }
