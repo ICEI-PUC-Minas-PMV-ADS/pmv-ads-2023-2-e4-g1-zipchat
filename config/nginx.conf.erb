@@ -32,10 +32,10 @@ http {
     }
 
     server {
-        listen <%= ENV["PORT"] %>;
+        listen 80;
         server_name _;
         keepalive_timeout 5;
-        root /src/dist;
+        root /app/dist;
 
         location = /index.html {
             add_header Cache-Control "no-store, no-cache";
