@@ -35,7 +35,7 @@ http {
             listen       80;
             server_name _;
             keepalive_timeout 5;
-            root /src/dist
+            root /src/dist;
 
             location = /index.html {
                 add_header Cache-Control "no-store, no-cache";
