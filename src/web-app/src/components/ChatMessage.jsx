@@ -2,6 +2,7 @@ import React from "react";
 import IconUser from "./icons/IconUser";
 import IconRobot from "./icons/IconRobot";
 import { useThemeProvider } from "../zustang/ThemeProvider";
+import AppointmentFor from './AppointmentForm'
 
 function ChatMessage({ item }) {
   const [showModal, setShowModal] = React.useState(false)
@@ -41,7 +42,7 @@ function ChatMessage({ item }) {
           )}
         </div>
       </div>
-      {showModal && <AppointmentForm onClose={setShowModal} />}
+      {showModal && <AppointmentFor onClose={setShowModal} />}
     </div>
   );
 }
