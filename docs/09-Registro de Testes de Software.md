@@ -1,26 +1,44 @@
 # Registro de Testes de Software
 
+## ANAMNESES
+
 CT-001 - Registrar histórico do paciente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/0d210c71-8549-4708-88ff-a63f9fdaf95b)
 
 CT-002 - Ausencia de campo obrigatório
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/92c8e384-525e-4902-8aef-dc4e0ea1870d)
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/3da0b4f6-3f0e-4bb5-afc5-a75522f4f12f)
 
 CT-003 – Coletar informações do paciente
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fe1c80f2-ccc4-46b8-a04a-75646b2335de)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/375ce358-fa3e-4c02-b89c-adbea4450ceb)
 
 CT-004 - Simulando a recuperação de um id inexistente
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/4f5a4cb6-a22a-4842-b5da-d212a55aa26a)
 
-CT-005 - Ausencia de simtomas
+CT-005 - Ultrapassando a quantidade de caracteres aceitos no campo sintomas
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/9958f1f3-035c-401d-a648-22a78f2e8d76)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/08cd4ddb-8e63-4913-9400-cca368644934)
 
+## AGENDAMENTO DE CONSULTA
+
+CT-001 - Consultar ID inexistente
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/f8be9978-a630-40be-94c5-c4d7b35c02e0)
+
+CT-002 - Simulando exceção durante consulta ao BD
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/214cd8a6-e2ea-4819-a2e8-c8449516f9b2)
+
+CT-003 - Simulando retorno de uma lista vazia
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/fce9895b-d8d5-44af-9509-109fb7dda824)
+
+CT-004 - Validando se será retornado a quantidade correta de registros do banco de dados
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat/assets/58198111/41d3dc30-4ffc-419f-8d1b-e8d4cf4d328a)
 
 
 
