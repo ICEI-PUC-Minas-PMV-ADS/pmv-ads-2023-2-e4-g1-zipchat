@@ -47,5 +47,12 @@ namespace back_zipchat.Controllers
             return await _ICalendarInterface.GetAppoitamentsById(id);
         }
 
+
+        [HttpGet("/calendar/usuario/{usuario}")]
+        public async Task<List<CalendarModel>> GetByUser(string usuario)
+        {
+            return await _ICalendarInterface.GetAppoitamentsByUser(usuario);
+        }
+
     }
 }

@@ -6,15 +6,13 @@ using MongoDB.Driver;
 
 namespace back_zipchat.Repository
 {
-    public class AnamneseRepository
+    public class AnamneseRepository : BaseRepository<AnamneseModel>
     {
         private readonly IMongoCollection<AnamneseModel> _anamneseCollection;
 
-        public AnamneseRepository(IOptions<MongoDBSettings> mongoDBSettings)
+        public AnamneseRepository(IOptions<MongoDBSettings> mongoDBSettings) : base(mongoDBSettings)
         {
-            MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
-            IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
-            _anamneseCollection = database.GetCollection<AnamneseModel>(mongoDBSettings.Value.CollectionName);
+            _anamneseCollection = _database.GetCollection<AnamneseModel>("anamnese");
         }
 
 

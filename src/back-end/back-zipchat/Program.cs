@@ -59,6 +59,7 @@ builder.Services.AddScoped<ICalendarInterface, CalendarService>();
 
 //MongoDB
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.AddSingleton<MongoDBService>();
 builder.Services.AddSingleton<AnamneseRepository>();
 builder.Services.AddSingleton<CalendarRepository>();
 

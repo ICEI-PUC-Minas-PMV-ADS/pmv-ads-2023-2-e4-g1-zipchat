@@ -6,15 +6,13 @@ using MongoDB.Driver;
 
 namespace back_zipchat.Repository
 {
-    public class CalendarRepository
+    public class CalendarRepository : BaseRepository<CalendarModel>
     {
         private readonly IMongoCollection<CalendarModel> _calendarCollection;
 
-        public CalendarRepository(IOptions<MongoDBSettings> mongoDBSettings)
+        public CalendarRepository(IOptions<MongoDBSettings> mongoDBSettings) : base(mongoDBSettings)
         {
-            MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
-            IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
-            _calendarCollection = database.GetCollection<CalendarModel>(mongoDBSettings.Value.CollectionName);
+            _calendarCollection = _database.GetCollection<CalendarModel>("calendar");
         }
 
         public async Task<List<CalendarModel>> GetAsync()
@@ -31,11 +29,19 @@ namespace back_zipchat.Repository
             return document;
         }
 
-        public async Task<List<CalendarModel>> GetAsync(string bbbbb)
+        public async Task<List<CalendarModel>> GetAsync(string usuario)
         {
-            FilterDefinition<CalendarModel> filter = Builders<CalendarModel>.Filter.Eq("paciente", bbbbb);
+            FilterDefinition<CalendarModel> filter = Builders<CalendarModel>.Filter.Eq("paciente", usuario);
 
-            var document = await _calendarCollection.Find(filter).ToListAsync();
+            List<CalendarModel> document = await _calendarCollection.Find(filter).ToListAsync();
+            
+            if (document.Count == 0)
+            {
+                FilterDefinition<CalendarModel> filter2 = Builders<CalendarModel>.Filter.Eq("medico", usuario);
+
+                document = await _calendarCollection.Find(filter2).ToListAsync();
+
+            }
 
             return document;
         }

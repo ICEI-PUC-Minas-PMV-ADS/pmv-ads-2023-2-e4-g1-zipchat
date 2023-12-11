@@ -5,11 +5,8 @@ using System.Text.Json.Serialization;
 
 namespace back_zipchat.Models
 {
-	public class AnamneseModel
+	public class AnamneseModel : BaseEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
 
         public string usuario { get; set; } = null!;
 

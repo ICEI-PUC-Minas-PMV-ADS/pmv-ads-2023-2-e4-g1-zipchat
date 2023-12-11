@@ -35,9 +35,9 @@ namespace back_zipchat.Services
             throw new NotImplementedException();
         }
 
-        public async Task<List<CalendarModel>> GetAppoitamentsByUser(string aaaaaaaaa)
+        public async Task<List<CalendarModel>> GetAppoitamentsByUser(string usuario)
         {
-            throw new NotImplementedException();
+            return await _calendarRepository.GetAsync(usuario);
         }
 
         public Task<CalendarModel> UpdateAppoitament(CalendarModel appointament)

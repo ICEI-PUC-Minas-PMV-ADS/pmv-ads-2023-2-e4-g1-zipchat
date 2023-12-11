@@ -3,11 +3,8 @@ using MongoDB.Bson;
 
 namespace back_zipchat.Models
 {
-    public class CalendarModel
+    public class CalendarModel : BaseEntity
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
         public string paciente { get; set; } = null!;
 
         public string anamneseId { get; set; } = null!;

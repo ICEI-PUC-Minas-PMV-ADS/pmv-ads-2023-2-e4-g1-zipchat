@@ -3,10 +3,10 @@ using MongoDB.Bson;
 
 namespace back_zipchat.Models
 {
-    public class BaseEntity: IBaseEntity
+    public interface IBaseEntity
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+        string? Id { get; set; }
     }
 }
