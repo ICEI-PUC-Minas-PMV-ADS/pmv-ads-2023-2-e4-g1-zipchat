@@ -17,17 +17,56 @@ import { ChatArea } from "../components/chat/ChatArea";
 import { Footer } from "../components/chat/Footer";
 import { SidebarChatButton } from "../components/chat/SidebarChatButton";
 import { useThemeProvider } from "../theme/themeProvider";
-import { post } from "../agent";
+import { post, get } from "../services/httpAgent";
+import { getDecodedAccessToken, removeAccessToken } from '../services/tokenService'
 
 export default function Chat() {
   
   const [AiResponse, setAIResponse] = useState('');
+  
+  const [modalVisibility, setModalVisibility] = useState(false);
+  const [chatActive, setChatActive] = useState({});
+  const [AILoading, setAILoading] = useState(false);
+
+  const [chatList, setChatList] = useState([]);
+  const [chatActiveId, setChatActiveId] = useState("");
+
+  const decodedToken = getDecodedAccessToken();
+  const userName = decodedToken.email;
   
   useEffect(() => {
     if(AiResponse) {
       getAiResponse();
     }
   }, [AiResponse])
+
+  useEffect(() => {
+    if(chatList.length == 0) {
+      console.log("Getting previews messages...")
+      getLastChats();
+    }
+  }, [chatList])
+
+  
+  const getLastChats = () => {
+    get(`anamnese/usuario/${userName}`).then(response => {
+      let lastChats = response.data.map(message => ({
+        id: message.id,
+        title: message.sintomas,
+        messages:[
+        {
+          author: 'me',
+          body: message.sintomas
+        },
+        {
+          author: 'ia',
+          body: message.resultadoIA          
+        }
+      ]
+      }));
+      setChatList(lastChats)
+    })
+  }
 
   const getAiResponse = () => {
     setTimeout(() => {
@@ -73,11 +112,6 @@ export default function Chat() {
     ],
   };
 
-  const [modalVisibility, setModalVisibility] = useState(false);
-  const [chatActive, setChatActive] = useState({});
-  const [AILoading, setAILoading] = useState(false);
-  const [chatList, setChatList] = useState([]);
-  const [chatActiveId, setChatActiveId] = useState("");
 
   useEffect(() => {
     const checkChatList = chatList.find(item => item.id === chatActiveId);

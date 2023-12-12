@@ -26,6 +26,7 @@ function Login() {
   
     userAutentication(formValues)
     .then((authSuccess) => {
+        console.log(authSuccess)
         if (authSuccess) {
            navigate('/chat')
         } else {

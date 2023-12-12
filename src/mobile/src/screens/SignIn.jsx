@@ -19,6 +19,8 @@ import { SigninInput } from "../components/SigninInput";
 import { useNavigation } from "@react-navigation/native";
 import { auth, post } from "../agent";
 
+import { userAutentication } from  '../services/authenticationService'
+
 export default function SignIn() {
   const [keyboardIsOpen, setKeyboardIsOpen] = useState(false);
   const [isFiledEmpty, setIsFiledEmpty] = useState(false);
@@ -45,8 +47,9 @@ export default function SignIn() {
     setIsFiledEmpty(false);
 
     // PARTE API
-    auth(signin)
+    await userAutentication(signin)
       .then((authSuccess) => {
+        console.log(authSuccess)
         if (authSuccess) {
           navigation.reset({ routes: [{ name: "Chat" }] });
         } else {

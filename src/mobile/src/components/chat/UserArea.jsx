@@ -7,6 +7,7 @@ import IconSun from "../../../assets/icons/IconSun";
 import { jwtDecode } from "jwt-decode";
 import { useNavigation } from "@react-navigation/native";
 import { useThemeProvider } from "../../theme/themeProvider";
+import { removeAccessToken } from '../../services/tokenService'
 
 export function UserArea({}) {
   const { theme, toggleTheme } = useThemeProvider();
@@ -14,7 +15,8 @@ export function UserArea({}) {
 
   const navigation = useNavigation();
   const handleLogout = () => {
-      localStorage.removeItem('access_token');
+      // localStorage.removeItem('access_token');
+      removeAccessToken()
       navigation.reset({ routes: [{ name: "SignIn" }] })
   };
   const access_token = localStorage.getItem('access_token');

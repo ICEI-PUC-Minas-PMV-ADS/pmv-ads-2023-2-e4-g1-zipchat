@@ -29,7 +29,6 @@ function Chatarea({chat, loading, appointment}) {
         )
       )}
       {loading && <ChatMessageLoading />}
-          <div>teste</div>
     </div>
   );
 }

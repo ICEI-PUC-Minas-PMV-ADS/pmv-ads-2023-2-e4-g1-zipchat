@@ -6,28 +6,10 @@ import Footer from "../components/Footer";
 import { useThemeProvider } from "../zustang/ThemeProvider";
 import { v4 as uuidv4 } from "uuid";
 import SideBarChatButton from "../components/SideBarChatButton";
-import { post, get} from "../services/httpAgent"
 import { redirect, useNavigate } from "react-router-dom";
+import { get, post} from '../services/httpAgent'
 
 import { getDecodedAccessToken, removeAccessToken } from '../services/tokenService'
-
-const exemploChat = {
-  id: "1",
-  title: "Exemplo de Chat",
-  messages: [
-    {
-      id: "1",
-      author: "me",
-      body: "Olá, como você está?",
-    },
-    {
-      id: "2",
-      author: "ai",
-      body: "Oi! Estou bem, obrigado. Como posso ajudar você hoje?",
-    },
-  ],
-};
-
 
 function Chat() {
   const navigate = useNavigate();
@@ -39,6 +21,7 @@ function Chat() {
 
   /**********simulando chat************************** */
   const [chatList, setChatList] = useState([]);
+  const [booted, setBooted] = useState(false);
   const [chatActiveId, setChatActiveId] = useState("");
 
   const decodedToken = getDecodedAccessToken();
@@ -46,6 +29,9 @@ function Chat() {
   
   const getLastChats = () => {
     get(`anamnese/usuario/${userName}`).then(response => {
+      console.log("getLastChats response")
+      console.log(response)
+      setBooted(true)
       let lastChats = response.data.map(message => ({
         id: message.id,
         title: message.sintomas,
@@ -61,6 +47,8 @@ function Chat() {
       ]
       }));
       setChatList(lastChats)
+    }).catch(e =>{
+      console.log(e)
     })
   }
 
@@ -69,11 +57,10 @@ function Chat() {
   }, [chatActiveId, chatList]);
 
   useEffect(() => {
-    if(chatList.length == 0) {
-      console.log("Getting previews messages...")
+    if(!booted) {
       getLastChats();
     }
-  }, [chatList])
+  }, [booted])
 
   useEffect(() => {
     if(AiResponse) {
@@ -83,8 +70,6 @@ function Chat() {
 
   const getAiResponse = () => {
     setTimeout(() => {
-      console.log(chatActiveId)
-      console.log(AiResponse)
       let chatListClone = [...chatList];
       let chatIndex = chatListClone.findIndex(item => item.id === chatActiveId);
       if(chatIndex > -1){
@@ -125,13 +110,12 @@ function Chat() {
     .then((response) => {
       console.log(response);
       setAIResponse(response.data.resultadoIA)
-    })
+    })    
   }
 
   /* manda mensagem*/
   const handleSendMessage = async (message) => {
     if (!chatActiveId) {
-      // Creating new chat
       let newChatid = uuidv4();
       setChatList([
         {
@@ -146,7 +130,6 @@ function Chat() {
 
       await sendAnamnese(message)
     } else {
-      // updating existing chat
       let chatListClone = [...chatList];
       let chatIndex = chatListClone.findIndex(
         (item) => item.id === chatActiveId
@@ -167,11 +150,7 @@ function Chat() {
     removeAccessToken()
     navigate('/')
   };
-  /************************************************** */
-
-  /***********************funções no SideBarChatButton *********8 */
-
-  /*** indica chat ativo na barra lateral */
+  
   const handleSelectChat = (id) => {
     if(AILoading) return;
     let item = chatList.find(item => item.id === id)

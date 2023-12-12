@@ -37,7 +37,7 @@ function ChatMessage({ item }) {
                   : "text-blue-900 hover:bg-gray-300"
               }`}
             >
-              Marcar consulta ?
+              Clique aqui para marcar uma consulta
             </h4>
           )}
         </div>

@@ -54,7 +54,7 @@ namespace back_zipchat.Services
 		{
             try
             {
-                string promptResponse = "[APP em teste] Procure um médico um clínico gereal";
+                string promptResponse = "Com o sintoma de dor de cabeçca, procure um médico um clínico gereal";
 
                 if (TEST != "true")
                 {

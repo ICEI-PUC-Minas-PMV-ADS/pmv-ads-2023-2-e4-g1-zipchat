@@ -28,11 +28,6 @@ function AppointmentForm({ onClose }) {
       setErrorMessage("Por favor, preencha todos os campos.");
       return
     }
-
-    // PARTE API
-
-
-    //// 
     
     setErrorMessage("");
     showCalendar(false)
@@ -69,12 +64,12 @@ function AppointmentForm({ onClose }) {
 
             />
 
-            <div className="flex ml-5 flex-row items-center">
+            {/* <div className="flex ml-5 flex-row items-center">
               <h4 className={`${theme === 'dark' ? 'white' : 'text-gray-500'}`}>Data: </h4>
               <div onClick={() => setShowCalendar(true)} className="cursor-pointer ml-4">
                 <IconCalendar width={30} height={30} className={`${theme === 'dark' ? 'white' : 'text-gray-500'}`} />
               </div>
-            </div>
+            </div> */}
 
             {showCalendar && (
               <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 border bg-white border-1 p-2 flex items-center rounded-3xl flex-col backdrop-blur-sm`}>
