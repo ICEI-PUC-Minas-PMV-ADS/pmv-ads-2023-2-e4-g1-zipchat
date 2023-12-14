@@ -1,30 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 
 import IconLogoutBoxLine from "../../../assets/icons/IconLogoutBoxLine";
 import IconMoon from "../../../assets/icons/IconMoon";
 import IconSun from "../../../assets/icons/IconSun";
-import { jwtDecode } from "jwt-decode";
 import { useNavigation } from "@react-navigation/native";
 import { useThemeProvider } from "../../theme/themeProvider";
 import { removeAccessToken } from '../../services/tokenService'
+import { getDecodedAccessToken } from '../../services/tokenService'
 
 export function UserArea({}) {
   const { theme, toggleTheme } = useThemeProvider();
   const [themeIcon, setThemeIcon] = useState("light");
+  const [userName, setUserName] = useState("username");
+  const [booted, setBooted] = useState(false);
+
+  useEffect(() => {
+    if(!booted) {
+      getUserName();
+    }
+  }, [booted])
 
   const navigation = useNavigation();
   const handleLogout = () => {
+    console.log("handleLogout!!!! <<<<<<<<<<<")
       // localStorage.removeItem('access_token');
       removeAccessToken()
       navigation.reset({ routes: [{ name: "SignIn" }] })
   };
-  const access_token = localStorage.getItem('access_token');
-
-  const decodedToken = jwtDecode(access_token);
-
-  // Acesse o nome do usuário a partir do token decodificado
-  const userName = decodedToken.name;
+ 
+  const getUserName = async () =>{
+    const decodedToken = await getDecodedAccessToken();
+    const user = decodedToken.email;
+    if(user){
+      setUserName(user)
+      setBooted(true)
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -35,7 +47,7 @@ export function UserArea({}) {
       </View>
 
       <IconLogoutBoxLine
-        onClick={() => handleLogout()}
+        onPress={() => handleLogout()}
         width={20}
         height={20}
         style={styles.icon}

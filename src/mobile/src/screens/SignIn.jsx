@@ -59,8 +59,6 @@ export default function SignIn() {
       .catch((error) => {
         setLoginError(true);
       });
-
-    // navigation.reset({ routes: [{ name: "Chat" }] });
   };
 
   useEffect(() => {

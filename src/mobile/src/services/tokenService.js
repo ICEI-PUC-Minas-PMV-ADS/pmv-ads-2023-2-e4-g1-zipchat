@@ -1,4 +1,8 @@
 import { jwtDecode } from "jwt-decode";
+import { decode } from "base-64";
+import "core-js/stable/atob";
+global.atob = decode;
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ACCESS_TOKEN = 'access_token'
@@ -12,7 +16,12 @@ export const getAccessToken = async () =>{
 }
 
 export const getDecodedAccessToken = async() =>{
-    return jwtDecode(await getAccessToken());
+    const token = await getAccessToken()
+    console.log(">> getDecodedAccessToken")
+    const decoded = jwtDecode(token);
+    console.log("decoded")
+    console.log(decoded)
+    return decoded;
 }
 
 export const removeAccessToken = async () =>{

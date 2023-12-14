@@ -19,6 +19,7 @@ import { SidebarChatButton } from "../components/chat/SidebarChatButton";
 import { useThemeProvider } from "../theme/themeProvider";
 import { post, get } from "../services/httpAgent";
 import { getDecodedAccessToken, removeAccessToken } from '../services/tokenService'
+import { getAnamneses, dtoAnamneses, sendAnamnese } from "../services/anamneseService"
 
 export default function Chat() {
   
@@ -29,10 +30,9 @@ export default function Chat() {
   const [AILoading, setAILoading] = useState(false);
 
   const [chatList, setChatList] = useState([]);
+  const [booted, setBooted] = useState(false);
   const [chatActiveId, setChatActiveId] = useState("");
-
-  const decodedToken = getDecodedAccessToken();
-  const userName = decodedToken.email;
+  const [userName, setUserName] = useState("username");
   
   useEffect(() => {
     if(AiResponse) {
@@ -40,31 +40,36 @@ export default function Chat() {
     }
   }, [AiResponse])
 
-  useEffect(() => {
-    if(chatList.length == 0) {
-      console.log("Getting previews messages...")
-      getLastChats();
+  const getUserName = async () =>{
+    const decodedToken = await getDecodedAccessToken();
+    const user = decodedToken.email;
+    if(user){
+      setUserName(user)
+      return user;
     }
-  }, [chatList])
+  }
 
   
-  const getLastChats = () => {
-    get(`anamnese/usuario/${userName}`).then(response => {
-      let lastChats = response.data.map(message => ({
-        id: message.id,
-        title: message.sintomas,
-        messages:[
-        {
-          author: 'me',
-          body: message.sintomas
-        },
-        {
-          author: 'ia',
-          body: message.resultadoIA          
-        }
-      ]
-      }));
+  useEffect(() => {
+    if(!booted) {
+      getLastChats();
+    }
+  }, [booted])
+
+  
+  const getLastChats = async () => {
+    // const decodedToken = await getDecodedAccessToken();
+    // const user = decodedToken.email;
+    const user = getUserName()
+    getAnamneses(user).
+    then(response=>{
+      setBooted(true)
+      const lastChats = dtoAnamneses(response)
+      console.log(lastChats)
       setChatList(lastChats)
+    }).catch(error =>{
+      console.log(">>> error")
+      console.log(error)
     })
   }
 
@@ -83,34 +88,13 @@ export default function Chat() {
       setAILoading(false);
     }, 2000)
   }
-  const sendAnamnese = async (message) => {
-    post('anamnese', {
-      "emissor": "vinicius",
-      "texto": message,
-      "data": "2023-10-01T17:08:24.968Z"
-    })
-    .then((response) => {
-      console.log(response);
-      setAIResponse(response.data.resultadoIA)
-    })
-  }
 
-  const exemploChat = {
-    id: "1",
-    title: "Exemplo de Chat",
-    messages: [
-      {
-        id: "1",
-        author: "me",
-        body: "Olá, como você está?",
-      },
-      {
-        id: "2",
-        author: "ai",
-        body: "Tudo ótimo, em que posso te ajudar",
-      }
-    ],
-  };
+  const sendUserMessage = async (message) => {
+    sendAnamnese(userName, message)
+    .then((response) => {
+      setAIResponse(response.data.resultadoIA)
+    })    
+  }
 
 
   useEffect(() => {
@@ -187,7 +171,7 @@ export default function Chat() {
       }, ...chatList]);
       setChatActiveId(newChatId);
 
-      await sendAnamnese(message)
+      await sendUserMessage(message)
 
     } else {
       //updating existing chat
