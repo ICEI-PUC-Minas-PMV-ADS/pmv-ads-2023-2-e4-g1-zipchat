@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   View,
@@ -14,8 +14,56 @@ import { AI } from '../../constants'
 
 import { FormInput } from "../FormInput";
 import { useThemeProvider } from "../../theme/themeProvider";
+import { createAppointments } from "../../services/appointmentsService"
 
-export function AppointmentForm({ onClose }) {
+
+// const especialidadeMedico = [
+//   "Cardiologia", "Dermatologia", "Ginecologia e Obstetrícia", "Ortopedia", "Anestesiologia", "Pediatria", "Oftalmologia", "Psiquiatria", "Acupuntura", "Alergia", "Imunologia", "Angiologia"," Clínico Geral"
+// ]
+const especialidadeMedicas = [
+  {value: '1', label: 'Cardiologia'},
+  {value: '2', label: 'Dermatologia'},
+  {value: '3', label: 'Clínico Geral'},
+  {value: '4', label: 'Ortopedia'},
+  {value: '5', label: 'Imunologia'},
+]
+
+const padTo2Digits = (num) => {
+  return num.toString().padStart(2, '0');
+}
+
+const formatDate = (date) => {
+  return [
+    padTo2Digits(date.getDate()),
+    padTo2Digits(date.getMonth() + 1),
+    date.getFullYear(),
+  ].join('/');
+}
+
+
+export function AppointmentForm({ motivoconsulta, anamneseid, onClose }) {
+  const [especialidade, setEspecialidade] = useState({value: '1', label: 'Cardiologia'});
+  const [date, setDate] = useState(new Date());
+  const [booted, setBooted] = useState(false);
+  const [userName, setUserName] = useState("username");
+
+  
+  const getUserName = async () =>{
+    const decodedToken = await getDecodedAccessToken();
+    const user = decodedToken.email;
+    if(user){
+      setUserName(user)
+      setBooted(true)
+      return user;
+    }
+  }
+
+  useEffect(() => {
+    if(!booted) {
+      getUserName();
+    }
+  }, [booted])
+
   const [form, setForm] = useState({
     medico: "",
     especialidade: "",
@@ -26,14 +74,13 @@ export function AppointmentForm({ onClose }) {
 
   const handleSubmit = () => {
 
-    const formValues = Object.values(form);
-    const emptyField = formValues.some((value) => value === "");
-    if (emptyField) {
-      return console.log("vazio");
-    }
-    console.log("-------------")
-
-    // CÓDIGO DA API
+    createAppointments({
+      paciente: userName,
+      anamneseId: anamneseid,
+      medico: especialidade.label,
+      data: new Date(date).toISOString(),
+      evento: `Consulta sobre ${motivoconsulta}`
+    })
 
     setOpenDate(false);
     onClose(false);
@@ -77,18 +124,28 @@ export function AppointmentForm({ onClose }) {
       </Text>
 
       <ScrollView>
-        <FormInput
-          placeholder="Médico"
-          value={form.medico}
-          onChangeText={(t) => handleInput("medico", t)}
-          style={{ marginTop: 20 }}
-        />
+        
+        <View>
+          
+        <label 
+              for="cars" border="none" 
+              className={`text-lg outline-none ml-5  rounded-sm p-3 pb-1 w-4/5 border-b-2 ${theme === 'dark' ? 'bg-gpt-gray' : 'bg-white'}`}>
+                Especilidade Médica
+              </label >
+            <select 
+              id="especilidade_medica" 
+              name="especilidade_medica" 
+              className={`text-lg outline-none ml-5  rounded-sm p-3 pb-1 w-4/5 border-b-2 ${theme === 'dark' ? 'bg-gpt-gray' : 'bg-white'}`}
+              onChange={(e) => setEspecialidade({value: e.target.value, label: especialidadeMedicas.filter(x => x.value ==  e.target.value)[0].label})}
+              >
+              {
+              especialidadeMedicas.map((especilidade)=>(
+                <option key={especilidade.value} value={especilidade.value}>{especilidade.label}</option>
+              ))
+              }
+            </select>
 
-        <FormInput
-          placeholder="Especialidade"
-          value={form.especialidade}
-          onChangeText={(t) => handleInput("especialidade", t)}
-        />
+        </View>
 
         <View style={styles.dateSelect}>
           <Text style={[styles.label, { color: theme.color }]}>Data: </Text>
@@ -103,7 +160,7 @@ export function AppointmentForm({ onClose }) {
             <View style={styles.modalView}>
               <DatePicer
                 mode="datepicker"
-                onDateChange={handlechangeDate}
+                onDateChange={e => setDate(e)}
               />
 
               <TouchableOpacity onPress={showDatepicker}>

@@ -15,7 +15,11 @@ export function ChatArea({ chat, loading }) {
         {chat &&
           Object.keys(chat).some((i) => i === "messages") &&
           chat.messages.map((item) => (
-            <ChatMessageItem key={item.id} item={item} />
+            <ChatMessageItem 
+            motivoconsulta={chat.title}
+            anamneseid={chat.id}
+            key={item.id} 
+            item={item} />
           ))}
 
         {loading && <ChatMessageLoaing />}

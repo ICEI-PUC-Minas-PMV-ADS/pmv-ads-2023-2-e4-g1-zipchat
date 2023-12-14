@@ -8,7 +8,7 @@ import { AI } from '../../constants'
 
 import { AppointmentForm } from "./AppointmentForm";
 
-export function ChatMessageItem({ item }) {
+export function ChatMessageItem({ motivoconsulta, anamneseid, item }) {
   const [modalVisibility, setModalVisibility] = useState(false);
   const { theme } = useThemeProvider();
   return (
@@ -51,7 +51,7 @@ export function ChatMessageItem({ item }) {
             transparent={false}
             onRequestClose={() => setModalVisibility(false)}
           >
-            <AppointmentForm onClose={setModalVisibility} />
+            <AppointmentForm motivoconsulta={motivoconsulta} anamneseid={anamneseid} onClose={setModalVisibility} />
           </Modal>
         </View>
       </View>
