@@ -20,6 +20,7 @@ import { useThemeProvider } from "../theme/themeProvider";
 import { post, get } from "../services/httpAgent";
 import { getDecodedAccessToken, removeAccessToken } from '../services/tokenService'
 import { getAnamneses, dtoAnamneses, sendAnamnese } from "../services/anamneseService"
+import { AI } from "../constants"
 
 export default function Chat() {
   
@@ -79,7 +80,7 @@ export default function Chat() {
       let chatIndex = chatListClone.findIndex(item => item.id === chatActiveId);
       if(chatIndex > -1){
         chatListClone[chatIndex].messages.push({
-          id: uuidv4, author: 'ai', body: AiResponse
+          id: uuidv4, author: AI, body: AiResponse
         })
       }
       setChatList(chatListClone);
@@ -146,7 +147,7 @@ export default function Chat() {
       if(chatIndex > -1){
         chatListClone[chatIndex].messages.push({
           id: uuidv4(),
-          author: 'ai',
+          author: AI,
           body: 'Resposta da AI'
         })
       }
