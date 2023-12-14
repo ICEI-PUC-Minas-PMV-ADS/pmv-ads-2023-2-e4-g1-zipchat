@@ -10,6 +10,7 @@ import {
 import DatePicer from "react-native-modern-datepicker";
 import IconCalendar from "../../../assets/icons/IconCalendar";
 import IconChevroBack from "../../../assets/icons/IconChevroBack";
+import { AI } from '../../constants'
 
 import { FormInput } from "../FormInput";
 import { useThemeProvider } from "../../theme/themeProvider";

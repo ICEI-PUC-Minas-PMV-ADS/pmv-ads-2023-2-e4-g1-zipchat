@@ -4,6 +4,7 @@ import { StyleSheet, View, Text, Modal } from "react-native";
 import IconUser from "../../../assets/icons/IconUser";
 import IconRobot from "../../../assets/icons/IconRobot";
 import { useThemeProvider } from "../../theme/themeProvider";
+import { AI } from '../../constants'
 
 import { AppointmentForm } from "./AppointmentForm";
 
@@ -15,8 +16,8 @@ export function ChatMessageItem({ item }) {
       style={[
         styles.container,
         {
-          backgroundColor: item.author === "ai" && "rgb(75 85 99)",
-          opacity: item.author === "ai" ? 0.5 : 1,
+          backgroundColor: item.author === AI && "rgb(75 85 99)",
+          opacity: item.author === AI ? 0.5 : 1,
         },
       ]}
     >
@@ -26,21 +27,21 @@ export function ChatMessageItem({ item }) {
             styles.icon,
             {
               backgroundColor:
-                item.author === "ai" ? "rgb(20 83 45)" : "rgb(30 58 138)",
+                item.author === AI ? "rgb(20 83 45)" : "rgb(30 58 138)",
             },
           ]}
         >
           {item.author === "me" && (
             <IconUser width={24} height={24} style={{ color: "white" }} />
           )}
-          {item.author === "ai" && (
+          {item.author === AI && (
             <IconRobot width={24} height={24} style={{ color: "white" }} />
           )}
         </View>
 
         <View style={styles.messageWrapper}>
           <Text style={[styles.message, { color: theme.color }]}>{item.body}</Text>
-          {item.author === "ai" && item.body !== "Resposta da AI" && (
+          {item.author === AI && item.body !== "Resposta da AI" && (
             <Text onPress={() => setModalVisibility(true)} style={[styles.link, { color: theme.link }]}>Marcar consulta ?</Text>
           )}
 

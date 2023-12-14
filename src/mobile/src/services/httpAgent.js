@@ -21,10 +21,6 @@ export const clearInstanceAuthorizationToken= () => {
     httpInstance.defaults.headers.common['Authorization'] = null;
 }
 
-// export const post = (uri, data) => {
-//     return httpInstance.post(uri, data);
-// }
-
 export const post = async (uri, data) => {
     return new Promise((resolve, reject) => {
         fetch(`${CONSTANTS.SERVICE_API_URL}${uri}`, {

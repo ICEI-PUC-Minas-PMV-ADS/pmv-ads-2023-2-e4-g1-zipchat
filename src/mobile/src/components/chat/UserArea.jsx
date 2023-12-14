@@ -23,8 +23,6 @@ export function UserArea({}) {
 
   const navigation = useNavigation();
   const handleLogout = () => {
-    console.log("handleLogout!!!! <<<<<<<<<<<")
-      // localStorage.removeItem('access_token');
       removeAccessToken()
       navigation.reset({ routes: [{ name: "SignIn" }] })
   };

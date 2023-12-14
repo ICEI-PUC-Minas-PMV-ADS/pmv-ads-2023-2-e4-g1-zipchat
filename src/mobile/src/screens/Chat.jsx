@@ -58,8 +58,6 @@ export default function Chat() {
 
   
   const getLastChats = async () => {
-    // const decodedToken = await getDecodedAccessToken();
-    // const user = decodedToken.email;
     const user = await getUserName()
     getAnamneses(user).
     then(response=>{
@@ -92,7 +90,7 @@ export default function Chat() {
   const sendUserMessage = async (message) => {
     sendAnamnese(userName, message)
     .then((response) => {
-      setAIResponse(response.data.resultadoIA)
+      setAIResponse(response.resultadoIA)
     })    
   }
 
