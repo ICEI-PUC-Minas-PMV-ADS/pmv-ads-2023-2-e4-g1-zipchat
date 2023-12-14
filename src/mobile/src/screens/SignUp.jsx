@@ -12,7 +12,7 @@ import { SignupInput } from "../components/SignupInput";
 import { useNavigation } from "@react-navigation/native";
 import IconEyeFill from "../../assets/icons/IconEyeFill";
 import IconEyeSlashFill from "../../assets/icons/IconEyeSlashFill";
-import { userRegister } from "../agent";
+import { userRegister } from "../services/userService";
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -51,18 +51,27 @@ export default function SignUp() {
     setWrongPass(false);
     // PARTE API
 
+    // const formValues = {
+    //   name: data.get("name"),
+    //   username: data.get("usuario"),
+    //   email: data.get("email"),
+    //   password: data.get("confirmPassword"),
+    // };
+
     userRegister(sigon)
-      .then((authSuccess) => {
-        console.log(authSuccess);
+    .then((authSuccess) => {
+        console.log("authSuccess")
+        console.log(authSuccess)
         if (authSuccess) {
-          navigation.reset({ routes: [{ name: "Chat" }] });
+           navigate('/')
         } else {
-          console.log("Falha no cadastro");
+            console.log('Falha na autenticação');
         }
-      })
-      .catch((error) => {
-        setLogonError(true);
-      });
+    })
+    .catch((error) => {
+        console.error('Erro na autenticação:', error);
+        setError("Erro ao cadastrar novo usuário."); 
+    });
 
     navigation.reset({ routes: [{ name: "Chat" }] });
   };
