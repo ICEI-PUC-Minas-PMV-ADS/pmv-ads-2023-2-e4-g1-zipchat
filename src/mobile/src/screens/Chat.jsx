@@ -60,7 +60,7 @@ export default function Chat() {
   const getLastChats = async () => {
     // const decodedToken = await getDecodedAccessToken();
     // const user = decodedToken.email;
-    const user = getUserName()
+    const user = await getUserName()
     getAnamneses(user).
     then(response=>{
       setBooted(true)
