@@ -3,15 +3,15 @@ import IconUser from "./icons/IconUser";
 import IconRobot from "./icons/IconRobot";
 import { useThemeProvider } from "../zustang/ThemeProvider";
 import AppointmentFor from './AppointmentForm'
+import { AI } from '../constants'
 
-function ChatMessage({ item }) {
+function ChatMessage({ motivoconsulta, anamneseid, item }) {
   const [showModal, setShowModal] = React.useState(false)
-  
   const { theme } = useThemeProvider();
   return (
     <div
       className={`py-5 ${
-        item.author === "ai" &&
+        item.author === AI &&
         `${theme === "dark" ? "bg-gray-600/50" : "bg-gray-600/10"}`
       }`}
     >
@@ -19,16 +19,16 @@ function ChatMessage({ item }) {
         <div
           className={`text-white w-10 h-10 flex justify-center items-center mx-4
           md:ml-0 rounded ${
-            item.author === "ai" ? "bg-green-900" : "bg-blue-900"
+            item.author === AI ? "bg-green-900" : "bg-blue-900"
           } `}
         >
           {item.author === "me" && <IconUser width={24} height={24} />}
-          {item.author === "ai" && <IconRobot width={24} height={24} />}
+          {item.author === AI && <IconRobot width={24} height={24} />}
         </div>
 
         <div className="flex-1 text-base whitespace-pre-wrap">
           {item.body}
-          {item.author === "ai" && (
+          {item.author === AI && (
             <h4
               onClick={() => setShowModal(true)}
               className={`mt-3   w-fit py-2 px-5 cursor-pointer  rounded-3xl transition-all ${
@@ -42,7 +42,7 @@ function ChatMessage({ item }) {
           )}
         </div>
       </div>
-      {showModal && <AppointmentFor onClose={setShowModal} />}
+      {showModal && <AppointmentFor motivoconsulta={motivoconsulta} anamneseid={anamneseid} onClose={setShowModal} />}
     </div>
   );
 }

@@ -1,13 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useThemeProvider } from "../zustang/ThemeProvider";
 import IconClose from "./icons/IconClose";
 import Calendar from "react-calendar";
+import { createAppointments } from "../services/appointmentsService"
+import { getDecodedAccessToken } from '../services/tokenService'
+import 'react-calendar/dist/Calendar.css';
 
 import IconCalendar from "./icons/IconCalendar";
 
-function AppointmentForm({ onClose }) {
+// const especialidadeMedico = [
+//   "Cardiologia", "Dermatologia", "Ginecologia e Obstetrícia", "Ortopedia", "Anestesiologia", "Pediatria", "Oftalmologia", "Psiquiatria", "Acupuntura", "Alergia", "Imunologia", "Angiologia"," Clínico Geral"
+// ]
+const especialidadeMedicas = [
+  {value: '1', label: 'Cardiologia'},
+  {value: '2', label: 'Dermatologia'}
+]
+
+const padTo2Digits = (num) => {
+  return num.toString().padStart(2, '0');
+}
+
+const formatDate = (date) => {
+  return [
+    padTo2Digits(date.getDate()),
+    padTo2Digits(date.getMonth() + 1),
+    date.getFullYear(),
+  ].join('/');
+}
+
+
+function AppointmentForm({ motivoconsulta, anamneseid, onClose }) {
   const [showCalendar, setShowCalendar] = useState(false)
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [especialidade, setEspecialidade] = useState({value: '1', label: 'Cardiologia'});
   const [form, setForm] = useState({
     medico: "",
     especialidade: "",
@@ -17,18 +42,17 @@ function AppointmentForm({ onClose }) {
 
   const { theme } = useThemeProvider();
 
-  const handleInput = (fieldName, value) => {
-    setForm({...form, [fieldName]: value})
-  }
+  const decodedToken = getDecodedAccessToken();
+  const userName = decodedToken.email;
 
   const handleForm = () => {
-    const values = Object.values(form)
-    const emptyValue = values.some(value => value === "")
-    if(emptyValue) {
-      setErrorMessage("Por favor, preencha todos os campos.");
-      return
-    }
-    
+    createAppointments({
+      paciente: userName,
+      anamneseId: anamneseid,
+      medico: especialidade.label,
+      data: new Date(date).toISOString(),
+      evento: `Consulta sobre ${motivoconsulta}`
+    })
     setErrorMessage("");
     showCalendar(false)
   }
@@ -45,35 +69,40 @@ function AppointmentForm({ onClose }) {
           <h4 className="text-center text-2xl">Marcar consulta</h4>
 
           <div className="h-3/6 justify-evenly flex flex-col relative">
-            <input
-              name="medico"
-              type="text"
-              placeholder="Médico"
+
+            <label 
+              for="cars" border="none" 
+              className={`text-lg outline-none ml-5  rounded-sm p-3 pb-1 w-4/5 border-b-2 ${theme === 'dark' ? 'bg-gpt-gray' : 'bg-white'}`}>
+                Especilidade Médica
+              </label >
+            <select 
+              id="especilidade_medica" 
+              name="especilidade_medica" 
               className={`text-lg outline-none ml-5  rounded-sm p-3 pb-1 w-4/5 border-b-2 ${theme === 'dark' ? 'bg-gpt-gray' : 'bg-white'}`}
-              value={form.medico}
-              onChange={(e) => handleInput("medico", e.target.value)}
-            />
+              onChange={(e) => setEspecialidade({value: e.target.value, label: especialidadeMedicas.filter(x => x.value ==  e.target.value)[0].label})}
+              >
+              {
+              especialidadeMedicas.map((especilidade)=>(
+                <option key={especilidade.value} value={especilidade.value}>{especilidade.label}</option>
+              ))
+              }
+            </select>
 
-            <input
-              name="especialidade"
-              type="text"
-              placeholder="Especialidade"
-              className={`text-lg outline-none ml-5  rounded-sm p-3 pb-1 w-4/5 border-b-2 ${theme === 'dark' ? 'bg-gpt-gray' : 'bg-white'}`}
-              value={form.especialidade}
-              onChange={(e) => handleInput("especialidade", e.target.value)}
-
-            />
-
-            {/* <div className="flex ml-5 flex-row items-center">
+            <div className="flex ml-5 flex-row items-center">
               <h4 className={`${theme === 'dark' ? 'white' : 'text-gray-500'}`}>Data: </h4>
               <div onClick={() => setShowCalendar(true)} className="cursor-pointer ml-4">
-                <IconCalendar width={30} height={30} className={`${theme === 'dark' ? 'white' : 'text-gray-500'}`} />
+                <IconCalendar width={30} height={30} className={`${theme === 'dark' ? 'white' : 'text-gray-500'}`} />{formatDate(date)}
               </div>
-            </div> */}
+            </div>
 
             {showCalendar && (
               <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 border bg-white border-1 p-2 flex items-center rounded-3xl flex-col backdrop-blur-sm`}>
-                <Calendar onChange={(date) => handleInput("date", date)} value={date} className="w-full flex flex-col items-center text-black" />
+                <Calendar 
+                  locale="pt-br"
+                  className="w-full flex flex-col items-center text-black" 
+                  onChange={setDate} 
+                  value={date} 
+                  />
                 <h4
                   onClick={() => setShowCalendar(false)}
                   className="p-2 cursor-pointer px-5 text-black"

@@ -11,7 +11,6 @@ export const getAccessToken = () =>{
 }
 
 export const getDecodedAccessToken = () =>{
-    console.log(getAccessToken())
     return jwtDecode(getAccessToken());
 }
 

@@ -1,6 +1,13 @@
 import Login from "./pages/Login"
-import Logon from "./pages/Logon"
-import PasswordRecover from "./pages/PasswordRecover"
+
+import { initializeApp } from 'firebase/app';
+
+const firebaseConfig = {
+    apiKey: 'AIzaSyAWlNXeaULFmGg-ExGJFFeuBmCSVkvJxWQ',
+    projectId: 'projeto-teste-d65b6'
+};
+  
+const app = initializeApp(firebaseConfig);
 
 function App() {
 

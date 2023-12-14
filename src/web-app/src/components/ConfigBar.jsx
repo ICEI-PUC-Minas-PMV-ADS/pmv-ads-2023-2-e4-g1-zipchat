@@ -3,17 +3,15 @@ import { useThemeProvider } from "../zustang/ThemeProvider";
 import IconMoon from "./icons/IconMoon";
 import IconSun from "./icons/IconSun";
 import IconLogoutBoxLine from "./icons/IconLogout";
-import { jwtDecode } from "jwt-decode";
+
+import { getDecodedAccessToken } from '../services/tokenService';
 
 function ConfigBar({logout}) {
   const { theme, toggleTheme } = useThemeProvider();
 
-  const access_token = localStorage.getItem('access_token');
-
-  const decodedToken = jwtDecode(access_token);
-
-  // Acesse o nome do usuário a partir do token decodificado
-  const userName = decodedToken.name;
+  
+  const decodedToken = getDecodedAccessToken();
+  const userName = decodedToken.email;
 
   return (
     <div className={`flex items-center justify-between py-1 px-4 `}>

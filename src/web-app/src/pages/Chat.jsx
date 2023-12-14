@@ -10,6 +10,7 @@ import { redirect, useNavigate } from "react-router-dom";
 import { get, post} from '../services/httpAgent'
 
 import { getDecodedAccessToken, removeAccessToken } from '../services/tokenService'
+import { getAnamneses, dtoAnamneses, sendAnamnese } from "../services/anamneseService"
 
 function Chat() {
   const navigate = useNavigate();
@@ -26,34 +27,11 @@ function Chat() {
 
   const decodedToken = getDecodedAccessToken();
   const userName = decodedToken.email;
-  
-  const getLastChats = () => {
-    get(`anamnese/usuario/${userName}`).then(response => {
-      console.log("getLastChats response")
-      console.log(response)
-      setBooted(true)
-      let lastChats = response.data.map(message => ({
-        id: message.id,
-        title: message.sintomas,
-        messages:[
-        {
-          author: 'me',
-          body: message.sintomas
-        },
-        {
-          author: 'ia',
-          body: message.resultadoIA          
-        }
-      ]
-      }));
-      setChatList(lastChats)
-    }).catch(e =>{
-      console.log(e)
-    })
-  }
+  const {setSideBarOpened} = useThemeProvider();
 
+  
   useEffect(() => {
-      setChatActive(chatList.find(item => item.id === chatActiveId));
+    setChatActive(chatList.find(item => item.id === chatActiveId));
   }, [chatActiveId, chatList]);
 
   useEffect(() => {
@@ -67,6 +45,18 @@ function Chat() {
       getAiResponse();
     }
   }, [AiResponse])
+
+  
+  const getLastChats = () => {
+    getAnamneses(userName).
+    then(response=>{
+      setBooted(true)
+      const lastChats = dtoAnamneses(response)
+      console.log(lastChats)
+      setChatList(lastChats)
+    })
+  }
+
 
   const getAiResponse = () => {
     setTimeout(() => {
@@ -85,7 +75,6 @@ function Chat() {
   /************************************************* */
 
   /***********funcionalidade de botões *************8 */
-  const {setSideBarOpened} = useThemeProvider();
 
   /* apagar conversas */
   const handleClearConversations = () => {
@@ -101,14 +90,9 @@ function Chat() {
     setSideBarOpened()
   };
 
-  const sendAnamnese = async (message) => {
-    post('anamnese', {
-      "emissor": `${userName}`,
-      "texto": message,
-      "data": new Date().toISOString
-    })
+  const sendUserMessage = async (message) => {
+    sendAnamnese(username, message)
     .then((response) => {
-      console.log(response);
       setAIResponse(response.data.resultadoIA)
     })    
   }
@@ -128,7 +112,7 @@ function Chat() {
 
       setChatActiveId(newChatid);
 
-      await sendAnamnese(message)
+      await sendUserMessage(message)
     } else {
       let chatListClone = [...chatList];
       let chatIndex = chatListClone.findIndex(

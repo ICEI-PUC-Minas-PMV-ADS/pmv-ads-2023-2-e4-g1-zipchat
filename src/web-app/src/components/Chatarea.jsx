@@ -5,9 +5,8 @@ import { useThemeProvider } from "../zustang/ThemeProvider";
 import ChatMessageLoading from "./ChatMessageLoading";
 
 
-function Chatarea({chat, loading, appointment}) {
-  const {theme} = useThemeProvider();
-  
+function Chatarea({chat, loading}) {
+  const {theme} = useThemeProvider();  
   return (
     <div className={`flex-auto h-0 overflow-y-scroll ${theme === 'dark' ? '' :  'text-black'}`}>
       {!chat ? (
@@ -18,6 +17,8 @@ function Chatarea({chat, loading, appointment}) {
           chat.messages.map((item, index) => (
             <div key={index} className="">
               <ChatMessage
+                motivoconsulta={chat.title}
+                anamneseid={chat.id}
                 key={item.id}
                 item={item}
               />
