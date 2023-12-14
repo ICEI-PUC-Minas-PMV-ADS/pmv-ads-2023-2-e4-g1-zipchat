@@ -1,5 +1,13 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { httpInstance } from './httpAgent';
+
+import { initializeApp } from 'firebase/app';
+
+const firebaseConfig = {
+    apiKey: 'AIzaSyAWlNXeaULFmGg-ExGJFFeuBmCSVkvJxWQ',
+    projectId: 'projeto-teste-d65b6'
+};
+  
+const app = initializeApp(firebaseConfig);
 
 export const userRegister = async (user) => {
     return new Promise((resolve, reject) => {
