@@ -1,0 +1,27 @@
+message: Please cite this software using these metadata.
+title: Zipchat
+authors:
+  - family-names: Henrique Pastor Pereira
+    given-names: Fellipe 
+  - family-names: De Oliveira Borges
+    given-names: Lucas 
+  - family-names: Pedro Pereira Santos
+    given-names: João 
+  - family-names: Gomes
+    given-names: Guilherme 
+  - family-names: Monteiro Fortino
+    given-names: Vinicius 
+  - family-names: Fellipe Pereira Pires
+    given-names: Luiz 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Cipriano da Silva
+    given-names: Wagner 
+keywords:
+  - Inteligencia Artificial 
+  - Rotas
+  - Caixeiro viajante
+  - Chat
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-g1-zipchat
+version: 1.0.0
+date-released: 2023-12-13
